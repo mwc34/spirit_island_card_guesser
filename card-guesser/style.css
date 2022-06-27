@@ -65,15 +65,15 @@ input[type=submit] {
 	display: flex;
 }
 
-#dailyAllOptions {
+#guessTypeOptions {
 	top: 0%;
 }
 
-#guessTypeOptions {
+#cardTypeOptions {
 	top: 5%;
 }
 
-#cardTypeOptions {
+#dailyAllOptions {
 	top: 10%;
 }
 

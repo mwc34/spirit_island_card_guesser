@@ -11,10 +11,6 @@
     </head>
     <body>
 		
-	<div id="dailyAllOptions" class="optionWrapper">
-		<div class="option" onclick="setDaily(true)">Daily</div>
-		<div class="option" onclick="setDaily(false)">Complete</div>
-	</div>
 	<div id="guessTypeOptions" class="optionWrapper">
 		<div class="option" onclick="toggleGuessType(0)">Minimal</div>
 	</div>
@@ -22,6 +18,10 @@
 		<div class="option" onclick="toggleCardType(0)">Minor</div>
 		<div class="option" onclick="toggleCardType(1)">Major</div>
 		<div class="option" onclick="toggleCardType(2)">Unique</div>
+	</div>
+	<div id="dailyAllOptions" class="optionWrapper">
+		<div class="option" onclick="startSet(true)">Start Daily Set</div>
+		<div class="option" onclick="startSet(false)">Start Complete Set</div>
 	</div>
 	
 	<img id="cardImage" src=""/>

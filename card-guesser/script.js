@@ -113,7 +113,7 @@ function cyrb128(str) {
     return [(h1^h2^h3^h4)>>>0, (h2^h1)>>>0, (h3^h1)>>>0, (h4^h1)>>>0];
 }
 
-function startSet() {
+function startSet(daily) {
 	
 	let population = [...completeCards];
 	
@@ -144,7 +144,7 @@ function startSet() {
 	let sample_count = null;
 	let random_seed = null;
 	
-	if (dailyAllOptions.children[0].classList.contains('activeOption')) {
+	if (daily) {
 		// Generate seed from date
 		let d = new Date();
 		random_seed = cyrb128(d.getDate().toString() + d.getMonth() + d.getFullYear()).reduce((x,y)=>x+y)
@@ -166,12 +166,13 @@ function getSubset(population_count, sample_count, random_seed=null) {
 	let population = [...Array(population_count).keys()];
 	let samples = [];
 	for (let i=0; i<sample_count; i++) {
+		let idx = null;
 		if (random_seed) {
-			let idx = random_seed % population.length;
+			idx = random_seed % population.length;
 			random_seed += idx;
 		} 
 		else {
-			let idx = Math.floor(Math.random()*population.length);
+			idx = Math.floor(Math.random()*population.length);
 		}
 		samples.push(population[idx]);
 		population.splice(idx, 1);
@@ -228,17 +229,6 @@ function incrementScore(correct) {
 	score.innerHTML = `Score: ${currentCorrect + correct}/${currentTotal + 1}`
 }
 
-function setDaily(daily) {
-	if (daily) {
-		dailyAllOptions.children[0].classList.add("activeOption");
-		dailyAllOptions.children[1].classList.remove("activeOption");
-	}
-	else {
-		dailyAllOptions.children[0].classList.remove("activeOption");
-		dailyAllOptions.children[1].classList.add("activeOption");
-	}
-}
-
 function toggleGuessType(idx) {
 	let e = guessTypeOptions.children[idx];
 	if (e.classList.contains("activeOption")) {
@@ -259,7 +249,6 @@ function toggleCardType(idx) {
 	}
 }
 
-const dailyAllOptions = document.getElementById("dailyAllOptions");
 const guessTypeOptions = document.getElementById("guessTypeOptions");
 const cardTypeOptions = document.getElementById("cardTypeOptions");
 const cardInput = document.getElementById("cardInput");
