@@ -25,7 +25,7 @@ function autocomplete(inp, arr) {
 				b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
 				b.innerHTML += arr[i].substr(val.length);
 				/*insert a input field that will hold the current array item's value:*/
-				b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+				b.innerHTML += `<input type="hidden" value="${arr[i]}">`;
 				/*execute a function when someone clicks on the item value (DIV element):*/
 				b.addEventListener("click", function(e) {
 					/*insert the value for the autocomplete text field:*/
@@ -198,13 +198,9 @@ function makeGuess() {
 	let guess = cardInput.value;
 	if (!guess.length) return
 	
-	console.log(guess);
-	
 	cardInput.value = "";
 	if (currentCard) {
-		console.log(currentCard.title);
 		if (currentCard.title == guess) {
-			console.log('correct!');
 			incrementScore(true);
 		}
 		else {
