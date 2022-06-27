@@ -17,13 +17,13 @@ function autocomplete(inp, arr) {
 		this.parentNode.appendChild(a);
 		/*for each item in the array...*/
 		for (i = 0; i < arr.length; i++) {
-			/*check if the item starts with the same letters as the text field value:*/
-			if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+			let start_idx = arr[i].toUpperCase().indexOf(val.toUpperCase())
+			if (start_idx >= 0) {
 				/*create a DIV element for each matching element:*/
 				b = document.createElement("DIV");
 				/*make the matching letters bold:*/
-				b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-				b.innerHTML += arr[i].substr(val.length);
+				b.innerHTML = "<strong>" + arr[i].substr(start_idx, val.length) + "</strong>";
+				b.innerHTML += arr[i].substr(val.length + start_idx);
 				/*insert a input field that will hold the current array item's value:*/
 				b.innerHTML += `<input type="hidden" value="${arr[i]}">`;
 				/*execute a function when someone clicks on the item value (DIV element):*/
@@ -36,6 +36,7 @@ function autocomplete(inp, arr) {
 				});
 				a.appendChild(b);
 			}
+			
 		}
 	});
 	/*execute a function presses a key on the keyboard:*/
@@ -191,7 +192,9 @@ function newCard() {
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
-	cardImage.src = `/card-guesser/minimal_cards_img/${currentCard.id}.png`;
+	setTimeout(() => {
+		cardImage.src = `/card-guesser/minimal_cards_img/${currentCard.id}.png`;
+	}, 1000)
 }
 
 function makeGuess() {
@@ -206,6 +209,7 @@ function makeGuess() {
 		else {
 			incrementScore(false);
 		}
+		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.webp`;
 		decrementCardsLeft();
 		newCard();
 	}
