@@ -96,18 +96,22 @@ function autocomplete(inp, arr) {
 function newCard() {
 	if (!completeCards.length) {
 		currentCard = null;
+		cardImage.src = "";
 		return;
 	}
 	currentCard = completeCards[Math.random()*completeCards.length];
+	cardImage.src = currentCard.art.url;
 }
 
 function makeGuess() {
 	let guess = cardInput.value;
-	if (currentCard.name == guess) {
-		console.log("WOOOOO");
-	}
-	else {
-		console.log("BOOOOO");
+	if (currentCard) {
+		if (currentCard.name == guess) {
+			console.log("WOOOOO");
+		}
+		else {
+			console.log("BOOOOO");
+		}
 	}
 	newCard();
 }
@@ -115,9 +119,9 @@ function makeGuess() {
 
 
 const cardInput = document.getElementById("cardInput");
-const prefix = '/card-guesser/';
+const cardImage = document.getElementById("cardImage");
 const completeCards = [];
 const cardNames = [];
-window.fetch(prefix + 'complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.name)}});
+window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.name)}});
 autocomplete(cardInput, cardNames);
 var currentCard = null;
