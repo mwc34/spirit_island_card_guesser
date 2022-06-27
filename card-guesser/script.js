@@ -100,8 +100,11 @@ function makeGuess() {
 
 const cardInput = document.getElementById("cardInput");
 const prefix = '/card-guesser/';
-const completeCards = {};
+const completeCards = [];
 const cardNames = [];
-window.fetch(prefix + 'card_names.json').then(x => x.json()).then(x => {for (let name of x) {cardNames.push(name)}});
+var promise_finishes = 0
+window.fetch(prefix + 'complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.name);}; promise_finishes++;});
 
-autocomplete(cardInput, cardNames);
+if (promise_finishes == 1) {
+	autocomplete(cardInput, cardNames);
+}

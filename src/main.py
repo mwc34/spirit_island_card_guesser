@@ -4,30 +4,15 @@ import itertools
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-complete_directory = '../card-guesser/complete_cards_json'
-minimal_directory = '../card-guesser/minimal_cards_json'
-os.makedirs(minimal_directory, exist_ok=True)
+complete_cards_path = '../card-guesser/complete_cards.json'
+minimal_cards_path = '../card-guesser/minimal_cards.json'
+minimal_cards_directory = 'minimal_cards_json'
+os.makedirs(minimal_cards_directory, exist_ok=True)
 
 def powerset(iterable):
     """powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"""
     s = list(iterable)
     return itertools.chain.from_iterable(itertools.combinations(s, r) for r in range(len(s)+1))
-
-
-def load_cards():
-    cards = []
-    for f in os.listdir(complete_directory):
-        print(f)
-        with open(os.path.join(complete_directory, f)) as fp:
-            c = json.load(fp)
-            c['file_name'] = os.path.splitext(f)[0]
-            
-            if c['range']['enabled'] and 'spirit' in c['target']['text']:
-                print(c)
-                input()
-            cards.append(c)
-        
-    return cards
 
 
 def check_unique_subset(complete_cards, checklist, debug=True):
@@ -55,7 +40,7 @@ def check_unique_subset(complete_cards, checklist, debug=True):
     return True
 
 
-def generate_minimal_cards(complete_cards):
+def generate_minimal_cards():
     def find_subset(complete_card, card, include_threshold=False):
         options = ['cost', 'sun', 'moon', 'fire', 'air', 'water', 'earth', 'plant', 'animal', 'range', 'target']
         if include_threshold:
@@ -92,10 +77,10 @@ def generate_minimal_cards(complete_cards):
         else:
             return None
         
-        
-        
+    with open(complete_cards_path) as fp:
+        complete_cards = json.load(fp)
                 
-    cards = []
+    minimal_cards = []
     # Categories are cost, speed, range, target, elements, threshold condition
     # Speed has to be there as can't remove
     for complete_card in complete_cards:
@@ -121,12 +106,14 @@ def generate_minimal_cards(complete_cards):
             if not complete_card['threshold']['conditionText'] or not find_subset(complete_card, card, True):
                 print(f"------------------------------------------{complete_card['name']} had no unique subset")
                 card['effect'] = complete_card['effect']
-            
-        with open(os.path.join(minimal_directory, card['file_name'] + '.json'), 'w') as fp:
-            json.dump(card, fp)
-            
-
-def generate_card_name_list(save_path):
-    names = sorted(map(lambda x: os.path.splitext(x)[0], os.listdir(complete_directory)))
-    with open(save_path, 'w') as fp:
-        json.dump(names, fp, indent=4)
+        
+        with open(os.path.join(minimal_cards_directory, complete_card['name'].replace('\n', ' ') + '.json'), 'w') as fp:
+            json.dump(card, fp, indent=4)
+        
+        minimal_cards.append(card)
+        
+    with open(minimal_cards_path, 'w') as fp:
+        json.dump(minimal_cards, fp, indent=4)
+        
+        
+generate_minimal_cards()

@@ -1,0 +1,43 @@
+{
+    "name": "",
+    "nameFontScale": 1,
+    "cost": "",
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": ""
+    },
+    "target": {
+        "enabled": true,
+        "text": ""
+    },
+    "effect": "Defend 2 in target land and all adjacent lands. For every {presence} on your \"Deep Slumber\" track, Defend 1 in target land and all adjacent lands.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": false,
+        "moon": false,
+        "fire": false,
+        "air": false,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": null
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "Elemental Aegis"
+}
