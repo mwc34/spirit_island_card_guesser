@@ -94,6 +94,7 @@ function autocomplete(inp, arr) {
 }
 
 function newCard() {
+	cardInput.value = "";
 	if (!completeCards.length) {
 		currentCard = null;
 		cardImage.src = "";
@@ -105,6 +106,8 @@ function newCard() {
 
 function makeGuess() {
 	let guess = cardInput.value;
+	if (!guess.length) return
+	
 	if (currentCard) {
 		if (currentCard.name == guess) {
 			console.log("WOOOOO");
