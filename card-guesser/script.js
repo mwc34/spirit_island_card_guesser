@@ -102,6 +102,7 @@ function startSet() {
 	}
 	resetScore();
 	setCardsLeft(sample_count);
+	newCard();
 }
 
 function getSubset(population_count, sample_count) {
@@ -138,8 +139,7 @@ function makeGuess() {
 			incrementScore(false);
 		}
 		decrementCardsLeft();
-		if (getCardsLeft())
-			newCard();
+		newCard();
 	}
 }
 
