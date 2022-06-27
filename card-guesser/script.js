@@ -171,7 +171,7 @@ const cardsLeft = document.getElementById("cardsLeft");
 const score = document.getElementById("score");
 const completeCards = [];
 const cardTitles = [];
-window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.title)}});
+window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardTitles.push(card.title)}});
 autocomplete(cardInput, cardTitles);
 var currentCard = null;
 var cardsToGuess = [];
