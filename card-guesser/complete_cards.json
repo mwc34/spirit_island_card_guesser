@@ -41,7 +41,8 @@
         "language": "English",
         "meeple": false,
         "id": "a_circuitous_and_wending_journey",
-        "title": "A Circuitous And Wending Journey"
+        "title": "A Circuitous And Wending Journey",
+        "type": "unique"
     },
     {
         "name": "A Dreadful Tide Of Scurrying Flesh",
@@ -85,7 +86,8 @@
         "language": "English",
         "meeple": false,
         "id": "a_dreadful_tide_of_scurrying_flesh",
-        "title": "A Dreadful Tide Of Scurrying Flesh"
+        "title": "A Dreadful Tide Of Scurrying Flesh",
+        "type": "unique"
     },
     {
         "name": "A Year Of \nPerfect Stillness",
@@ -129,7 +131,8 @@
         "language": "English",
         "meeple": false,
         "id": "a_year_of_perfect_stillness",
-        "title": "A Year Of  Perfect Stillness"
+        "title": "A Year Of  Perfect Stillness",
+        "type": "unique"
     },
     {
         "name": "Absolute Stasis",
@@ -173,7 +176,8 @@
         "language": "English",
         "meeple": false,
         "id": "absolute_stasis",
-        "title": "Absolute Stasis"
+        "title": "Absolute Stasis",
+        "type": "unique"
     },
     {
         "name": "Absorb Corruption",
@@ -217,7 +221,8 @@
         "language": "English",
         "meeple": false,
         "id": "absorb_corruption",
-        "title": "Absorb Corruption"
+        "title": "Absorb Corruption",
+        "type": "minor"
     },
     {
         "name": "Absorb Essence",
@@ -261,7 +266,8 @@
         "language": "English",
         "meeple": false,
         "id": "absorb_essence",
-        "title": "Absorb Essence"
+        "title": "Absorb Essence",
+        "type": "unique"
     },
     {
         "name": "Accelerated Rot",
@@ -305,7 +311,8 @@
         "language": "English",
         "meeple": false,
         "id": "accelerated_rot",
-        "title": "Accelerated Rot"
+        "title": "Accelerated Rot",
+        "type": "major"
     },
     {
         "name": "Aid From The Spirit-Speakers",
@@ -349,7 +356,8 @@
         "language": "English",
         "meeple": false,
         "id": "aid_from_the_spiritspeakers",
-        "title": "Aid From The Spirit-Speakers"
+        "title": "Aid From The Spirit-Speakers",
+        "type": "unique"
     },
     {
         "name": "Angry Bears",
@@ -393,7 +401,8 @@
         "language": "English",
         "meeple": false,
         "id": "angry_bears",
-        "title": "Angry Bears"
+        "title": "Angry Bears",
+        "type": "major"
     },
     {
         "name": "Animated Wrackroot",
@@ -437,7 +446,8 @@
         "language": "English",
         "meeple": false,
         "id": "animated_wrackroot",
-        "title": "Animated Wrackroot"
+        "title": "Animated Wrackroot",
+        "type": "minor"
     },
     {
         "name": "Asphyxiating Smoke",
@@ -481,7 +491,8 @@
         "language": "English",
         "meeple": false,
         "id": "asphyxiating_smoke",
-        "title": "Asphyxiating Smoke"
+        "title": "Asphyxiating Smoke",
+        "type": "unique"
     },
     {
         "name": "Bargains Of Power\nAnd Protection",
@@ -525,7 +536,8 @@
         "language": "English",
         "meeple": false,
         "id": "bargains_of_power_and_protection",
-        "title": "Bargains Of Power And Protection"
+        "title": "Bargains Of Power And Protection",
+        "type": "major"
     },
     {
         "name": "Bats Scout For\nRaids By Darkness",
@@ -569,7 +581,8 @@
         "language": "English",
         "meeple": false,
         "id": "bats_scout_for_raids_by_darkness",
-        "title": "Bats Scout For Raids By Darkness"
+        "title": "Bats Scout For Raids By Darkness",
+        "type": "minor"
     },
     {
         "name": "Birds Cry Warning",
@@ -613,7 +626,8 @@
         "language": "English",
         "meeple": false,
         "id": "birds_cry_warning",
-        "title": "Birds Cry Warning"
+        "title": "Birds Cry Warning",
+        "type": "minor"
     },
     {
         "name": "Blazing Renewal",
@@ -657,7 +671,8 @@
         "language": "English",
         "meeple": false,
         "id": "blazing_renewal",
-        "title": "Blazing Renewal"
+        "title": "Blazing Renewal",
+        "type": "major"
     },
     {
         "name": "Blood Draws Predators",
@@ -701,7 +716,8 @@
         "language": "English",
         "meeple": false,
         "id": "blood_draws_predators",
-        "title": "Blood Draws Predators"
+        "title": "Blood Draws Predators",
+        "type": "minor"
     },
     {
         "name": "Bloodwrack Plague",
@@ -745,7 +761,8 @@
         "language": "English",
         "meeple": false,
         "id": "bloodwrack_plague",
-        "title": "Bloodwrack Plague"
+        "title": "Bloodwrack Plague",
+        "type": "major"
     },
     {
         "name": "Blur The Arc Of Years",
@@ -789,7 +806,8 @@
         "language": "English",
         "meeple": false,
         "id": "blur_the_arc_of_years",
-        "title": "Blur The Arc Of Years"
+        "title": "Blur The Arc Of Years",
+        "type": "unique"
     },
     {
         "name": "Boon Of Ancient\nMemories",
@@ -833,7 +851,8 @@
         "language": "English",
         "meeple": false,
         "id": "boon_of_ancient_memories",
-        "title": "Boon Of Ancient Memories"
+        "title": "Boon Of Ancient Memories",
+        "type": "unique"
     },
     {
         "name": "Boon Of Growing Power",
@@ -877,7 +896,8 @@
         "language": "English",
         "meeple": false,
         "id": "boon_of_growing_power",
-        "title": "Boon Of Growing Power"
+        "title": "Boon Of Growing Power",
+        "type": "unique"
     },
     {
         "name": "Boon Of Reimagining",
@@ -921,7 +941,8 @@
         "language": "English",
         "meeple": false,
         "id": "boon_of_reimagining",
-        "title": "Boon Of Reimagining"
+        "title": "Boon Of Reimagining",
+        "type": "unique"
     },
     {
         "name": "Boon Of Swarming\nBedevilment",
@@ -965,7 +986,8 @@
         "language": "English",
         "meeple": false,
         "id": "boon_of_swarming_bedevilment",
-        "title": "Boon Of Swarming Bedevilment"
+        "title": "Boon Of Swarming Bedevilment",
+        "type": "unique"
     },
     {
         "name": "Boon Of Vigor",
@@ -1009,7 +1031,8 @@
         "language": "English",
         "meeple": false,
         "id": "boon_of_vigor",
-        "title": "Boon Of Vigor"
+        "title": "Boon Of Vigor",
+        "type": "unique"
     },
     {
         "name": "Call Of The Dahan Ways",
@@ -1053,7 +1076,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_of_the_dahan_ways",
-        "title": "Call Of The Dahan Ways"
+        "title": "Call Of The Dahan Ways",
+        "type": "minor"
     },
     {
         "name": "Call Of The Deeps",
@@ -1097,7 +1121,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_of_the_deeps",
-        "title": "Call Of The Deeps"
+        "title": "Call Of The Deeps",
+        "type": "unique"
     },
     {
         "name": "Call On Midnight's Dream",
@@ -1141,7 +1166,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_on_midnights_dream",
-        "title": "Call On Midnight's Dream"
+        "title": "Call On Midnight's Dream",
+        "type": "unique"
     },
     {
         "name": "Call To Bloodshed",
@@ -1185,7 +1211,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_to_bloodshed",
-        "title": "Call To Bloodshed"
+        "title": "Call To Bloodshed",
+        "type": "minor"
     },
     {
         "name": "Call To Ferocity",
@@ -1229,7 +1256,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_to_ferocity",
-        "title": "Call To Ferocity"
+        "title": "Call To Ferocity",
+        "type": "minor"
     },
     {
         "name": "Call To Guard",
@@ -1273,7 +1301,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_to_guard",
-        "title": "Call To Guard"
+        "title": "Call To Guard",
+        "type": "minor"
     },
     {
         "name": "Call To Isolation",
@@ -1317,7 +1346,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_to_isolation",
-        "title": "Call To Isolation"
+        "title": "Call To Isolation",
+        "type": "minor"
     },
     {
         "name": "Call To Migrate",
@@ -1361,7 +1391,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_to_migrate",
-        "title": "Call To Migrate"
+        "title": "Call To Migrate",
+        "type": "minor"
     },
     {
         "name": "Call To Tend",
@@ -1405,7 +1436,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_to_tend",
-        "title": "Call To Tend"
+        "title": "Call To Tend",
+        "type": "minor"
     },
     {
         "name": "Call To Trade",
@@ -1449,7 +1481,8 @@
         "language": "English",
         "meeple": false,
         "id": "call_to_trade",
-        "title": "Call To Trade"
+        "title": "Call To Trade",
+        "type": "minor"
     },
     {
         "name": "Carapaced Land",
@@ -1493,7 +1526,8 @@
         "language": "English",
         "meeple": false,
         "id": "carapaced_land",
-        "title": "Carapaced Land"
+        "title": "Carapaced Land",
+        "type": "minor"
     },
     {
         "name": "Cast Down Into\nThe Briny Deep",
@@ -1537,7 +1571,8 @@
         "language": "English",
         "meeple": false,
         "id": "cast_down_into_the_briny_deep",
-        "title": "Cast Down Into The Briny Deep"
+        "title": "Cast Down Into The Briny Deep",
+        "type": "major"
     },
     {
         "name": "Cleansing Floods",
@@ -1581,7 +1616,8 @@
         "language": "English",
         "meeple": false,
         "id": "cleansing_floods",
-        "title": "Cleansing Floods"
+        "title": "Cleansing Floods",
+        "type": "major"
     },
     {
         "name": "Concealing Shadows",
@@ -1625,7 +1661,8 @@
         "language": "English",
         "meeple": false,
         "id": "concealing_shadows",
-        "title": "Concealing Shadows"
+        "title": "Concealing Shadows",
+        "type": "unique"
     },
     {
         "name": "Confounding Mists",
@@ -1669,7 +1706,8 @@
         "language": "English",
         "meeple": false,
         "id": "confounding_mists",
-        "title": "Confounding Mists"
+        "title": "Confounding Mists",
+        "type": "minor"
     },
     {
         "name": "Crops Wither And Fade",
@@ -1713,7 +1751,8 @@
         "language": "English",
         "meeple": false,
         "id": "crops_wither_and_fade",
-        "title": "Crops Wither And Fade"
+        "title": "Crops Wither And Fade",
+        "type": "unique"
     },
     {
         "name": "Cycles Of Time And Tide",
@@ -1757,7 +1796,8 @@
         "language": "English",
         "meeple": false,
         "id": "cycles_of_time_and_tide",
-        "title": "Cycles Of Time And Tide"
+        "title": "Cycles Of Time And Tide",
+        "type": "minor"
     },
     {
         "name": "Dark And Tangled Woods",
@@ -1801,7 +1841,8 @@
         "language": "English",
         "meeple": false,
         "id": "dark_and_tangled_woods",
-        "title": "Dark And Tangled Woods"
+        "title": "Dark And Tangled Woods",
+        "type": "minor"
     },
     {
         "name": "Dark Skies Loose A Stinging Rain",
@@ -1845,7 +1886,8 @@
         "language": "English",
         "meeple": false,
         "id": "dark_skies_loose_a_stinging_rain",
-        "title": "Dark Skies Loose A Stinging Rain"
+        "title": "Dark Skies Loose A Stinging Rain",
+        "type": "unique"
     },
     {
         "name": "Death Falls Gently From Open Blossoms",
@@ -1889,7 +1931,8 @@
         "language": "English",
         "meeple": false,
         "id": "death_falls_gently_from_open_blossoms",
-        "title": "Death Falls Gently From Open Blossoms"
+        "title": "Death Falls Gently From Open Blossoms",
+        "type": "major"
     },
     {
         "name": "Delusions Of Danger",
@@ -1933,7 +1976,8 @@
         "language": "English",
         "meeple": false,
         "id": "delusions_of_danger",
-        "title": "Delusions Of Danger"
+        "title": "Delusions Of Danger",
+        "type": "minor"
     },
     {
         "name": "Desiccating Winds",
@@ -1977,7 +2021,8 @@
         "language": "English",
         "meeple": false,
         "id": "desiccating_winds",
-        "title": "Desiccating Winds"
+        "title": "Desiccating Winds",
+        "type": "minor"
     },
     {
         "name": "Devouring Ants",
@@ -2021,7 +2066,8 @@
         "language": "English",
         "meeple": false,
         "id": "devouring_ants",
-        "title": "Devouring Ants"
+        "title": "Devouring Ants",
+        "type": "minor"
     },
     {
         "name": "Dire Metamorphosis",
@@ -2065,7 +2111,8 @@
         "language": "English",
         "meeple": false,
         "id": "dire_metamorphosis",
-        "title": "Dire Metamorphosis"
+        "title": "Dire Metamorphosis",
+        "type": "minor"
     },
     {
         "name": "Disorienting Landscape",
@@ -2109,7 +2156,8 @@
         "language": "English",
         "meeple": false,
         "id": "disorienting_landscape",
-        "title": "Disorienting Landscape"
+        "title": "Disorienting Landscape",
+        "type": "minor"
     },
     {
         "name": "Dissolve The Bonds Of Kinship",
@@ -2153,7 +2201,8 @@
         "language": "English",
         "meeple": false,
         "id": "dissolve_the_bonds_of_kinship",
-        "title": "Dissolve The Bonds Of Kinship"
+        "title": "Dissolve The Bonds Of Kinship",
+        "type": "major"
     },
     {
         "name": "Dissolving Vapors",
@@ -2197,7 +2246,8 @@
         "language": "English",
         "meeple": false,
         "id": "dissolving_vapors",
-        "title": "Dissolving Vapors"
+        "title": "Dissolving Vapors",
+        "type": "unique"
     },
     {
         "name": "Domesticated Animals\nGo Berserk",
@@ -2241,7 +2291,8 @@
         "language": "English",
         "meeple": false,
         "id": "domesticated_animals_go_berserk",
-        "title": "Domesticated Animals Go Berserk"
+        "title": "Domesticated Animals Go Berserk",
+        "type": "minor"
     },
     {
         "name": "Draw Of The Fruitful Earth",
@@ -2285,7 +2336,8 @@
         "language": "English",
         "meeple": false,
         "id": "draw_of_the_fruitful_earth",
-        "title": "Draw Of The Fruitful Earth"
+        "title": "Draw Of The Fruitful Earth",
+        "type": "major"
     },
     {
         "name": "Draw Towards A Consuming Void",
@@ -2329,7 +2381,8 @@
         "language": "English",
         "meeple": false,
         "id": "draw_towards_a_consuming_void",
-        "title": "Draw Towards A Consuming Void"
+        "title": "Draw Towards A Consuming Void",
+        "type": "unique"
     },
     {
         "name": "Dread Apparitions",
@@ -2373,7 +2426,8 @@
         "language": "English",
         "meeple": false,
         "id": "dread_apparitions",
-        "title": "Dread Apparitions"
+        "title": "Dread Apparitions",
+        "type": "unique"
     },
     {
         "name": "Dream Of The Untouched Land",
@@ -2417,7 +2471,8 @@
         "language": "English",
         "meeple": false,
         "id": "dream_of_the_untouched_land",
-        "title": "Dream Of The Untouched Land"
+        "title": "Dream Of The Untouched Land",
+        "type": "major"
     },
     {
         "name": "Dreams Of The Dahan",
@@ -2461,7 +2516,8 @@
         "language": "English",
         "meeple": false,
         "id": "dreams_of_the_dahan",
-        "title": "Dreams Of The Dahan"
+        "title": "Dreams Of The Dahan",
+        "type": "unique"
     },
     {
         "name": "Drift Down Into Slumber",
@@ -2505,7 +2561,8 @@
         "language": "English",
         "meeple": false,
         "id": "drift_down_into_slumber",
-        "title": "Drift Down Into Slumber"
+        "title": "Drift Down Into Slumber",
+        "type": "minor"
     },
     {
         "name": "Drought",
@@ -2549,7 +2606,8 @@
         "language": "English",
         "meeple": false,
         "id": "drought",
-        "title": "Drought"
+        "title": "Drought",
+        "type": "minor"
     },
     {
         "name": "Dry Wood Explodes In Smoldering Splinters",
@@ -2593,7 +2651,8 @@
         "language": "English",
         "meeple": false,
         "id": "dry_wood_explodes_in_smoldering_splinters",
-        "title": "Dry Wood Explodes In Smoldering Splinters"
+        "title": "Dry Wood Explodes In Smoldering Splinters",
+        "type": "minor"
     },
     {
         "name": "Elemental Aegis",
@@ -2637,7 +2696,8 @@
         "language": "English",
         "meeple": false,
         "id": "elemental_aegis",
-        "title": "Elemental Aegis"
+        "title": "Elemental Aegis",
+        "type": "unique"
     },
     {
         "name": "Elemental Boon",
@@ -2681,7 +2741,8 @@
         "language": "English",
         "meeple": false,
         "id": "elemental_boon",
-        "title": "Elemental Boon"
+        "title": "Elemental Boon",
+        "type": "minor"
     },
     {
         "name": "Elemental Teachings",
@@ -2725,7 +2786,8 @@
         "language": "English",
         "meeple": false,
         "id": "elemental_teachings",
-        "title": "Elemental Teachings"
+        "title": "Elemental Teachings",
+        "type": "unique"
     },
     {
         "name": "Elusive Ambushes",
@@ -2769,7 +2831,8 @@
         "language": "English",
         "meeple": false,
         "id": "elusive_ambushes",
-        "title": "Elusive Ambushes"
+        "title": "Elusive Ambushes",
+        "type": "minor"
     },
     {
         "name": "Encompassing Ward",
@@ -2813,7 +2876,8 @@
         "language": "English",
         "meeple": false,
         "id": "encompassing_ward",
-        "title": "Encompassing Ward"
+        "title": "Encompassing Ward",
+        "type": "minor"
     },
     {
         "name": "Enticing Splendor",
@@ -2857,7 +2921,8 @@
         "language": "English",
         "meeple": false,
         "id": "enticing_splendor",
-        "title": "Enticing Splendor"
+        "title": "Enticing Splendor",
+        "type": "minor"
     },
     {
         "name": "Entrancing Apparitions",
@@ -2901,7 +2966,8 @@
         "language": "English",
         "meeple": false,
         "id": "entrancing_apparitions",
-        "title": "Entrancing Apparitions"
+        "title": "Entrancing Apparitions",
+        "type": "minor"
     },
     {
         "name": "Entrap The Forces Of Corruption",
@@ -2945,7 +3011,8 @@
         "language": "English",
         "meeple": false,
         "id": "entrap_the_forces_of_corruption",
-        "title": "Entrap The Forces Of Corruption"
+        "title": "Entrap The Forces Of Corruption",
+        "type": "minor"
     },
     {
         "name": "Entwined Power",
@@ -2989,7 +3056,8 @@
         "language": "English",
         "meeple": false,
         "id": "entwined_power",
-        "title": "Entwined Power"
+        "title": "Entwined Power",
+        "type": "major"
     },
     {
         "name": "Ever-Multiplying Swarm",
@@ -3033,7 +3101,8 @@
         "language": "English",
         "meeple": false,
         "id": "evermultiplying_swarm",
-        "title": "Ever-Multiplying Swarm"
+        "title": "Ever-Multiplying Swarm",
+        "type": "unique"
     },
     {
         "name": "Exaltation Of\nMolten Stone",
@@ -3077,7 +3146,8 @@
         "language": "English",
         "meeple": false,
         "id": "exaltation_of_molten_stone",
-        "title": "Exaltation Of Molten Stone"
+        "title": "Exaltation Of Molten Stone",
+        "type": "unique"
     },
     {
         "name": "Favor of the Sun and Star-Lit Dark",
@@ -3121,7 +3191,8 @@
         "language": "English",
         "meeple": false,
         "id": "favor_of_the_sun_and_starlit_dark",
-        "title": "Favor of the Sun and Star-Lit Dark"
+        "title": "Favor of the Sun and Star-Lit Dark",
+        "type": "minor"
     },
     {
         "name": "Favors Called Due",
@@ -3165,7 +3236,8 @@
         "language": "English",
         "meeple": false,
         "id": "favors_called_due",
-        "title": "Favors Called Due"
+        "title": "Favors Called Due",
+        "type": "unique"
     },
     {
         "name": "Fetid Breath Spreads Infection",
@@ -3209,7 +3281,8 @@
         "language": "English",
         "meeple": false,
         "id": "fetid_breath_spreads_infection",
-        "title": "Fetid Breath Spreads Infection"
+        "title": "Fetid Breath Spreads Infection",
+        "type": "unique"
     },
     {
         "name": "Fields Choked With Growth",
@@ -3253,7 +3326,8 @@
         "language": "English",
         "meeple": false,
         "id": "fields_choked_with_growth",
-        "title": "Fields Choked With Growth"
+        "title": "Fields Choked With Growth",
+        "type": "unique"
     },
     {
         "name": "Fiery Vengeance",
@@ -3297,7 +3371,8 @@
         "language": "English",
         "meeple": false,
         "id": "fiery_vengeance",
-        "title": "Fiery Vengeance"
+        "title": "Fiery Vengeance",
+        "type": "unique"
     },
     {
         "name": "Fire And Flood",
@@ -3341,7 +3416,8 @@
         "language": "English",
         "meeple": false,
         "id": "fire_and_flood",
-        "title": "Fire And Flood"
+        "title": "Fire And Flood",
+        "type": "major"
     },
     {
         "name": "Fire In The Sky",
@@ -3385,7 +3461,8 @@
         "language": "English",
         "meeple": false,
         "id": "fire_in_the_sky",
-        "title": "Fire In The Sky"
+        "title": "Fire In The Sky",
+        "type": "minor"
     },
     {
         "name": "Flame's Fury",
@@ -3429,7 +3506,8 @@
         "language": "English",
         "meeple": false,
         "id": "flames_fury",
-        "title": "Flame's Fury"
+        "title": "Flame's Fury",
+        "type": "unique"
     },
     {
         "name": "Flash Floods",
@@ -3473,7 +3551,8 @@
         "language": "English",
         "meeple": false,
         "id": "flash_floods",
-        "title": "Flash Floods"
+        "title": "Flash Floods",
+        "type": "unique"
     },
     {
         "name": "Flash-Fires",
@@ -3517,7 +3596,8 @@
         "language": "English",
         "meeple": false,
         "id": "flashfires",
-        "title": "Flash-Fires"
+        "title": "Flash-Fires",
+        "type": "unique"
     },
     {
         "name": "Fleshrot Fever",
@@ -3561,7 +3641,8 @@
         "language": "English",
         "meeple": false,
         "id": "fleshrot_fever",
-        "title": "Fleshrot Fever"
+        "title": "Fleshrot Fever",
+        "type": "minor"
     },
     {
         "name": "Flow Downriver, Blow Downwind",
@@ -3605,7 +3686,8 @@
         "language": "English",
         "meeple": false,
         "id": "flow_downriver_blow_downwind",
-        "title": "Flow Downriver, Blow Downwind"
+        "title": "Flow Downriver, Blow Downwind",
+        "type": "minor"
     },
     {
         "name": "Flow Like Water, Reach Like Air",
@@ -3649,7 +3731,8 @@
         "language": "English",
         "meeple": false,
         "id": "flow_like_water_reach_like_air",
-        "title": "Flow Like Water, Reach Like Air"
+        "title": "Flow Like Water, Reach Like Air",
+        "type": "major"
     },
     {
         "name": "Flowing And Silent Forms Dart By",
@@ -3693,7 +3776,8 @@
         "language": "English",
         "meeple": false,
         "id": "flowing_and_silent_forms_dart_by",
-        "title": "Flowing And Silent Forms Dart By"
+        "title": "Flowing And Silent Forms Dart By",
+        "type": "unique"
     },
     {
         "name": "Focus the Land's Anguish",
@@ -3737,7 +3821,8 @@
         "language": "English",
         "meeple": false,
         "id": "focus_the_lands_anguish",
-        "title": "Focus the Land's Anguish"
+        "title": "Focus the Land's Anguish",
+        "type": "major"
     },
     {
         "name": "Forests Of Living Obsidian",
@@ -3781,7 +3866,8 @@
         "language": "English",
         "meeple": false,
         "id": "forests_of_living_obsidian",
-        "title": "Forests Of Living Obsidian"
+        "title": "Forests Of Living Obsidian",
+        "type": "major"
     },
     {
         "name": "Foundations Sink Into Mud",
@@ -3825,7 +3911,8 @@
         "language": "English",
         "meeple": false,
         "id": "foundations_sink_into_mud",
-        "title": "Foundations Sink Into Mud"
+        "title": "Foundations Sink Into Mud",
+        "type": "unique"
     },
     {
         "name": "Gather The Scattered Light Of Stars",
@@ -3869,7 +3956,8 @@
         "language": "English",
         "meeple": false,
         "id": "gather_the_scattered_light_of_stars",
-        "title": "Gather The Scattered Light Of Stars"
+        "title": "Gather The Scattered Light Of Stars",
+        "type": "unique"
     },
     {
         "name": "Gift Of Abundance",
@@ -3913,7 +4001,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_abundance",
-        "title": "Gift Of Abundance"
+        "title": "Gift Of Abundance",
+        "type": "unique"
     },
     {
         "name": "Gift Of Constancy",
@@ -3957,7 +4046,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_constancy",
-        "title": "Gift Of Constancy"
+        "title": "Gift Of Constancy",
+        "type": "minor"
     },
     {
         "name": "Gift Of Flowing Power",
@@ -4001,7 +4091,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_flowing_power",
-        "title": "Gift Of Flowing Power"
+        "title": "Gift Of Flowing Power",
+        "type": "unique"
     },
     {
         "name": "Gift Of Living Energy",
@@ -4045,7 +4136,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_living_energy",
-        "title": "Gift Of Living Energy"
+        "title": "Gift Of Living Energy",
+        "type": "minor"
     },
     {
         "name": "Gift Of Nature's Connection",
@@ -4089,7 +4181,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_natures_connection",
-        "title": "Gift Of Nature's Connection"
+        "title": "Gift Of Nature's Connection",
+        "type": "minor"
     },
     {
         "name": "Gift Of Power",
@@ -4133,7 +4226,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_power",
-        "title": "Gift Of Power"
+        "title": "Gift Of Power",
+        "type": "minor"
     },
     {
         "name": "Gift Of Proliferation",
@@ -4177,7 +4271,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_proliferation",
-        "title": "Gift Of Proliferation"
+        "title": "Gift Of Proliferation",
+        "type": "unique"
     },
     {
         "name": "Gift Of The\nPrimordial Deeps",
@@ -4221,7 +4316,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_the_primordial_deeps",
-        "title": "Gift Of The Primordial Deeps"
+        "title": "Gift Of The Primordial Deeps",
+        "type": "unique"
     },
     {
         "name": "Gift Of The Untamed Wild",
@@ -4265,7 +4361,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_the_untamed_wild",
-        "title": "Gift Of The Untamed Wild"
+        "title": "Gift Of The Untamed Wild",
+        "type": "unique"
     },
     {
         "name": "Gift Of Twinned Days",
@@ -4309,7 +4406,8 @@
         "language": "English",
         "meeple": false,
         "id": "gift_of_twinned_days",
-        "title": "Gift Of Twinned Days"
+        "title": "Gift Of Twinned Days",
+        "type": "minor"
     },
     {
         "name": "Gnawing Rootbiters",
@@ -4353,7 +4451,8 @@
         "language": "English",
         "meeple": false,
         "id": "gnawing_rootbiters",
-        "title": "Gnawing Rootbiters"
+        "title": "Gnawing Rootbiters",
+        "type": "minor"
     },
     {
         "name": "Gold's Allure",
@@ -4397,7 +4496,8 @@
         "language": "English",
         "meeple": false,
         "id": "golds_allure",
-        "title": "Gold's Allure"
+        "title": "Gold's Allure",
+        "type": "minor"
     },
     {
         "name": "Grant Hatred A Ravenous Form",
@@ -4441,7 +4541,8 @@
         "language": "English",
         "meeple": false,
         "id": "grant_hatred_a_ravenous_form",
-        "title": "Grant Hatred A Ravenous Form"
+        "title": "Grant Hatred A Ravenous Form",
+        "type": "major"
     },
     {
         "name": "Grasping Tide",
@@ -4485,7 +4586,8 @@
         "language": "English",
         "meeple": false,
         "id": "grasping_tide",
-        "title": "Grasping Tide"
+        "title": "Grasping Tide",
+        "type": "unique"
     },
     {
         "name": "Growth Through Sacrifice",
@@ -4529,7 +4631,8 @@
         "language": "English",
         "meeple": false,
         "id": "growth_through_sacrifice",
-        "title": "Growth Through Sacrifice"
+        "title": "Growth Through Sacrifice",
+        "type": "minor"
     },
     {
         "name": "Guard The Healing Land",
@@ -4573,7 +4676,8 @@
         "language": "English",
         "meeple": false,
         "id": "guard_the_healing_land",
-        "title": "Guard The Healing Land"
+        "title": "Guard The Healing Land",
+        "type": "unique"
     },
     {
         "name": "Guardian Serpents",
@@ -4617,7 +4721,8 @@
         "language": "English",
         "meeple": false,
         "id": "guardian_serpents",
-        "title": "Guardian Serpents"
+        "title": "Guardian Serpents",
+        "type": "minor"
     },
     {
         "name": "Guide The Way On Feathered Wings",
@@ -4661,7 +4766,8 @@
         "language": "English",
         "meeple": false,
         "id": "guide_the_way_on_feathered_wings",
-        "title": "Guide The Way On Feathered Wings"
+        "title": "Guide The Way On Feathered Wings",
+        "type": "unique"
     },
     {
         "name": "Harbingers Of The Lightning",
@@ -4705,7 +4811,8 @@
         "language": "English",
         "meeple": false,
         "id": "harbingers_of_the_lightning",
-        "title": "Harbingers Of The Lightning"
+        "title": "Harbingers Of The Lightning",
+        "type": "unique"
     },
     {
         "name": "Haunted By\nPrimal Memories",
@@ -4749,7 +4856,8 @@
         "language": "English",
         "meeple": false,
         "id": "haunted_by_primal_memories",
-        "title": "Haunted By Primal Memories"
+        "title": "Haunted By Primal Memories",
+        "type": "minor"
     },
     {
         "name": "Hazards Spread Across The Island",
@@ -4793,7 +4901,8 @@
         "language": "English",
         "meeple": false,
         "id": "hazards_spread_across_the_island",
-        "title": "Hazards Spread Across The Island"
+        "title": "Hazards Spread Across The Island",
+        "type": "minor"
     },
     {
         "name": "Here There Be Monsters",
@@ -4837,7 +4946,8 @@
         "language": "English",
         "meeple": false,
         "id": "here_there_be_monsters",
-        "title": "Here There Be Monsters"
+        "title": "Here There Be Monsters",
+        "type": "minor"
     },
     {
         "name": "Impersonate Authority",
@@ -4881,7 +4991,8 @@
         "language": "English",
         "meeple": false,
         "id": "impersonate_authority",
-        "title": "Impersonate Authority"
+        "title": "Impersonate Authority",
+        "type": "unique"
     },
     {
         "name": "Incite The Mob",
@@ -4925,7 +5036,8 @@
         "language": "English",
         "meeple": false,
         "id": "incite_the_mob",
-        "title": "Incite The Mob"
+        "title": "Incite The Mob",
+        "type": "unique"
     },
     {
         "name": "Indomitable Claim",
@@ -4969,7 +5081,8 @@
         "language": "English",
         "meeple": false,
         "id": "indomitable_claim",
-        "title": "Indomitable Claim"
+        "title": "Indomitable Claim",
+        "type": "major"
     },
     {
         "name": "Infestation Of Venomous Spiders",
@@ -5013,7 +5126,8 @@
         "language": "English",
         "meeple": false,
         "id": "infestation_of_venomous_spiders",
-        "title": "Infestation Of Venomous Spiders"
+        "title": "Infestation Of Venomous Spiders",
+        "type": "major"
     },
     {
         "name": "Infested Aquifers",
@@ -5057,7 +5171,8 @@
         "language": "English",
         "meeple": false,
         "id": "infested_aquifers",
-        "title": "Infested Aquifers"
+        "title": "Infested Aquifers",
+        "type": "minor"
     },
     {
         "name": "Infinite Vitality",
@@ -5101,7 +5216,8 @@
         "language": "English",
         "meeple": false,
         "id": "infinite_vitality",
-        "title": "Infinite Vitality"
+        "title": "Infinite Vitality",
+        "type": "major"
     },
     {
         "name": "Inflame The Fires Of Life",
@@ -5145,7 +5261,8 @@
         "language": "English",
         "meeple": false,
         "id": "inflame_the_fires_of_life",
-        "title": "Inflame The Fires Of Life"
+        "title": "Inflame The Fires Of Life",
+        "type": "minor"
     },
     {
         "name": "Insatiable Hunger\nOf The Swarm",
@@ -5189,7 +5306,8 @@
         "language": "English",
         "meeple": false,
         "id": "insatiable_hunger_of_the_swarm",
-        "title": "Insatiable Hunger Of The Swarm"
+        "title": "Insatiable Hunger Of The Swarm",
+        "type": "major"
     },
     {
         "name": "Instruments Of\nTheir Own Ruin",
@@ -5233,7 +5351,8 @@
         "language": "English",
         "meeple": false,
         "id": "instruments_of_their_own_ruin",
-        "title": "Instruments Of Their Own Ruin"
+        "title": "Instruments Of Their Own Ruin",
+        "type": "major"
     },
     {
         "name": "Irresistible Call",
@@ -5277,7 +5396,8 @@
         "language": "English",
         "meeple": false,
         "id": "irresistible_call",
-        "title": "Irresistible Call"
+        "title": "Irresistible Call",
+        "type": "major"
     },
     {
         "name": "Jagged Shards Push From The Earth",
@@ -5321,7 +5441,8 @@
         "language": "English",
         "meeple": false,
         "id": "jagged_shards_push_from_the_earth",
-        "title": "Jagged Shards Push From The Earth"
+        "title": "Jagged Shards Push From The Earth",
+        "type": "unique"
     },
     {
         "name": "Land Of Haunts And Embers",
@@ -5365,7 +5486,8 @@
         "language": "English",
         "meeple": false,
         "id": "land_of_haunts_and_embers",
-        "title": "Land Of Haunts And Embers"
+        "title": "Land Of Haunts And Embers",
+        "type": "minor"
     },
     {
         "name": "Lava Flows",
@@ -5409,7 +5531,8 @@
         "language": "English",
         "meeple": false,
         "id": "lava_flows",
-        "title": "Lava Flows"
+        "title": "Lava Flows",
+        "type": "unique"
     },
     {
         "name": "Lightning's Boon",
@@ -5453,7 +5576,8 @@
         "language": "English",
         "meeple": false,
         "id": "lightnings_boon",
-        "title": "Lightning's Boon"
+        "title": "Lightning's Boon",
+        "type": "unique"
     },
     {
         "name": "Like Calls To Like",
@@ -5497,7 +5621,8 @@
         "language": "English",
         "meeple": false,
         "id": "like_calls_to_like",
-        "title": "Like Calls To Like"
+        "title": "Like Calls To Like",
+        "type": "minor"
     },
     {
         "name": "Lure Of The Unknown",
@@ -5541,7 +5666,8 @@
         "language": "English",
         "meeple": false,
         "id": "lure_of_the_unknown",
-        "title": "Lure Of The Unknown"
+        "title": "Lure Of The Unknown",
+        "type": "minor"
     },
     {
         "name": "Manifest Incarnation",
@@ -5585,7 +5711,8 @@
         "language": "English",
         "meeple": false,
         "id": "manifest_incarnation",
-        "title": "Manifest Incarnation"
+        "title": "Manifest Incarnation",
+        "type": "major"
     },
     {
         "name": "Manifestation Of\nPower And Glory",
@@ -5629,7 +5756,8 @@
         "language": "English",
         "meeple": false,
         "id": "manifestation_of_power_and_glory",
-        "title": "Manifestation Of Power And Glory"
+        "title": "Manifestation Of Power And Glory",
+        "type": "unique"
     },
     {
         "name": "Mantle Of Dread",
@@ -5673,7 +5801,8 @@
         "language": "English",
         "meeple": false,
         "id": "mantle_of_dread",
-        "title": "Mantle Of Dread"
+        "title": "Mantle Of Dread",
+        "type": "unique"
     },
     {
         "name": "Melt Earth Into Quicksand",
@@ -5717,7 +5846,8 @@
         "language": "English",
         "meeple": false,
         "id": "melt_earth_into_quicksand",
-        "title": "Melt Earth Into Quicksand"
+        "title": "Melt Earth Into Quicksand",
+        "type": "major"
     },
     {
         "name": "Mesmerized Tranquility",
@@ -5761,7 +5891,8 @@
         "language": "English",
         "meeple": false,
         "id": "mesmerized_tranquility",
-        "title": "Mesmerized Tranquility"
+        "title": "Mesmerized Tranquility",
+        "type": "minor"
     },
     {
         "name": "Mists Of Oblivion",
@@ -5805,7 +5936,8 @@
         "language": "English",
         "meeple": false,
         "id": "mists_of_oblivion",
-        "title": "Mists Of Oblivion"
+        "title": "Mists Of Oblivion",
+        "type": "major"
     },
     {
         "name": "Nature's Resilience",
@@ -5849,7 +5981,8 @@
         "language": "English",
         "meeple": false,
         "id": "natures_resilience",
-        "title": "Nature's Resilience"
+        "title": "Nature's Resilience",
+        "type": "minor"
     },
     {
         "name": "Offer Passage\nBetween Worlds",
@@ -5893,7 +6026,8 @@
         "language": "English",
         "meeple": false,
         "id": "offer_passage_between_worlds",
-        "title": "Offer Passage Between Worlds"
+        "title": "Offer Passage Between Worlds",
+        "type": "unique"
     },
     {
         "name": "Overenthusiastic Arson",
@@ -5937,7 +6071,8 @@
         "language": "English",
         "meeple": false,
         "id": "overenthusiastic_arson",
-        "title": "Overenthusiastic Arson"
+        "title": "Overenthusiastic Arson",
+        "type": "unique"
     },
     {
         "name": "Overgrow In A Night",
@@ -5981,7 +6116,8 @@
         "language": "English",
         "meeple": false,
         "id": "overgrow_in_a_night",
-        "title": "Overgrow In A Night"
+        "title": "Overgrow In A Night",
+        "type": "unique"
     },
     {
         "name": "Pact Of The Joined Hunt",
@@ -6025,7 +6161,8 @@
         "language": "English",
         "meeple": false,
         "id": "pact_of_the_joined_hunt",
-        "title": "Pact Of The Joined Hunt"
+        "title": "Pact Of The Joined Hunt",
+        "type": "minor"
     },
     {
         "name": "Paralyzing Fright",
@@ -6069,7 +6206,8 @@
         "language": "English",
         "meeple": false,
         "id": "paralyzing_fright",
-        "title": "Paralyzing Fright"
+        "title": "Paralyzing Fright",
+        "type": "major"
     },
     {
         "name": "Paths Tied By Nature",
@@ -6113,7 +6251,8 @@
         "language": "English",
         "meeple": false,
         "id": "paths_tied_by_nature",
-        "title": "Paths Tied By Nature"
+        "title": "Paths Tied By Nature",
+        "type": "unique"
     },
     {
         "name": "Peace Of The\nNighttime Sky",
@@ -6157,7 +6296,8 @@
         "language": "English",
         "meeple": false,
         "id": "peace_of_the_nighttime_sky",
-        "title": "Peace Of The Nighttime Sky"
+        "title": "Peace Of The Nighttime Sky",
+        "type": "unique"
     },
     {
         "name": "Pent-up Calamity",
@@ -6201,7 +6341,8 @@
         "language": "English",
         "meeple": false,
         "id": "pentup_calamity",
-        "title": "Pent-up Calamity"
+        "title": "Pent-up Calamity",
+        "type": "major"
     },
     {
         "name": "Perils Of The\nDeepest Island",
@@ -6245,7 +6386,8 @@
         "language": "English",
         "meeple": false,
         "id": "perils_of_the_deepest_island",
-        "title": "Perils Of The Deepest Island"
+        "title": "Perils Of The Deepest Island",
+        "type": "unique"
     },
     {
         "name": "Pillar Of Living Flame",
@@ -6289,7 +6431,8 @@
         "language": "English",
         "meeple": false,
         "id": "pillar_of_living_flame",
-        "title": "Pillar Of Living Flame"
+        "title": "Pillar Of Living Flame",
+        "type": "major"
     },
     {
         "name": "Plaguebearers",
@@ -6333,7 +6476,8 @@
         "language": "English",
         "meeple": false,
         "id": "plaguebearers",
-        "title": "Plaguebearers"
+        "title": "Plaguebearers",
+        "type": "unique"
     },
     {
         "name": "Plows Shatter On\nRocky Ground",
@@ -6377,7 +6521,8 @@
         "language": "English",
         "meeple": false,
         "id": "plows_shatter_on_rocky_ground",
-        "title": "Plows Shatter On Rocky Ground"
+        "title": "Plows Shatter On Rocky Ground",
+        "type": "unique"
     },
     {
         "name": "Poisoned Dew",
@@ -6421,7 +6566,8 @@
         "language": "English",
         "meeple": false,
         "id": "poisoned_dew",
-        "title": "Poisoned Dew"
+        "title": "Poisoned Dew",
+        "type": "minor"
     },
     {
         "name": "Poisoned Land",
@@ -6465,7 +6611,8 @@
         "language": "English",
         "meeple": false,
         "id": "poisoned_land",
-        "title": "Poisoned Land"
+        "title": "Poisoned Land",
+        "type": "major"
     },
     {
         "name": "Portents Of Disaster",
@@ -6509,7 +6656,8 @@
         "language": "English",
         "meeple": false,
         "id": "portents_of_disaster",
-        "title": "Portents Of Disaster"
+        "title": "Portents Of Disaster",
+        "type": "minor"
     },
     {
         "name": "Pour Time Sideways",
@@ -6553,7 +6701,8 @@
         "language": "English",
         "meeple": false,
         "id": "pour_time_sideways",
-        "title": "Pour Time Sideways"
+        "title": "Pour Time Sideways",
+        "type": "unique"
     },
     {
         "name": "Powerstorm",
@@ -6597,7 +6746,8 @@
         "language": "English",
         "meeple": false,
         "id": "powerstorm",
-        "title": "Powerstorm"
+        "title": "Powerstorm",
+        "type": "major"
     },
     {
         "name": "Predatory Nightmares",
@@ -6641,7 +6791,8 @@
         "language": "English",
         "meeple": false,
         "id": "predatory_nightmares",
-        "title": "Predatory Nightmares"
+        "title": "Predatory Nightmares",
+        "type": "unique"
     },
     {
         "name": "Prey On The Builders",
@@ -6685,7 +6836,8 @@
         "language": "English",
         "meeple": false,
         "id": "prey_on_the_builders",
-        "title": "Prey On The Builders"
+        "title": "Prey On The Builders",
+        "type": "unique"
     },
     {
         "name": "Promises Of Protection",
@@ -6729,7 +6881,8 @@
         "language": "English",
         "meeple": false,
         "id": "promises_of_protection",
-        "title": "Promises Of Protection"
+        "title": "Promises Of Protection",
+        "type": "minor"
     },
     {
         "name": "Prowling Panthers",
@@ -6773,7 +6926,8 @@
         "language": "English",
         "meeple": false,
         "id": "prowling_panthers",
-        "title": "Prowling Panthers"
+        "title": "Prowling Panthers",
+        "type": "minor"
     },
     {
         "name": "Pull Beneath\nThe Hungry Earth",
@@ -6817,7 +6971,8 @@
         "language": "English",
         "meeple": false,
         "id": "pull_beneath_the_hungry_earth",
-        "title": "Pull Beneath The Hungry Earth"
+        "title": "Pull Beneath The Hungry Earth",
+        "type": "minor"
     },
     {
         "name": "Purifying Flame",
@@ -6861,7 +7016,8 @@
         "language": "English",
         "meeple": false,
         "id": "purifying_flame",
-        "title": "Purifying Flame"
+        "title": "Purifying Flame",
+        "type": "minor"
     },
     {
         "name": "Pursue With Scratches,\nPecks, And Stings",
@@ -6905,7 +7061,8 @@
         "language": "English",
         "meeple": false,
         "id": "pursue_with_scratches_pecks_and_stings",
-        "title": "Pursue With Scratches, Pecks, And Stings"
+        "title": "Pursue With Scratches, Pecks, And Stings",
+        "type": "unique"
     },
     {
         "name": "Pyroclastic Bombardment",
@@ -6949,7 +7106,8 @@
         "language": "English",
         "meeple": false,
         "id": "pyroclastic_bombardment",
-        "title": "Pyroclastic Bombardment"
+        "title": "Pyroclastic Bombardment",
+        "type": "unique"
     },
     {
         "name": "Pyroclastic Flow",
@@ -6993,7 +7151,8 @@
         "language": "English",
         "meeple": false,
         "id": "pyroclastic_flow",
-        "title": "Pyroclastic Flow"
+        "title": "Pyroclastic Flow",
+        "type": "major"
     },
     {
         "name": "Quicken The\nEarth's Struggles",
@@ -7037,7 +7196,8 @@
         "language": "English",
         "meeple": false,
         "id": "quicken_the_earths_struggles",
-        "title": "Quicken The Earth's Struggles"
+        "title": "Quicken The Earth's Struggles",
+        "type": "minor"
     },
     {
         "name": "Raging Storm",
@@ -7081,7 +7241,8 @@
         "language": "English",
         "meeple": false,
         "id": "raging_storm",
-        "title": "Raging Storm"
+        "title": "Raging Storm",
+        "type": "unique"
     },
     {
         "name": "Rain Of Ash",
@@ -7125,7 +7286,8 @@
         "language": "English",
         "meeple": false,
         "id": "rain_of_ash",
-        "title": "Rain Of Ash"
+        "title": "Rain Of Ash",
+        "type": "unique"
     },
     {
         "name": "Rain Of Blood",
@@ -7169,7 +7331,8 @@
         "language": "English",
         "meeple": false,
         "id": "rain_of_blood",
-        "title": "Rain Of Blood"
+        "title": "Rain Of Blood",
+        "type": "minor"
     },
     {
         "name": "Razor-sharp Undergrowth",
@@ -7213,7 +7376,8 @@
         "language": "English",
         "meeple": false,
         "id": "razorsharp_undergrowth",
-        "title": "Razor-sharp Undergrowth"
+        "title": "Razor-sharp Undergrowth",
+        "type": "minor"
     },
     {
         "name": "Reaching Grasp",
@@ -7257,7 +7421,8 @@
         "language": "English",
         "meeple": false,
         "id": "reaching_grasp",
-        "title": "Reaching Grasp"
+        "title": "Reaching Grasp",
+        "type": "minor"
     },
     {
         "name": "Regrow From Roots",
@@ -7301,7 +7466,8 @@
         "language": "English",
         "meeple": false,
         "id": "regrow_from_roots",
-        "title": "Regrow From Roots"
+        "title": "Regrow From Roots",
+        "type": "unique"
     },
     {
         "name": "Renewing Boon",
@@ -7345,7 +7511,8 @@
         "language": "English",
         "meeple": false,
         "id": "renewing_boon",
-        "title": "Renewing Boon"
+        "title": "Renewing Boon",
+        "type": "minor"
     },
     {
         "name": "Renewing Rain",
@@ -7389,7 +7556,8 @@
         "language": "English",
         "meeple": false,
         "id": "renewing_rain",
-        "title": "Renewing Rain"
+        "title": "Renewing Rain",
+        "type": "minor"
     },
     {
         "name": "Rites Of The\nLand's Rejection",
@@ -7433,7 +7601,8 @@
         "language": "English",
         "meeple": false,
         "id": "rites_of_the_lands_rejection",
-        "title": "Rites Of The Land's Rejection"
+        "title": "Rites Of The Land's Rejection",
+        "type": "minor"
     },
     {
         "name": "Rituals Of Destruction",
@@ -7477,7 +7646,8 @@
         "language": "English",
         "meeple": false,
         "id": "rituals_of_destruction",
-        "title": "Rituals Of Destruction"
+        "title": "Rituals Of Destruction",
+        "type": "unique"
     },
     {
         "name": "River's Bounty",
@@ -7521,7 +7691,8 @@
         "language": "English",
         "meeple": false,
         "id": "rivers_bounty",
-        "title": "River's Bounty"
+        "title": "River's Bounty",
+        "type": "unique"
     },
     {
         "name": "Rouse The Trees\nAnd Stones",
@@ -7565,7 +7736,8 @@
         "language": "English",
         "meeple": false,
         "id": "rouse_the_trees_and_stones",
-        "title": "Rouse The Trees And Stones"
+        "title": "Rouse The Trees And Stones",
+        "type": "minor"
     },
     {
         "name": "Sacrosanct Wilderness",
@@ -7609,7 +7781,8 @@
         "language": "English",
         "meeple": false,
         "id": "sacrosanct_wilderness",
-        "title": "Sacrosanct Wilderness"
+        "title": "Sacrosanct Wilderness",
+        "type": "unique"
     },
     {
         "name": "Sap The Strength\nOf Multitudes",
@@ -7653,7 +7826,8 @@
         "language": "English",
         "meeple": false,
         "id": "sap_the_strength_of_multitudes",
-        "title": "Sap The Strength Of Multitudes"
+        "title": "Sap The Strength Of Multitudes",
+        "type": "minor"
     },
     {
         "name": "Savage Mawbeasts",
@@ -7697,7 +7871,8 @@
         "language": "English",
         "meeple": false,
         "id": "savage_mawbeasts",
-        "title": "Savage Mawbeasts"
+        "title": "Savage Mawbeasts",
+        "type": "minor"
     },
     {
         "name": "Savage Transformation",
@@ -7741,7 +7916,8 @@
         "language": "English",
         "meeple": false,
         "id": "savage_transformation",
-        "title": "Savage Transformation"
+        "title": "Savage Transformation",
+        "type": "major"
     },
     {
         "name": "Scarred And\nStony Land",
@@ -7785,7 +7961,8 @@
         "language": "English",
         "meeple": false,
         "id": "scarred_and_stony_land",
-        "title": "Scarred And Stony Land"
+        "title": "Scarred And Stony Land",
+        "type": "unique"
     },
     {
         "name": "Scour The Land",
@@ -7829,7 +8006,8 @@
         "language": "English",
         "meeple": false,
         "id": "scour_the_land",
-        "title": "Scour The Land"
+        "title": "Scour The Land",
+        "type": "minor"
     },
     {
         "name": "Scream Disease Into The Wind",
@@ -7873,7 +8051,8 @@
         "language": "English",
         "meeple": false,
         "id": "scream_disease_into_the_wind",
-        "title": "Scream Disease Into The Wind"
+        "title": "Scream Disease Into The Wind",
+        "type": "minor"
     },
     {
         "name": "Sea Monsters",
@@ -7917,7 +8096,8 @@
         "language": "English",
         "meeple": false,
         "id": "sea_monsters",
-        "title": "Sea Monsters"
+        "title": "Sea Monsters",
+        "type": "major"
     },
     {
         "name": "Sear Anger Into The Wild Lands",
@@ -7961,7 +8141,8 @@
         "language": "English",
         "meeple": false,
         "id": "sear_anger_into_the_wild_lands",
-        "title": "Sear Anger Into The Wild Lands"
+        "title": "Sear Anger Into The Wild Lands",
+        "type": "minor"
     },
     {
         "name": "Set Them On An Ever-Twisting Trail",
@@ -8005,7 +8186,8 @@
         "language": "English",
         "meeple": false,
         "id": "set_them_on_an_evertwisting_trail",
-        "title": "Set Them On An Ever-Twisting Trail"
+        "title": "Set Them On An Ever-Twisting Trail",
+        "type": "minor"
     },
     {
         "name": "Settle Into Hunting-Grounds",
@@ -8049,7 +8231,8 @@
         "language": "English",
         "meeple": false,
         "id": "settle_into_huntinggrounds",
-        "title": "Settle Into Hunting-Grounds"
+        "title": "Settle Into Hunting-Grounds",
+        "type": "major"
     },
     {
         "name": "Shadows Of The\nBurning Forest",
@@ -8093,7 +8276,8 @@
         "language": "English",
         "meeple": false,
         "id": "shadows_of_the_burning_forest",
-        "title": "Shadows Of The Burning Forest"
+        "title": "Shadows Of The Burning Forest",
+        "type": "minor"
     },
     {
         "name": "Shape The Self Anew",
@@ -8137,7 +8321,8 @@
         "language": "English",
         "meeple": false,
         "id": "shape_the_self_anew",
-        "title": "Shape The Self Anew"
+        "title": "Shape The Self Anew",
+        "type": "unique"
     },
     {
         "name": "Share Secrets Of Survival",
@@ -8181,7 +8366,8 @@
         "language": "English",
         "meeple": false,
         "id": "share_secrets_of_survival",
-        "title": "Share Secrets Of Survival"
+        "title": "Share Secrets Of Survival",
+        "type": "unique"
     },
     {
         "name": "Shatter Homesteads",
@@ -8225,7 +8411,8 @@
         "language": "English",
         "meeple": false,
         "id": "shatter_homesteads",
-        "title": "Shatter Homesteads"
+        "title": "Shatter Homesteads",
+        "type": "unique"
     },
     {
         "name": "Skies Herald The\nSeason Of Return",
@@ -8269,7 +8456,8 @@
         "language": "English",
         "meeple": false,
         "id": "skies_herald_the_season_of_return",
-        "title": "Skies Herald The Season Of Return"
+        "title": "Skies Herald The Season Of Return",
+        "type": "minor"
     },
     {
         "name": "Sky Stretches To Shore",
@@ -8313,7 +8501,8 @@
         "language": "English",
         "meeple": false,
         "id": "sky_stretches_to_shore",
-        "title": "Sky Stretches To Shore"
+        "title": "Sky Stretches To Shore",
+        "type": "minor"
     },
     {
         "name": "Sleep And Never Waken",
@@ -8357,7 +8546,8 @@
         "language": "English",
         "meeple": false,
         "id": "sleep_and_never_waken",
-        "title": "Sleep And Never Waken"
+        "title": "Sleep And Never Waken",
+        "type": "major"
     },
     {
         "name": "Smothering Infestation",
@@ -8401,7 +8591,8 @@
         "language": "English",
         "meeple": false,
         "id": "smothering_infestation",
-        "title": "Smothering Infestation"
+        "title": "Smothering Infestation",
+        "type": "major"
     },
     {
         "name": "Softly Beckon\nEver Inward",
@@ -8445,7 +8636,8 @@
         "language": "English",
         "meeple": false,
         "id": "softly_beckon_ever_inward",
-        "title": "Softly Beckon Ever Inward"
+        "title": "Softly Beckon Ever Inward",
+        "type": "unique"
     },
     {
         "name": "Song Of Sanctity",
@@ -8489,7 +8681,8 @@
         "language": "English",
         "meeple": false,
         "id": "song_of_sanctity",
-        "title": "Song Of Sanctity"
+        "title": "Song Of Sanctity",
+        "type": "minor"
     },
     {
         "name": "Spill Bitterness\nInto The Earth",
@@ -8533,7 +8726,8 @@
         "language": "English",
         "meeple": false,
         "id": "spill_bitterness_into_the_earth",
-        "title": "Spill Bitterness Into The Earth"
+        "title": "Spill Bitterness Into The Earth",
+        "type": "major"
     },
     {
         "name": "Spur On With Words Of Fire",
@@ -8577,7 +8771,8 @@
         "language": "English",
         "meeple": false,
         "id": "spur_on_with_words_of_fire",
-        "title": "Spur On With Words Of Fire"
+        "title": "Spur On With Words Of Fire",
+        "type": "minor"
     },
     {
         "name": "Steam Vents",
@@ -8621,7 +8816,8 @@
         "language": "English",
         "meeple": false,
         "id": "steam_vents",
-        "title": "Steam Vents"
+        "title": "Steam Vents",
+        "type": "minor"
     },
     {
         "name": "Stem The Flow\nOf Fresh Water",
@@ -8665,7 +8861,8 @@
         "language": "English",
         "meeple": false,
         "id": "stem_the_flow_of_fresh_water",
-        "title": "Stem The Flow Of Fresh Water"
+        "title": "Stem The Flow Of Fresh Water",
+        "type": "unique"
     },
     {
         "name": "Storm-Swath",
@@ -8709,7 +8906,8 @@
         "language": "English",
         "meeple": false,
         "id": "stormswath",
-        "title": "Storm-Swath"
+        "title": "Storm-Swath",
+        "type": "major"
     },
     {
         "name": "Strangling Firevine",
@@ -8753,7 +8951,8 @@
         "language": "English",
         "meeple": false,
         "id": "strangling_firevine",
-        "title": "Strangling Firevine"
+        "title": "Strangling Firevine",
+        "type": "major"
     },
     {
         "name": "Strike Low With\nSudden Fevers",
@@ -8797,7 +8996,8 @@
         "language": "English",
         "meeple": false,
         "id": "strike_low_with_sudden_fevers",
-        "title": "Strike Low With Sudden Fevers"
+        "title": "Strike Low With Sudden Fevers",
+        "type": "unique"
     },
     {
         "name": "Strong And Constant Currents",
@@ -8841,7 +9041,8 @@
         "language": "English",
         "meeple": false,
         "id": "strong_and_constant_currents",
-        "title": "Strong And Constant Currents"
+        "title": "Strong And Constant Currents",
+        "type": "minor"
     },
     {
         "name": "Stubborn Solidity",
@@ -8885,7 +9086,8 @@
         "language": "English",
         "meeple": false,
         "id": "stubborn_solidity",
-        "title": "Stubborn Solidity"
+        "title": "Stubborn Solidity",
+        "type": "unique"
     },
     {
         "name": "Study The\nInvaders' Fears",
@@ -8929,7 +9131,8 @@
         "language": "English",
         "meeple": false,
         "id": "study_the_invaders_fears",
-        "title": "Study The Invaders' Fears"
+        "title": "Study The Invaders' Fears",
+        "type": "unique"
     },
     {
         "name": "Sucking Ooze",
@@ -8973,7 +9176,8 @@
         "language": "English",
         "meeple": false,
         "id": "sucking_ooze",
-        "title": "Sucking Ooze"
+        "title": "Sucking Ooze",
+        "type": "minor"
     },
     {
         "name": "Sudden Ambush",
@@ -9017,7 +9221,8 @@
         "language": "English",
         "meeple": false,
         "id": "sudden_ambush",
-        "title": "Sudden Ambush"
+        "title": "Sudden Ambush",
+        "type": "unique"
     },
     {
         "name": "Sunset's Fire Flows Across The Land",
@@ -9061,7 +9266,8 @@
         "language": "English",
         "meeple": false,
         "id": "sunsets_fire_flows_across_the_land",
-        "title": "Sunset's Fire Flows Across The Land"
+        "title": "Sunset's Fire Flows Across The Land",
+        "type": "minor"
     },
     {
         "name": "Swallow The Land-dwellers",
@@ -9105,7 +9311,8 @@
         "language": "English",
         "meeple": false,
         "id": "swallow_the_landdwellers",
-        "title": "Swallow The Land-dwellers"
+        "title": "Swallow The Land-dwellers",
+        "type": "unique"
     },
     {
         "name": "Swallowed By\nThe Wilderness",
@@ -9149,7 +9356,8 @@
         "language": "English",
         "meeple": false,
         "id": "swallowed_by_the_wilderness",
-        "title": "Swallowed By The Wilderness"
+        "title": "Swallowed By The Wilderness",
+        "type": "unique"
     },
     {
         "name": "Swarming Wasps",
@@ -9193,7 +9401,8 @@
         "language": "English",
         "meeple": false,
         "id": "swarming_wasps",
-        "title": "Swarming Wasps"
+        "title": "Swarming Wasps",
+        "type": "minor"
     },
     {
         "name": "Sweep Into The Sea",
@@ -9237,7 +9446,8 @@
         "language": "English",
         "meeple": false,
         "id": "sweep_into_the_sea",
-        "title": "Sweep Into The Sea"
+        "title": "Sweep Into The Sea",
+        "type": "major"
     },
     {
         "name": "Talons Of Lightning",
@@ -9281,7 +9491,8 @@
         "language": "English",
         "meeple": false,
         "id": "talons_of_lightning",
-        "title": "Talons Of Lightning"
+        "title": "Talons Of Lightning",
+        "type": "major"
     },
     {
         "name": "Teeming Rivers",
@@ -9325,7 +9536,8 @@
         "language": "English",
         "meeple": false,
         "id": "teeming_rivers",
-        "title": "Teeming Rivers"
+        "title": "Teeming Rivers",
+        "type": "minor"
     },
     {
         "name": "Teeth Gleam\nFrom Darkness",
@@ -9369,7 +9581,8 @@
         "language": "English",
         "meeple": false,
         "id": "teeth_gleam_from_darkness",
-        "title": "Teeth Gleam From Darkness"
+        "title": "Teeth Gleam From Darkness",
+        "type": "unique"
     },
     {
         "name": "Terrifying Chase",
@@ -9413,7 +9626,8 @@
         "language": "English",
         "meeple": false,
         "id": "terrifying_chase",
-        "title": "Terrifying Chase"
+        "title": "Terrifying Chase",
+        "type": "unique"
     },
     {
         "name": "Terrifying Nightmares",
@@ -9457,7 +9671,8 @@
         "language": "English",
         "meeple": false,
         "id": "terrifying_nightmares",
-        "title": "Terrifying Nightmares"
+        "title": "Terrifying Nightmares",
+        "type": "major"
     },
     {
         "name": "Territorial Strife",
@@ -9501,7 +9716,8 @@
         "language": "English",
         "meeple": false,
         "id": "territorial_strife",
-        "title": "Territorial Strife"
+        "title": "Territorial Strife",
+        "type": "minor"
     },
     {
         "name": "Terror Turns To Madness",
@@ -9545,7 +9761,8 @@
         "language": "English",
         "meeple": false,
         "id": "terror_turns_to_madness",
-        "title": "Terror Turns To Madness"
+        "title": "Terror Turns To Madness",
+        "type": "minor"
     },
     {
         "name": "The Fog Closes In",
@@ -9589,7 +9806,8 @@
         "language": "English",
         "meeple": false,
         "id": "the_fog_closes_in",
-        "title": "The Fog Closes In"
+        "title": "The Fog Closes In",
+        "type": "unique"
     },
     {
         "name": "The Jungle Hungers",
@@ -9633,7 +9851,8 @@
         "language": "English",
         "meeple": false,
         "id": "the_jungle_hungers",
-        "title": "The Jungle Hungers"
+        "title": "The Jungle Hungers",
+        "type": "major"
     },
     {
         "name": "The Land Thrashes\nIn Furious Pain",
@@ -9677,7 +9896,8 @@
         "language": "English",
         "meeple": false,
         "id": "the_land_thrashes_in_furious_pain",
-        "title": "The Land Thrashes In Furious Pain"
+        "title": "The Land Thrashes In Furious Pain",
+        "type": "major"
     },
     {
         "name": "The Past Returns Again",
@@ -9721,7 +9941,8 @@
         "language": "English",
         "meeple": false,
         "id": "the_past_returns_again",
-        "title": "The Past Returns Again"
+        "title": "The Past Returns Again",
+        "type": "unique"
     },
     {
         "name": "The Shore Seethes\nWith Hatred",
@@ -9765,7 +9986,8 @@
         "language": "English",
         "meeple": false,
         "id": "the_shore_seethes_with_hatred",
-        "title": "The Shore Seethes With Hatred"
+        "title": "The Shore Seethes With Hatred",
+        "type": "minor"
     },
     {
         "name": "The Trees And Stones\nSpeak Of War",
@@ -9809,7 +10031,8 @@
         "language": "English",
         "meeple": false,
         "id": "the_trees_and_stones_speak_of_war",
-        "title": "The Trees And Stones Speak Of War"
+        "title": "The Trees And Stones Speak Of War",
+        "type": "major"
     },
     {
         "name": "The Wounded Wild Turns On Its Assailants",
@@ -9853,7 +10076,8 @@
         "language": "English",
         "meeple": false,
         "id": "the_wounded_wild_turns_on_its_assailants",
-        "title": "The Wounded Wild Turns On Its Assailants"
+        "title": "The Wounded Wild Turns On Its Assailants",
+        "type": "major"
     },
     {
         "name": "Thickets Erupt With Every Touch Of Breeze",
@@ -9897,7 +10121,8 @@
         "language": "English",
         "meeple": false,
         "id": "thickets_erupt_with_every_touch_of_breeze",
-        "title": "Thickets Erupt With Every Touch Of Breeze"
+        "title": "Thickets Erupt With Every Touch Of Breeze",
+        "type": "major"
     },
     {
         "name": "Threatening Flames",
@@ -9941,7 +10166,8 @@
         "language": "English",
         "meeple": false,
         "id": "threatening_flames",
-        "title": "Threatening Flames"
+        "title": "Threatening Flames",
+        "type": "unique"
     },
     {
         "name": "Thriving Chokefungus",
@@ -9985,7 +10211,8 @@
         "language": "English",
         "meeple": false,
         "id": "thriving_chokefungus",
-        "title": "Thriving Chokefungus"
+        "title": "Thriving Chokefungus",
+        "type": "minor"
     },
     {
         "name": "Tidal Boon",
@@ -10029,7 +10256,8 @@
         "language": "English",
         "meeple": false,
         "id": "tidal_boon",
-        "title": "Tidal Boon"
+        "title": "Tidal Boon",
+        "type": "unique"
     },
     {
         "name": "Tigers Hunting",
@@ -10073,7 +10301,8 @@
         "language": "English",
         "meeple": false,
         "id": "tigers_hunting",
-        "title": "Tigers Hunting"
+        "title": "Tigers Hunting",
+        "type": "major"
     },
     {
         "name": "Too Near The Jungle",
@@ -10117,7 +10346,8 @@
         "language": "English",
         "meeple": false,
         "id": "too_near_the_jungle",
-        "title": "Too Near The Jungle"
+        "title": "Too Near The Jungle",
+        "type": "unique"
     },
     {
         "name": "Tormenting Rotflies",
@@ -10161,7 +10391,8 @@
         "language": "English",
         "meeple": false,
         "id": "tormenting_rotflies",
-        "title": "Tormenting Rotflies"
+        "title": "Tormenting Rotflies",
+        "type": "minor"
     },
     {
         "name": "Towering Wrath",
@@ -10205,7 +10436,8 @@
         "language": "English",
         "meeple": false,
         "id": "towering_wrath",
-        "title": "Towering Wrath"
+        "title": "Towering Wrath",
+        "type": "unique"
     },
     {
         "name": "Transform To A Murderous Darkness",
@@ -10249,7 +10481,8 @@
         "language": "English",
         "meeple": false,
         "id": "transform_to_a_murderous_darkness",
-        "title": "Transform To A Murderous Darkness"
+        "title": "Transform To A Murderous Darkness",
+        "type": "major"
     },
     {
         "name": "Traveler's Boon",
@@ -10293,7 +10526,8 @@
         "language": "English",
         "meeple": false,
         "id": "travelers_boon",
-        "title": "Traveler's Boon"
+        "title": "Traveler's Boon",
+        "type": "unique"
     },
     {
         "name": "Treacherous Waterways",
@@ -10337,7 +10571,8 @@
         "language": "English",
         "meeple": false,
         "id": "treacherous_waterways",
-        "title": "Treacherous Waterways"
+        "title": "Treacherous Waterways",
+        "type": "minor"
     },
     {
         "name": "Trees Radiate\nCelestial Brilliance",
@@ -10381,7 +10616,8 @@
         "language": "English",
         "meeple": false,
         "id": "trees_radiate_celestial_brilliance",
-        "title": "Trees Radiate Celestial Brilliance"
+        "title": "Trees Radiate Celestial Brilliance",
+        "type": "major"
     },
     {
         "name": "Tsunami",
@@ -10425,7 +10661,8 @@
         "language": "English",
         "meeple": false,
         "id": "tsunami",
-        "title": "Tsunami"
+        "title": "Tsunami",
+        "type": "major"
     },
     {
         "name": "Twilight Fog\nBrings Madness",
@@ -10469,7 +10706,8 @@
         "language": "English",
         "meeple": false,
         "id": "twilight_fog_brings_madness",
-        "title": "Twilight Fog Brings Madness"
+        "title": "Twilight Fog Brings Madness",
+        "type": "minor"
     },
     {
         "name": "Twisted Flowers\nMurmur Ultimatums",
@@ -10513,7 +10751,8 @@
         "language": "English",
         "meeple": false,
         "id": "twisted_flowers_murmur_ultimatums",
-        "title": "Twisted Flowers Murmur Ultimatums"
+        "title": "Twisted Flowers Murmur Ultimatums",
+        "type": "major"
     },
     {
         "name": "Unbearable Deluge",
@@ -10557,7 +10796,8 @@
         "language": "English",
         "meeple": false,
         "id": "unbearable_deluge",
-        "title": "Unbearable Deluge"
+        "title": "Unbearable Deluge",
+        "type": "unique"
     },
     {
         "name": "Uncanny Melting",
@@ -10601,7 +10841,8 @@
         "language": "English",
         "meeple": false,
         "id": "uncanny_melting",
-        "title": "Uncanny Melting"
+        "title": "Uncanny Melting",
+        "type": "minor"
     },
     {
         "name": "Unexpected Tigers",
@@ -10645,7 +10886,8 @@
         "language": "English",
         "meeple": false,
         "id": "unexpected_tigers",
-        "title": "Unexpected Tigers"
+        "title": "Unexpected Tigers",
+        "type": "unique"
     },
     {
         "name": "Unleash a Torrent of \nthe Self's Own Essence",
@@ -10689,7 +10931,8 @@
         "language": "English",
         "meeple": false,
         "id": "unleash_a_torrent_of_the_selfs_own_essence",
-        "title": "Unleash a Torrent of  the Self's Own Essence"
+        "title": "Unleash a Torrent of  the Self's Own Essence",
+        "type": "major"
     },
     {
         "name": "Unlock The Gates Of Deepest Power",
@@ -10733,7 +10976,8 @@
         "language": "English",
         "meeple": false,
         "id": "unlock_the_gates_of_deepest_power",
-        "title": "Unlock The Gates Of Deepest Power"
+        "title": "Unlock The Gates Of Deepest Power",
+        "type": "major"
     },
     {
         "name": "Unnerving Pall",
@@ -10777,7 +11021,8 @@
         "language": "English",
         "meeple": false,
         "id": "unnerving_pall",
-        "title": "Unnerving Pall"
+        "title": "Unnerving Pall",
+        "type": "unique"
     },
     {
         "name": "Unquenchable Flames",
@@ -10821,7 +11066,8 @@
         "language": "English",
         "meeple": false,
         "id": "unquenchable_flames",
-        "title": "Unquenchable Flames"
+        "title": "Unquenchable Flames",
+        "type": "minor"
     },
     {
         "name": "Unrelenting Growth",
@@ -10865,7 +11111,8 @@
         "language": "English",
         "meeple": false,
         "id": "unrelenting_growth",
-        "title": "Unrelenting Growth"
+        "title": "Unrelenting Growth",
+        "type": "major"
     },
     {
         "name": "Utter A Curse Of\nDread And Bone",
@@ -10909,7 +11156,8 @@
         "language": "English",
         "meeple": false,
         "id": "utter_a_curse_of_dread_and_bone",
-        "title": "Utter A Curse Of Dread And Bone"
+        "title": "Utter A Curse Of Dread And Bone",
+        "type": "major"
     },
     {
         "name": "Vanish Softly Away, Forgotten by All",
@@ -10953,7 +11201,8 @@
         "language": "English",
         "meeple": false,
         "id": "vanish_softly_away_forgotten_by_all",
-        "title": "Vanish Softly Away, Forgotten by All"
+        "title": "Vanish Softly Away, Forgotten by All",
+        "type": "major"
     },
     {
         "name": "Veil The Night's Hunt",
@@ -10997,7 +11246,8 @@
         "language": "English",
         "meeple": false,
         "id": "veil_the_nights_hunt",
-        "title": "Veil The Night's Hunt"
+        "title": "Veil The Night's Hunt",
+        "type": "minor"
     },
     {
         "name": "Vengeance Of The Dead",
@@ -11041,7 +11291,8 @@
         "language": "English",
         "meeple": false,
         "id": "vengeance_of_the_dead",
-        "title": "Vengeance Of The Dead"
+        "title": "Vengeance Of The Dead",
+        "type": "major"
     },
     {
         "name": "Vigor Of The\nBreaking Dawn",
@@ -11085,7 +11336,8 @@
         "language": "English",
         "meeple": false,
         "id": "vigor_of_the_breaking_dawn",
-        "title": "Vigor Of The Breaking Dawn"
+        "title": "Vigor Of The Breaking Dawn",
+        "type": "major"
     },
     {
         "name": "Visions Of Fiery Doom",
@@ -11129,7 +11381,8 @@
         "language": "English",
         "meeple": false,
         "id": "visions_of_fiery_doom",
-        "title": "Visions Of Fiery Doom"
+        "title": "Visions Of Fiery Doom",
+        "type": "minor"
     },
     {
         "name": "Voice Of Command",
@@ -11173,7 +11426,8 @@
         "language": "English",
         "meeple": false,
         "id": "voice_of_command",
-        "title": "Voice Of Command"
+        "title": "Voice Of Command",
+        "type": "major"
     },
     {
         "name": "Voice Of Thunder",
@@ -11217,7 +11471,8 @@
         "language": "English",
         "meeple": false,
         "id": "voice_of_thunder",
-        "title": "Voice Of Thunder"
+        "title": "Voice Of Thunder",
+        "type": "unique"
     },
     {
         "name": "Volcanic Eruption",
@@ -11261,7 +11516,8 @@
         "language": "English",
         "meeple": false,
         "id": "volcanic_eruption",
-        "title": "Volcanic Eruption"
+        "title": "Volcanic Eruption",
+        "type": "major"
     },
     {
         "name": "Voracious Growth",
@@ -11305,7 +11561,8 @@
         "language": "English",
         "meeple": false,
         "id": "voracious_growth",
-        "title": "Voracious Growth"
+        "title": "Voracious Growth",
+        "type": "minor"
     },
     {
         "name": "Walls Of Rock\nAnd Thorn",
@@ -11349,7 +11606,8 @@
         "language": "English",
         "meeple": false,
         "id": "walls_of_rock_and_thorn",
-        "title": "Walls Of Rock And Thorn"
+        "title": "Walls Of Rock And Thorn",
+        "type": "major"
     },
     {
         "name": "Wash Away",
@@ -11393,7 +11651,8 @@
         "language": "English",
         "meeple": false,
         "id": "wash_away",
-        "title": "Wash Away"
+        "title": "Wash Away",
+        "type": "unique"
     },
     {
         "name": "Ways Of Shore\nAnd Heartland",
@@ -11437,7 +11696,8 @@
         "language": "English",
         "meeple": false,
         "id": "ways_of_shore_and_heartland",
-        "title": "Ways Of Shore And Heartland"
+        "title": "Ways Of Shore And Heartland",
+        "type": "unique"
     },
     {
         "name": "Weave Together The Fabric Of Place",
@@ -11481,7 +11741,8 @@
         "language": "English",
         "meeple": false,
         "id": "weave_together_the_fabric_of_place",
-        "title": "Weave Together The Fabric Of Place"
+        "title": "Weave Together The Fabric Of Place",
+        "type": "major"
     },
     {
         "name": "Weep For What Is Lost",
@@ -11525,7 +11786,8 @@
         "language": "English",
         "meeple": false,
         "id": "weep_for_what_is_lost",
-        "title": "Weep For What Is Lost"
+        "title": "Weep For What Is Lost",
+        "type": "minor"
     },
     {
         "name": "Winds Of Rust And Atrophy",
@@ -11569,7 +11831,8 @@
         "language": "English",
         "meeple": false,
         "id": "winds_of_rust_and_atrophy",
-        "title": "Winds Of Rust And Atrophy"
+        "title": "Winds Of Rust And Atrophy",
+        "type": "major"
     },
     {
         "name": "Words Of Warning",
@@ -11613,7 +11876,8 @@
         "language": "English",
         "meeple": false,
         "id": "words_of_warning",
-        "title": "Words Of Warning"
+        "title": "Words Of Warning",
+        "type": "unique"
     },
     {
         "name": "Wrap In Wings Of Sunlight",
@@ -11657,6 +11921,7 @@
         "language": "English",
         "meeple": false,
         "id": "wrap_in_wings_of_sunlight",
-        "title": "Wrap In Wings Of Sunlight"
+        "title": "Wrap In Wings Of Sunlight",
+        "type": "major"
     }
 ]

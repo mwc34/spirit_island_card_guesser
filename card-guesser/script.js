@@ -96,11 +96,65 @@ function autocomplete(inp, arr) {
 	});
 }
 
+function cyrb128(str) {
+    let h1 = 1779033703, h2 = 3144134277,
+        h3 = 1013904242, h4 = 2773480762;
+    for (let i = 0, k; i < str.length; i++) {
+        k = str.charCodeAt(i);
+        h1 = h2 ^ Math.imul(h1 ^ k, 597399067);
+        h2 = h3 ^ Math.imul(h2 ^ k, 2869860233);
+        h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
+        h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
+    }
+    h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067);
+    h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233);
+    h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213);
+    h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179);
+    return [(h1^h2^h3^h4)>>>0, (h2^h1)>>>0, (h3^h1)>>>0, (h4^h1)>>>0];
+}
+
 function startSet() {
-	let sample_count = 5;
-	let population = completeCards;
+	
+	let population = [...completeCards];
+	
+	// Remove unwanted sections
+	// Minor
+	if (!cardTypeOptions.children[0].classList.contains("activeOption")) {
+		for (let i=population.length-1; i>=0; i--) {
+			if (population[i].type == 'minor')
+				population.splice(i, 1);
+		}
+	}
+	// Major
+	if (!cardTypeOptions.children[1].classList.contains("activeOption")) {
+		for (let i=population.length-1; i>=0; i--) {
+			if (population[i].type == 'major')
+				population.splice(i, 1);
+		}
+	}
+	// Unique
+	if (!cardTypeOptions.children[2].classList.contains("activeOption")) {
+		for (let i=population.length-1; i>=0; i--) {
+			if (population[i].type == 'unique')
+				population.splice(i, 1);
+		}
+	}
+	
+	
+	let sample_count = null;
+	let random_seed = null;
+	
+	if (dailyAllOptions.children[0].classList.contains('activeOption')) {
+		// Generate seed from date
+		let d = new Date();
+		random_seed = cyrb128(d.getDate().toString() + d.getMonth() + d.getFullYear()).reduce((x,y)=>x+y)
+		sample_count = dailyCount;
+	}
+	else {
+		sample_count = population.length;
+	}
 	cardsToGuess = [];
-	for (let idx of getSubset(population.length, sample_count)) {
+	for (let idx of getSubset(population.length, sample_count, random_seed)) {
 		cardsToGuess.push(population[idx]);
 	}
 	resetScore();
@@ -108,11 +162,15 @@ function startSet() {
 	newCard();
 }
 
-function getSubset(population_count, sample_count) {
+function getSubset(population_count, sample_count, random_seed=null) {
 	let population = [...Array(population_count).keys()];
 	let samples = [];
 	for (let i=0; i<sample_count; i++) {
-		let idx = Math.floor(Math.random()*population.length);
+		if (random_seed)
+			let idx = random_seed % population.length;
+			random_seed += idx;
+		else
+			let idx = Math.floor(Math.random()*population.length);
 		samples.push(population[idx]);
 		population.splice(idx, 1);
 	}
@@ -168,10 +226,45 @@ function incrementScore(correct) {
 	score.innerHTML = `Score: ${currentCorrect + correct}/${currentTotal + 1}`
 }
 
+function setDaily(daily) {
+	if (daily) {
+		dailyAllOptions.children[0].classList.add("activeOption");
+		dailyAllOptions.children[1].classList.remove("activeOption");
+	}
+	else {
+		dailyAllOptions.children[0].classList.remove("activeOption");
+		dailyAllOptions.children[1].classList.add("activeOption");
+	}
+}
+
+function toggleGuessType(idx) {
+	let e = guessTypeOptions.children[idx];
+	if (e.classList.contains("activeOption")) {
+		e.classList.remove("activeOption");
+	}
+	else {
+		e.classList.add("activeOption");
+	}
+}
+
+function toggleCardType(idx) {
+	let e = cardTypeOptions.children[idx];
+	if (e.classList.contains("activeOption")) {
+		e.classList.remove("activeOption");
+	}
+	else {
+		e.classList.add("activeOption");
+	}
+}
+
+const dailyAllOptions = document.getElementById("dailyAllOptions");
+const guessTypeOptions = document.getElementById("guessTypeOptions");
+const cardTypeOptions = document.getElementById("cardTypeOptions");
 const cardInput = document.getElementById("cardInput");
 const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
 const score = document.getElementById("score");
+const dailyCount = 10;
 const completeCards = [];
 const cardTitles = [];
 window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardTitles.push(card.title)}});

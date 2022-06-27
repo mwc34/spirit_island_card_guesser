@@ -48,6 +48,10 @@ input[type=submit] {
   color: #ffffff;
 }
 
+.activeOption  {
+	background-color: red;
+}
+
 .optionWrapper {
 	display: flex;
 	justify-content: space-evenly;
