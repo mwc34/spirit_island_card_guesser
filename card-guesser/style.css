@@ -63,6 +63,8 @@ input[type=submit] {
 
 .option {
 	display: flex;
+	user-select: none;
+	flex-grow: 1;
 }
 
 #guessTypeOptions {
