@@ -99,7 +99,7 @@ function newCard() {
 		cardImage.src = "";
 		return;
 	}
-	currentCard = completeCards[Math.random()*completeCards.length];
+	currentCard = completeCards[Math.floor(Math.random()*completeCards.length)];
 	cardImage.src = currentCard.art.url;
 }
 
