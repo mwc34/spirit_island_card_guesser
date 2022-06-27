@@ -5,20 +5,20 @@
             Spirit Island Card Guesser
         </title>
         <meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="/card-guesser/style.css">
-		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="/card-guesser/style.css"> -->
+		<link rel="stylesheet" type="text/css" href="style.css">
         <!---<link rel="icon" href="assets/other/favicon.png">--->
     </head>
     <body>
 		
-	<div id="dailyAllOptions">
+	<div id="dailyAllOptions" class="optionWrapper">
 		<div class="option">Daily</div>
 		<div class="option">Complete</div>
 	</div>
-	<div id="guessTypeOptions">
+	<div id="guessTypeOptions" class="optionWrapper">
 		<div class="option">Minimal</div>
 	</div>
-	<div id="cardTypeOptions">
+	<div id="cardTypeOptions" class="optionWrapper">
 		<div class="option">Minor</div>
 		<div class="option">Major</div>
 		<div class="option">Unique</div>
@@ -27,17 +27,19 @@
 	<img id="cardImage" src=""/>
 	
 	<!--Make sure the form has the autocomplete function switched off:-->
-	<form autocomplete="off" onsubmit="makeGuess();return false;">
-	  <div class="autocomplete" style="width:300px;">
-		<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
-	  </div>
-	  <input type="submit" value="Guess">
-	</form>
+	<div id="submitForm">
+		<form autocomplete="off" onsubmit="makeGuess();return false;">
+		  <div class="autocomplete" style="width:300px;">
+			<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
+		  </div>
+		  <input type="submit" value="Guess">
+		</form>
+	</div>
 	
     </body>
     
-    <script src="/card-guesser/script.js">
-    <!-- <script src="script.js"> -->
+    <!-- <script src="/card-guesser/script.js"> -->
+    <script src="script.js">
     </script>
     
 </html>

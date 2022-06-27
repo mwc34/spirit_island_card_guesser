@@ -93,18 +93,31 @@ function autocomplete(inp, arr) {
 	});
 }
 
+function newCard() {
+	if (!completeCards.length) {
+		currentCard = null;
+		return;
+	}
+	currentCard = completeCards[Math.random()*completeCards.length];
+}
+
 function makeGuess() {
 	let guess = cardInput.value;
-	console.log(guess);
+	if (currentCard.name == guess) {
+		console.log("WOOOOO");
+	}
+	else {
+		console.log("BOOOOO");
+	}
+	newCard();
 }
+
+
 
 const cardInput = document.getElementById("cardInput");
 const prefix = '/card-guesser/';
 const completeCards = [];
 const cardNames = [];
-var promise_finishes = 0
-window.fetch(prefix + 'complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.name);}; promise_finishes++;});
-
-if (promise_finishes == 1) {
-	autocomplete(cardInput, cardNames);
-}
+window.fetch(prefix + 'complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.name)}});
+autocomplete(cardInput, cardNames);
+var currentCard = null;

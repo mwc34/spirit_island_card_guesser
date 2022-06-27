@@ -48,27 +48,40 @@ input[type=submit] {
   color: #ffffff;
 }
 
-
-
-
-
+.optionWrapper {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	position: absolute;
+	height: 5%;
+}
 
 .option {
-	
+	display: flex;
 }
 
 #dailyAllOptions {
-	
+	top: 0%;
 }
 
 #guessTypeOptions {
-	
+	top: 5%;
 }
 
 #cardTypeOptions {
-	
+	top: 10%;
+}
+
+#submitForm {
+	position: absolute;
+	top: 20%;
+	left: 10%;
 }
 
 #cardImage {
-	
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	width: 25%;
 }
