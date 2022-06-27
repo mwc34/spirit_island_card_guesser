@@ -198,9 +198,13 @@ function makeGuess() {
 	let guess = cardInput.value;
 	if (!guess.length) return
 	
+	console.log(guess);
+	
 	cardInput.value = "";
 	if (currentCard) {
+		console.log(currentCard.title);
 		if (currentCard.title == guess) {
+			console.log('correct!');
 			incrementScore(true);
 		}
 		else {
