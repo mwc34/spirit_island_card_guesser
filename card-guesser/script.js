@@ -191,7 +191,7 @@ function newCard() {
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
-	cardImage.src = currentCard.art.url;
+	cardImage.src = `/card-guesser/minimal_cards_img/${currentCard.id}.png`;
 }
 
 function makeGuess() {

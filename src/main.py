@@ -42,12 +42,16 @@ def check_unique_subset(complete_cards, checklist, debug=True):
 
 def generate_minimal_cards():
     def find_subset(complete_card, card, include_threshold=False):
-        options = ['cost', 'sun', 'moon', 'fire', 'air', 'water', 'earth', 'plant', 'animal', 'range', 'target']
+        options = ['cost', 'sun', 'moon', 'fire', 'air', 'water', 'earth', 'plant', 'animal', 'target']
+        if complete_card['range']['enabled']:
+            options.append('range')
         if include_threshold:
             options.append('threshold')
             
         for subset in powerset(options):
             subset = list(subset) + ['speed']
+            if not complete_card['range']['enabled']:
+                subset += ['range']
                 
             checklist = {}
             for e in subset:
@@ -60,7 +64,7 @@ def generate_minimal_cards():
                 elif complete_card['elements'][e]:
                     checklist[e] = complete_card['elements'][e]
             
-            if check_unique_subset(complete_cards, checklist, debug=len(subset) == len(options) + 1):
+            if check_unique_subset(complete_cards, checklist, debug=len(subset) == len(options) + 1 + (not complete_card['range']['enabled'])):
                 for e in checklist:
                     if e in ['cost', 'speed']:
                         card[e] = checklist[e]
@@ -80,16 +84,13 @@ def generate_minimal_cards():
     with open(complete_cards_path) as fp:
         complete_cards = json.load(fp)
                 
-    minimal_cards = []
     # Categories are cost, speed, range, target, elements, threshold condition
     # Speed has to be there as can't remove
     for complete_card in complete_cards:
         print(complete_card['name'])
         card = json.loads(json.dumps(complete_card))
-        card['id'] = card['name']
         card['name'] = ''
         card['cost'] = ''
-        card['range']['enabled'] = True
         card['range']['text'] = ''
         card['target']['enabled'] = True
         card['target']['text'] = ''
@@ -104,13 +105,10 @@ def generate_minimal_cards():
         
         if not find_subset(complete_card, card):
             if not complete_card['threshold']['conditionText'] or not find_subset(complete_card, card, True):
-                print(f"------------------------------------------{complete_card['name']} had no unique subset")
+                print(f"------------------------------------------{complete_card['title']} had no unique subset")
                 card['effect'] = complete_card['effect']
         
-        with open(os.path.join(minimal_cards_directory, complete_card['name'].replace('\n', ' ') + '.json'), 'w') as fp:
+        with open(os.path.join(minimal_cards_directory, complete_card['id'] + '.json'), 'w') as fp:
             json.dump(card, fp, indent=4)
-        
-        minimal_cards.append(card)
-        
-    with open(minimal_cards_path, 'w') as fp:
-        json.dump(minimal_cards, fp, indent=4)
+            
+generate_minimal_cards()

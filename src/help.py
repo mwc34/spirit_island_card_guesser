@@ -1,49 +1,34 @@
-import json
 import os
-import itertools
-import shutil
-import requests
+import pyautogui
+import time
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-working_directory = '../card-guesser/complete_cards_json'
-old_directory = 'old'
+files = os.listdir('minimal_cards_json')
 
-def downloadImage(url, file_path):
+print(pyautogui.size())
 
-    # Open the url image, set stream to True, this will return the stream content.
-    r = requests.get(url, stream = True)
+sleep_time = 0.5
 
-    # Check if the image was retrieved successfully
-    if r.status_code == 200:
-        # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
-        r.raw.decode_content = True
-        
-        # Open a local file with wb ( write binary ) permission.
-        with open(file_path, 'wb+') as f:
-            shutil.copyfileobj(r.raw, f)
-            
-        return True
-        
-    else:
-        print('Image Couldn\'t be retreived')
-        print(url)
-        return False
-
-old_names = sorted(os.listdir(old_directory))
-working_names = sorted(os.listdir(working_directory))
-
-for of, wf in zip(old_names, working_names):
-    with open(os.path.join(old_directory, of)) as fp:
-        o = json.load(fp)
-    with open(os.path.join(working_directory, wf)) as fp:
-        w = json.load(fp)
+def process_card(card):
+    time.sleep(sleep_time)
+    pyautogui.click(1567, 854)
+    time.sleep(sleep_time)
+    pyautogui.typewrite(card)
+    time.sleep(sleep_time)
+    pyautogui.click(553, 448)
+    time.sleep(sleep_time)
+    pyautogui.click(1657, 542, button='right')
+    time.sleep(sleep_time)
+    pyautogui.moveTo(1715, 589)
+    pyautogui.click(1715, 589)
+    time.sleep(sleep_time)
+    pyautogui.typewrite(card)
+    time.sleep(sleep_time)
+    pyautogui.click(553, 448)
+    time.sleep(sleep_time)
     
-    file_path = 'card-guesser/complete_cards_img/' + os.path.basename(o['art']['url'])
-    downloadImage(o['art']['url'], '../' + file_path)
-    
-    w['id'] = os.path.splitext(of)[0]
-    w['art']['url'] = '/' + file_path
-    
-    with open(os.path.join(working_directory, wf), 'w') as fp:
-        json.dump(w, fp, indent=4)
+time.sleep(2)
+for f in files:
+    print(f)
+    process_card(os.path.splitext(f)[0])
