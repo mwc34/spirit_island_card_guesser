@@ -114,6 +114,3 @@ def generate_minimal_cards():
         
     with open(minimal_cards_path, 'w') as fp:
         json.dump(minimal_cards, fp, indent=4)
-        
-        
-generate_minimal_cards()

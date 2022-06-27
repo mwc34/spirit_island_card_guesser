@@ -93,14 +93,35 @@ function autocomplete(inp, arr) {
 	});
 }
 
+function startSet() {
+	let sample_count = 5;
+	let population = completeCards;
+	cardsToGuess = [];
+	for (let idx of getSubset(population.length, sample_count)) {
+		cardsToGuess.push(population[idx]);
+	}
+	resetScore();
+	setCardsLeft(sample_count);
+}
+
+function getSubset(population_count, sample_count) {
+	let population = [...Array(population_count).keys()];
+	let samples = [];
+	for (let i=0; i<sample_count; i++) {
+		let idx = Math.floor(Math.random()*population.length);
+		samples.push(population[idx]);
+		population.splice(idx, 1);
+	}
+	return samples;
+}
+
 function newCard() {
-	cardInput.value = "";
-	if (!completeCards.length) {
+	if (!cardsToGuess.length) {
 		currentCard = null;
 		cardImage.src = "";
 		return;
 	}
-	currentCard = completeCards[Math.floor(Math.random()*completeCards.length)];
+	currentCard = cardsToGuess.splice(0, 1)[0];
 	cardImage.src = currentCard.art.url;
 }
 
@@ -108,23 +129,49 @@ function makeGuess() {
 	let guess = cardInput.value;
 	if (!guess.length) return
 	
+	cardInput.value = "";
 	if (currentCard) {
-		if (currentCard.name == guess) {
-			console.log("WOOOOO");
+		if (currentCard.title == guess) {
+			incrementScore(true);
 		}
 		else {
-			console.log("BOOOOO");
+			incrementScore(false);
 		}
+		decrementCardsLeft();
+		if (getCardsLeft())
+			newCard();
 	}
-	newCard();
 }
 
+function setCardsLeft(v) {
+	cardsLeft.innerHTML = `Cards Left: ${v}`;
+}
 
+function decrementCardsLeft() {
+	setCardsLeft(getCardsLeft() - 1);
+}
+
+function getCardsLeft() {
+	return parseInt(cardsLeft.innerHTML.slice(12));
+}
+
+function resetScore() {
+	score.innerHTML = "Score: 0/0";
+}
+
+function incrementScore(correct) {
+	currentCorrect = parseInt(score.innerHTML.slice(7));
+	currentTotal = parseInt(score.innerHTML.slice(9));
+	score.innerHTML = `Score: ${currentCorrect + correct}/${currentTotal + 1}`
+}
 
 const cardInput = document.getElementById("cardInput");
 const cardImage = document.getElementById("cardImage");
+const cardsLeft = document.getElementById("cardsLeft");
+const score = document.getElementById("score");
 const completeCards = [];
-const cardNames = [];
-window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.name)}});
-autocomplete(cardInput, cardNames);
+const cardTitles = [];
+window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardNames.push(card.title)}});
+autocomplete(cardInput, cardTitles);
 var currentCard = null;
+var cardsToGuess = [];
