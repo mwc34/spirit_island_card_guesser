@@ -59,6 +59,9 @@ function autocomplete(inp, arr) {
 				/*and simulate a click on the "active" item:*/
 				if (x) x[currentFocus].click();
 			}
+			else if (x && x.length == 1) {
+				x[0].click();
+			}
 		}
 	});
 	function addActive(x) {
