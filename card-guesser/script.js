@@ -22,7 +22,8 @@ function autocomplete(inp, arr) {
 				/*create a DIV element for each matching element:*/
 				b = document.createElement("DIV");
 				/*make the matching letters bold:*/
-				b.innerHTML = "<strong>" + arr[i].substr(start_idx, val.length) + "</strong>";
+				b.innerHTML = arr[i].substr(0, start_idx);
+				b.innerHTML += "<strong>" + arr[i].substr(start_idx, val.length) + "</strong>";
 				b.innerHTML += arr[i].substr(val.length + start_idx);
 				/*insert a input field that will hold the current array item's value:*/
 				b.innerHTML += `<input type="hidden" value="${arr[i]}">`;
