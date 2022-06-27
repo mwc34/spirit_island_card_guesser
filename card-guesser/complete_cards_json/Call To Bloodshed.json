@@ -1,0 +1,43 @@
+{
+    "name": "Call To Bloodshed",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{dahan}"
+    },
+    "effect": "1 Damage per {dahan}.\n{wide_or}\nGather up to 3 {dahan}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": true,
+        "air": false,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Jorge Ramos",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/call_to_bloodshed.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "call_to_bloodshed"
+}

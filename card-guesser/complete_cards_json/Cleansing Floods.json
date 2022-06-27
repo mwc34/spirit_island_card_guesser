@@ -1,0 +1,43 @@
+{
+    "name": "Cleansing Floods",
+    "nameFontScale": 1,
+    "cost": 5,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{wetland_with_presence} {range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "4 Damage.\nRemove 1 {blight}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": false,
+        "water": true,
+        "earth": false,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.42,
+        "conditionText": "4{water}",
+        "effectText": "+10 Damage."
+    },
+    "art": {
+        "image": null,
+        "artist": "Nolan Nasser",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/cleansing_floods.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "cleansing_floods"
+}

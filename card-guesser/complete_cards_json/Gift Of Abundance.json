@@ -1,0 +1,43 @@
+{
+    "name": "Gift Of Abundance",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "fast",
+    "range": {
+        "enabled": false,
+        "text": "{norange}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{another_spirit}"
+    },
+    "effect": "Target Spirit either gains 2 Energy, or may Repeat one Power Card this turn by paying its cost.\n\nEither you or target Spirit may add 1 Destroyed {presence} to a {wetland} where you have {presence}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": true,
+        "water": true,
+        "earth": false,
+        "plant": true,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Damon Westenhofer",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/gift_of_abundance.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "gift_of_abundance"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "Vengeance Of The Dead",
+    "nameFontScale": 1,
+    "cost": 3,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,3}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "3 {fear}.\nAfter each effect that Destroys\n{town}/{city}/{dahan} in target land,\n1 Damage per {town}/{city}/{dahan} Destroyed.",
+    "effectFontScale": 0.85,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": true,
+        "air": false,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.48,
+        "conditionText": "3{animal}",
+        "effectText": "Damage from this Power may be dealt into adjacent lands."
+    },
+    "art": {
+        "image": null,
+        "artist": "Kat Birmelin",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/vengeance_of_the_dead.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "vengeance_of_the_dead"
+}

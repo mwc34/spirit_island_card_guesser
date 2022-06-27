@@ -1,0 +1,43 @@
+{
+    "name": "Accelerated Rot",
+    "nameFontScale": 1,
+    "cost": 4,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{range,2}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{jungle_wetland}"
+    },
+    "effect": "2 {fear}.\n4 Damage.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": false,
+        "water": true,
+        "earth": false,
+        "plant": true,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.45,
+        "conditionText": "3{sun} 2{water} 3{plant}",
+        "effectText": "+5 Damage. Remove 1 {blight}."
+    },
+    "art": {
+        "image": null,
+        "artist": "Graham Stermberg",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/accelerated_rot.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "accelerated_rot"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "Indomitable Claim",
+    "nameFontScale": 1,
+    "cost": 4,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Add 1 {presence} in target land even if you normally could not due to land type. Defend 20.",
+    "effectFontScale": 0.93,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": false,
+        "water": false,
+        "earth": true,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.59,
+        "conditionText": "2{sun} 3{earth}",
+        "effectText": "3 {fear} if Invaders are present.\nInvaders skip all Actions in target land this turn."
+    },
+    "art": {
+        "image": null,
+        "artist": "Jorge Ramos",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/indomitable_claim.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "indomitable_claim"
+}

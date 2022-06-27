@@ -1,0 +1,43 @@
+{
+    "name": "Transform To A Murderous Darkness",
+    "nameFontScale": 1,
+    "cost": 6,
+    "speed": "slow",
+    "range": {
+        "enabled": false,
+        "text": "{norange}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_spirit}"
+    },
+    "effect": "Target Spirit may choose one of their {sacredsite}. In that land: Replace all their {presence} with {badlands}; the replaced {presence} leaves the game. Push any number of those {badlands}. 3 Fear. 3 Damage per {presence} replaced.",
+    "effectFontScale": 0.75,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": true,
+        "air": true,
+        "water": true,
+        "earth": false,
+        "plant": true,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.48,
+        "conditionText": "3{moon} 2{fire} 2{air}",
+        "effectText": "1 Damage in an adjacent land.\n1 Damage in an adjacent land."
+    },
+    "art": {
+        "image": null,
+        "artist": "Moro Rogers",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/transform_to_a_murderous_darkness.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "transform_to_a_murderous_darkness"
+}

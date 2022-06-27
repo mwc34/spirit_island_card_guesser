@@ -1,0 +1,43 @@
+{
+    "name": "Mists Of Oblivion",
+    "nameFontScale": 1,
+    "cost": 4,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{range,3}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "1 {fear} per {town}/{city} this Power Destroys (to a maximum of 4).\n1 Damage to each Invader.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": false,
+        "air": true,
+        "water": true,
+        "earth": false,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.4,
+        "conditionText": "2{moon} 3{air} 2{water}",
+        "effectText": "3 Damage."
+    },
+    "art": {
+        "image": null,
+        "artist": "Nolan Nasser",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/mists_of_oblivion.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "mists_of_oblivion"
+}

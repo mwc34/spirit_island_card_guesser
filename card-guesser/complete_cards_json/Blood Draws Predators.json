@@ -1,0 +1,43 @@
+{
+    "name": "Blood Draws Predators",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "After the next time Invaders are Destroyed in target land:\nAdd 1 {beast}, then 1 Damage per {beast} (max. 3 Damage).",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": true,
+        "air": false,
+        "water": true,
+        "earth": false,
+        "plant": false,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Jorge Ramos",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/blood_draws_predators.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "blood_draws_predators"
+}

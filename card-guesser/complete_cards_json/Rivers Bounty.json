@@ -1,0 +1,43 @@
+{
+    "name": "River's Bounty",
+    "nameFontScale": 1,
+    "cost": 0,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{range,0}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Gather up to 2 {dahan}.\n\nIf there are now at least 2 {dahan}, add 1 {dahan} and gain 1 Energy.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": false,
+        "water": true,
+        "earth": false,
+        "plant": false,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Nolan Nasser",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/rivers_bounty.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "rivers_bounty"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "Overenthusiastic Arson",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Destroy 1 {town}.\n\nDiscard the top card of the Minor Power Deck. If it provides {fire}:\n1 {fear}, 2 Damage, and add 1 {blight}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": false,
+        "moon": false,
+        "fire": true,
+        "air": true,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Joshua Wright",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/overenthusiastic_arson.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "overenthusiastic_arson"
+}

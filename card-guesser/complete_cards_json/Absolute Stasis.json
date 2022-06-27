@@ -1,0 +1,43 @@
+{
+    "name": "Absolute Stasis",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{from_sacredsite} {range,2}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "*Cost to Use:* 1 Time.\n\nUntil the end of the {slow} phase, target land and everything in it cease to exist for all purposes except checking victory/defeat.\n\n(You cannot target into, out of, or through where the land was.)\n\nThis cannot target an Ocean even if Oceans are in play.",
+    "effectFontScale": 0.76,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": true,
+        "water": false,
+        "earth": true,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Lucas Durham",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/absolute_stasis.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "absolute_stasis"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "Dread Apparitions",
+    "nameFontScale": 1,
+    "cost": 2,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{invaders}"
+    },
+    "effect": "When Powers generate {fear} in target land, Defend 1 per {fear}.\n1 {fear}.\n\n_({fear} from To Dream a Thousand Deaths counts. {fear} from Destroying {town}/{city} does not.)_",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": false,
+        "air": true,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Shane Tyree",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/dread_apparitions.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "dread_apparitions"
+}

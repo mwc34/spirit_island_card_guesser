@@ -1,0 +1,43 @@
+{
+    "name": "Unrelenting Growth",
+    "nameFontScale": 1,
+    "cost": 4,
+    "speed": "slow",
+    "range": {
+        "enabled": false,
+        "text": "{norange}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_spirit}"
+    },
+    "effect": "Target Spirit adds 2 {presence} and 1 {wilds} to a land at {range,1}{spacer_tiny}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": true,
+        "air": false,
+        "water": true,
+        "earth": false,
+        "plant": true,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.63,
+        "conditionText": "3{sun} 3{plant}",
+        "effectText": "In that land, add 1 additional {wilds} and Remove 1 {blight}. Target Spirit gains a Power Card."
+    },
+    "art": {
+        "image": null,
+        "artist": "Joshua Wright",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/unrelenting_growth.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "unrelenting_growth"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "Unexpected Tigers",
+    "nameFontScale": 1,
+    "cost": 0,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "1 {fear} if Invaders are present.\n\nIf you can gather 1 {beast},\ndo so, then push 1 {explorer}.\n\nOtherwise, add 1 {beast}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": true,
+        "air": false,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Joshua Wright",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/unexpected_tigers.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "unexpected_tigers"
+}

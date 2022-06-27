@@ -1,0 +1,43 @@
+{
+    "name": "Dream Of The Untouched Land",
+    "nameFontScale": 1,
+    "cost": 6,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{from_sacredsite} {range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Remove up to 3 {blight} and up to \n3 Health worth of Invaders.",
+    "effectFontScale": 0.62,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": false,
+        "air": false,
+        "water": true,
+        "earth": true,
+        "plant": true,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.78,
+        "conditionText": "3{moon} 2{water} 3{earth} 2{plant}",
+        "effectText": "*(Max. 1x/game)* Add a random new Island Board next to target board. Ignore its Setup icons; add 2 Beasts, 2 Wilds, 2 Badlands and up to 2 Presence (from any Spirits) anywhere on it. From now on, Build cards and \"Each board / Each land\" Adversary Actions skip 1 Board."
+    },
+    "art": {
+        "image": null,
+        "artist": "Joshua Wright",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/dream_of_the_untouched_land.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "dream_of_the_untouched_land"
+}

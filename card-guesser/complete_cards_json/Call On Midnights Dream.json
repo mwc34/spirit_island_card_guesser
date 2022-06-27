@@ -1,0 +1,43 @@
+{
+    "name": "Call On Midnight's Dream",
+    "nameFontScale": 0.97,
+    "cost": 0,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,0}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "If target land has {dahan}, gain a Major Power. If you Forget this Power, gain Energy equal to {dahan} and you may play the Major Power immediately, paying its cost.\n{wide_or}\nIf Invaders are present, 2 {fear}.",
+    "effectFontScale": 0.97,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": false,
+        "air": false,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Shane Tyree",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/call_on_midnights_dream.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "call_on_midnights_dream"
+}

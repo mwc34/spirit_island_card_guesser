@@ -1,0 +1,43 @@
+{
+    "name": "Pact Of The Joined Hunt",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "slow",
+    "range": {
+        "enabled": false,
+        "text": "{norange}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_spirit}"
+    },
+    "effect": "Target Spirit Gathers 1 {dahan}\ninto one of their lands.\n1 Damage in that land\nper {dahan} present.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": false,
+        "water": false,
+        "earth": false,
+        "plant": true,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Jorge Ramos",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/pact_of_the_joined_hunt.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "pact_of_the_joined_hunt"
+}

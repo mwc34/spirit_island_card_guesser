@@ -1,0 +1,43 @@
+{
+    "name": "Desiccating Winds",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{from_sacredsite} {range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{mountain_sand}"
+    },
+    "effect": "If target land has {badlands},\n1 Damage.\n\nAdd 1 {badlands}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": false,
+        "moon": false,
+        "fire": true,
+        "air": true,
+        "water": false,
+        "earth": true,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Shawn Daley",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/desiccating_winds.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "desiccating_winds"
+}

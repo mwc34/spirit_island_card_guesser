@@ -1,0 +1,43 @@
+{
+    "name": "Sap The Strength\nOf Multitudes",
+    "nameFontScale": 1,
+    "cost": 0,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,0}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Defend 5.",
+    "effectFontScale": 0.9,
+    "elements": {
+        "sun": false,
+        "moon": false,
+        "fire": false,
+        "air": false,
+        "water": true,
+        "earth": false,
+        "plant": false,
+        "animal": true
+    },
+    "threshold": {
+        "enabled": true,
+        "relativeHeight": 0.4,
+        "conditionText": "1{air}",
+        "effectText": "Increase this Power's Range by 1."
+    },
+    "art": {
+        "image": null,
+        "artist": "Loic Belliau",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/sap_the_strength_of_multitudes.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "sap_the_strength_of_multitudes"
+}

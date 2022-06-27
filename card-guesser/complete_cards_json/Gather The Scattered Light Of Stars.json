@@ -1,0 +1,43 @@
+{
+    "name": "Gather The Scattered Light Of Stars",
+    "nameFontScale": 1,
+    "cost": 0,
+    "speed": "slow",
+    "range": {
+        "enabled": false,
+        "text": "{norange}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{yourself}"
+    },
+    "effect": "At end of turn after discarding: Reclaim up to 2 cards to your hand.\n\nYou may then Forget a Unique Power Card to Reclaim up to 3 additional cards.",
+    "effectFontScale": 0.95,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": false,
+        "air": false,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Emily Hancock",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/gather_the_scattered_light_of_stars.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "gather_the_scattered_light_of_stars"
+}

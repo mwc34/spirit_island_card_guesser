@@ -1,0 +1,43 @@
+{
+    "name": "Dreams Of The Dahan",
+    "nameFontScale": 1,
+    "cost": 0,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,2}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Gather up to 2 {dahan}.\n\n{wide_or}\n\nIf target land has {town}/{city}, 1 {fear} for each {dahan}, to a maximum of 3 {fear}.",
+    "effectFontScale": 1,
+    "elements": {
+        "sun": false,
+        "moon": true,
+        "fire": false,
+        "air": true,
+        "water": false,
+        "earth": false,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Shane Tyree",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/dreams_of_the_dahan.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "dreams_of_the_dahan"
+}

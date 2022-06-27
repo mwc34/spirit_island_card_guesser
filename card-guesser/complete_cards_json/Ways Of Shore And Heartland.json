@@ -1,0 +1,43 @@
+{
+    "name": "Ways Of Shore\nAnd Heartland",
+    "nameFontScale": 1,
+    "cost": 1,
+    "speed": "slow",
+    "range": {
+        "enabled": true,
+        "text": "{range,2}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Push up to 2 Invaders/{dahan}/{presence}/{beast} to a land that is also Coastal/Inland (whichever the target land is).",
+    "effectFontScale": 0.98,
+    "elements": {
+        "sun": false,
+        "moon": false,
+        "fire": false,
+        "air": true,
+        "water": true,
+        "earth": true,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Moro Rogers",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/ways_of_shore_and_heartland.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "ways_of_shore_and_heartland"
+}

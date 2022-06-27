@@ -1,0 +1,43 @@
+{
+    "name": "Call To Guard",
+    "nameFontScale": 1,
+    "cost": 0,
+    "speed": "fast",
+    "range": {
+        "enabled": true,
+        "text": "{range,1}"
+    },
+    "target": {
+        "enabled": true,
+        "text": "{any_land}"
+    },
+    "effect": "Gather up to 1 {dahan}.\nThen, if {dahan} are present, either:\n\nDefend 1 per {dahan}.\n{wide_or}\nAfter Invaders are added or moved to target land, 1 Damage to each added or moved Invader.",
+    "effectFontScale": 0.9,
+    "elements": {
+        "sun": true,
+        "moon": false,
+        "fire": false,
+        "air": true,
+        "water": false,
+        "earth": true,
+        "plant": false,
+        "animal": false
+    },
+    "threshold": {
+        "enabled": false,
+        "relativeHeight": 0.5,
+        "conditionText": "",
+        "effectText": ""
+    },
+    "art": {
+        "image": null,
+        "artist": "Kat Guevara",
+        "leftOffset": -0.09,
+        "topOffset": 0.24,
+        "scale": 0.87,
+        "url": "/card-guesser/complete_cards_img/call_to_guard.webp"
+    },
+    "language": "English",
+    "meeple": false,
+    "id": "call_to_guard"
+}
