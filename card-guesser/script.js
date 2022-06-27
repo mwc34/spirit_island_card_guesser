@@ -140,7 +140,6 @@ function startSet(daily) {
 		}
 	}
 	
-	
 	let sample_count = null;
 	let random_seed = null;
 	
@@ -153,6 +152,11 @@ function startSet(daily) {
 	else {
 		sample_count = population.length;
 	}
+	
+	if (population.length < sample_count)
+		return
+	
+	
 	cardsToGuess = [];
 	for (let idx of getSubset(population.length, sample_count, random_seed)) {
 		cardsToGuess.push(population[idx]);
