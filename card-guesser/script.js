@@ -166,11 +166,13 @@ function getSubset(population_count, sample_count, random_seed=null) {
 	let population = [...Array(population_count).keys()];
 	let samples = [];
 	for (let i=0; i<sample_count; i++) {
-		if (random_seed)
+		if (random_seed) {
 			let idx = random_seed % population.length;
 			random_seed += idx;
-		else
+		} 
+		else {
 			let idx = Math.floor(Math.random()*population.length);
+		}
 		samples.push(population[idx]);
 		population.splice(idx, 1);
 	}
