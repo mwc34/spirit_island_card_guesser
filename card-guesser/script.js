@@ -323,7 +323,7 @@ function shareSet() {
 	navigator.clipboard.writeText(copyText);
 
 	/* Alert the copied text */
-	alert("Copied the text: " + copyText);
+	alert("Copied the text:\n" + copyText);
 }
 
 const guessTypeOptions = document.getElementById("guessTypeOptions");
