@@ -30,10 +30,11 @@ input[type=submit] {
   border-top: none;
   z-index: 99;
   /*position the autocomplete items to be the same width as the container:*/
-  bottom: 0;
+  bottom: 100%;
   left: 0;
   right: 0;
   max-height: 50vh;
+  overflow-y: auto;
 }
 .autocomplete-items div {
   padding: 10px;
@@ -73,26 +74,27 @@ input[type=submit] {
 }
 
 #guessTypeOptions {
-	top: 0%;
+	top: 0vh;
 }
 
 #cardTypeOptions {
-	top: 5%;
+	top: 5vh;
 }
 
 #dailyAllOptions {
-	top: 10%;
+	top: 10vh;
 }
 
 #submitForm {
 	position: absolute;
-	top: 80%;
+	top: 80vh;
 	left: 10%;
+	width: 25%:
 }
 
 #cardImage {
 	position: absolute;
-	top: 20%;
+	top: 20vh;
 	left: 50%;
 	width: 25%;
 }
