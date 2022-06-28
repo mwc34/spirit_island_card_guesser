@@ -412,7 +412,7 @@ preImg.href = '';
 preImg.rel = 'preload';
 preImg.as = 'image';
 document.head.appendChild(preImg);
-const local = true;
+const local = false;
 if (!local) {
 	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {
 		for (let card of x) {
