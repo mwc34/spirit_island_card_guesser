@@ -308,7 +308,7 @@ function shareSet() {
 		}
 	}
 	copyText = copyText.slice(0, copyText.length-1) + '\n';
-	copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)})\n`;
+	copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)}%)\n`;
 	copyText += 'https://spirit-island.vercel.app/card-guesser/';
 	
 	navigator.clipboard.writeText(copyText);
