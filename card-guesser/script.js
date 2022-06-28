@@ -255,14 +255,17 @@ function resetScore() {
 }
 
 function incrementScore(correct) {
-	currentCorrect, currentTotal = getScore();
-	score.innerHTML = `Score: ${currentCorrect + correct}/${currentTotal + 1}`
+	current = getScore();
+	score.innerHTML = `Score: ${current.correct + correct}/${current.total + 1}`
 }
 
 function getScore() {
-	currentCorrect = parseInt(score.innerHTML.slice(7));
-	currentTotal = parseInt(score.innerHTML.slice(9));
-	return currentCorrect, currentTotal;
+	let idx = score.innerHTML.indexOf('/');
+	
+	return {
+		'correct' : parseInt(score.innerHTML.slice(7, idx)),
+		'total' : parseInt(score.innerHTML.slice(idx+1, score.innerHTML.length))
+	}
 }
 
 function toggleGuessType(idx) {
@@ -287,7 +290,7 @@ function toggleCardType(idx) {
 }
 
 function shareSet() {
-	correct, total = getScore();
+	let current = getScore();
 	let d = new Date();
 	let date = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
 	let copyText = `#SI Card Guesser ${total == dailyCount ? date : 'Complete Set'}\n`;
@@ -303,7 +306,7 @@ function shareSet() {
 		}
 	}
 	copyText = copyText.slice(0, copyText.length-1) + '\n';
-	copyText += `${correct}/${total} (${Math.floor(correct*100/total)})\n`;
+	copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)})\n`;
 	copyText += 'https://spirit-island.vercel.app/card-guesser/';
 	
 	navigator.clipboard.writeText(copyText);
