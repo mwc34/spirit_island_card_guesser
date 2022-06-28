@@ -293,7 +293,7 @@ function shareSet() {
 	let current = getScore();
 	let d = new Date();
 	let date = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
-	let copyText = `#SI Card Guesser ${total == dailyCount ? date : 'Complete Set'}\n`;
+	let copyText = `#SI Card Guesser ${current.total == dailyCount ? date : 'Complete Set'}\n`;
 	for (let c of guessTypeOptions.children) {
 		if (c.classList.contains("activeOption")) {
 			copyText += c.innerHTML + ' ';
