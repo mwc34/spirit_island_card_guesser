@@ -347,8 +347,7 @@ function shareSet() {
 	
 	navigator.clipboard.writeText(copyText);
 
-	/* Alert the copied text */
-	alert("Copied the text:\n" + copyText);
+	cardImage.src = "/card-guesser/finish_card.png";
 }
 
 const mainWrapper = document.getElementById("mainWrapper");
