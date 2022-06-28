@@ -4,18 +4,22 @@ import time
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-files = os.listdir('minimal_cards_json')
+files = os.listdir('no_picture_cards_json')
 
 print(pyautogui.size())
 
-sleep_time = 0.5
+sleep_time = 0.4
+
+def check_position():
+    while True:
+        time.sleep(sleep_time)
+        print(pyautogui.position())
 
 def process_card(card):
     time.sleep(sleep_time)
     pyautogui.click(1567, 854)
     time.sleep(sleep_time)
     pyautogui.typewrite(card)
-    time.sleep(sleep_time)
     pyautogui.click(553, 448)
     time.sleep(sleep_time)
     pyautogui.click(1657, 542, button='right')
@@ -24,10 +28,9 @@ def process_card(card):
     pyautogui.click(1715, 589)
     time.sleep(sleep_time)
     pyautogui.typewrite(card)
-    time.sleep(sleep_time)
     pyautogui.click(553, 448)
-    time.sleep(sleep_time)
-    
+
+# check_position()
 time.sleep(2)
 for f in files:
     print(f)

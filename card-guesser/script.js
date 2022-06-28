@@ -116,6 +116,16 @@ function cyrb128(str) {
 }
 
 function startSet(daily) {
+	// Set function to find set urls
+	// Minimal
+	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
+	}
+	// No Picture
+	if (guessTypeOptions.children[1].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x}.png`;
+	}
+	
 	
 	let population = [...completeCards];
 	
@@ -189,7 +199,9 @@ function getSubset(population_count, sample_count, random_seed=null) {
 function newCard() {
 	if (!cardsToGuess.length) {
 		currentCard = null;
-		cardImage.src = "";
+		setTimeout(() => {
+			cardImage.src = "";
+		}, 1000)
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
@@ -210,7 +222,7 @@ function makeGuess() {
 		else {
 			incrementScore(false);
 		}
-		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.webp`;
+		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		decrementCardsLeft();
 		newCard();
 	}
@@ -239,12 +251,13 @@ function incrementScore(correct) {
 }
 
 function toggleGuessType(idx) {
-	let e = guessTypeOptions.children[idx];
-	if (e.classList.contains("activeOption")) {
-		e.classList.remove("activeOption");
-	}
-	else {
-		e.classList.add("activeOption");
+	for (let i=0; i<guessTypeOptions.childElementCount; i++) {
+		if (i == idx) {
+			guessTypeOptions.children[i].classList.add("activeOption");
+		}
+		else {
+			guessTypeOptions.children[i].classList.remove("activeOption");
+		}
 	}
 }
 
@@ -271,3 +284,4 @@ window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => 
 autocomplete(cardInput, cardTitles);
 var currentCard = null;
 var cardsToGuess = [];
+var cardGuessURI = null;

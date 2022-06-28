@@ -5,9 +5,16 @@ import itertools
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 complete_cards_path = '../card-guesser/complete_cards.json'
-minimal_cards_path = '../card-guesser/minimal_cards.json'
 minimal_cards_directory = 'minimal_cards_json'
+complete_cards_directory = 'complete_cards_json'
+no_picture_cards_directory = 'no_picture_cards_json'
+picture_only_cards_directory = 'picture_only_cards_json'
+maximal_cards_directory = 'maximal_cards_json'
 os.makedirs(minimal_cards_directory, exist_ok=True)
+os.makedirs(complete_cards_directory, exist_ok=True)
+os.makedirs(no_picture_cards_directory, exist_ok=True)
+os.makedirs(picture_only_cards_directory, exist_ok=True)
+os.makedirs(maximal_cards_directory, exist_ok=True)
 
 def powerset(iterable):
     """powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"""
@@ -87,7 +94,7 @@ def generate_minimal_cards():
     # Categories are cost, speed, range, target, elements, threshold condition
     # Speed has to be there as can't remove
     for complete_card in complete_cards:
-        print(complete_card['name'])
+        print(complete_card['title'])
         card = json.loads(json.dumps(complete_card))
         card['name'] = ''
         card['cost'] = ''
@@ -111,4 +118,53 @@ def generate_minimal_cards():
         with open(os.path.join(minimal_cards_directory, complete_card['id'] + '.json'), 'w') as fp:
             json.dump(card, fp, indent=4)
             
-generate_minimal_cards()
+
+def generate_no_picture_cards():
+    with open(complete_cards_path) as fp:
+        complete_cards = json.load(fp)
+        
+    for complete_card in complete_cards:
+        print(complete_card['title'])
+        card = json.loads(json.dumps(complete_card))
+        card['name'] = ''
+        card['art']['image'] = None
+        card['art']['url'] = None
+        card['art']['artist'] = ''
+        
+        with open(os.path.join(no_picture_cards_directory, complete_card['id'] + '.json'), 'w') as fp:
+            json.dump(card, fp, indent=4)
+            
+            
+def generate_picture_only_cards():
+    with open(complete_cards_path) as fp:
+        complete_cards = json.load(fp)
+        
+    for complete_card in complete_cards:
+        print(complete_card['title'])
+        card = json.loads(json.dumps(complete_card))
+        card['name'] = ''
+        card['cost'] = ''
+        card['range']['text'] = ''
+        card['target']['enabled'] = True
+        card['target']['text'] = ''
+        card['effect'] = ''
+        card['elements'] = {i: False for i in card['elements']}
+        card['threshold']['enabled'] = False
+        card['threshold']['conditionText'] = ''
+        card['threshold']['effectText'] = ''
+        
+        with open(os.path.join(picture_only_cards_directory, complete_card['id'] + '.json'), 'w') as fp:
+            json.dump(card, fp, indent=4)
+            
+            
+def generate_no_picture_cards():
+    with open(complete_cards_path) as fp:
+        complete_cards = json.load(fp)
+        
+    for complete_card in complete_cards:
+        print(complete_card['title'])
+        card = json.loads(json.dumps(complete_card))
+        card['name'] = ''
+        
+        with open(os.path.join(maximal_cards_directory, complete_card['id'] + '.json'), 'w') as fp:
+            json.dump(card, fp, indent=4)
