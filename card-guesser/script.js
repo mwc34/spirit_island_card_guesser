@@ -186,6 +186,9 @@ function startSet() {
 		let d = new Date();
 		let hashString = d.getUTCDate().toString() + d.getUTCMonth() + d.getUTCFullYear();
 		hashString += sections.reduce((x,y)=>x+y);
+		if (differentDaily) {
+			hashString += cardGuessURI('hash');
+		}
 		random_seed = cyrb128(hashString).reduce((x,y)=>x+y);
 		sample_count = dailyCount;
 	}
@@ -376,6 +379,7 @@ const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
 const score = document.getElementById("score");
 const dailyCount = 10;
+const differentDaily = true; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
 const preImg = document.createElement('link');
