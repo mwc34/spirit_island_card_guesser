@@ -121,9 +121,9 @@ function cyrb128(str) {
 
 function startSet(daily) {
 	// Set function to find set urls
-	// Minimal
+	// Maximal
 	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
+		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
 	}
 	// No Picture
 	if (guessTypeOptions.children[1].classList.contains("activeOption")) {
@@ -133,9 +133,9 @@ function startSet(daily) {
 	if (guessTypeOptions.children[2].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x}.png`;
 	}
-	// Maximal
+	// Minimal
 	if (guessTypeOptions.children[3].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
+		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
 	}
 	
 	
@@ -338,8 +338,15 @@ const score = document.getElementById("score");
 const dailyCount = 10;
 const completeCards = [];
 const cardTitles = [];
-window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardTitles.push(card.title)}});
-autocomplete(cardInput, cardTitles);
+const local = false;
+if (!local) {
+	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardTitles.push(card.title)}});
+	autocomplete(cardInput, cardTitles);
+}
+else {
+	autocomplete(cardInput, ['a', 'aa', 'aaa', 'aaaa']);
+	cardImage.src = 'complete_cards_img/a_circuitous_and_wending_journey.png'
+}
 var currentCard = null;
 var cardsToGuess = [];
 var cardGuessURI = null;
