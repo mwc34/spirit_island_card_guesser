@@ -66,7 +66,7 @@ input[type=submit] {
 .option {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	user-select: none;
 	flex-grow: 1;
 }
