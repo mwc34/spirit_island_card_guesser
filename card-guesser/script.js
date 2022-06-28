@@ -249,19 +249,21 @@ function getSubset(population_count, sample_count, random_seed=null) {
 }
 
 function newCard(timeout=10) {
-	score.style.backgroundColor = '';
-	cardsLeft.style.backgroundColor = '';
 	if (!cardsToGuess.length) {
 		currentCard = null;
 		shareButton.style.display = '';
 		cardInputWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
+		score.style.backgroundColor = '';
+		cardsLeft.style.backgroundColor = '';
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
 	
 	preImg.href = cardGuessURI(currentCard.id);
 	setTimeout(() => {
+		score.style.backgroundColor = '';
+		cardsLeft.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard.id);
 		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		if (!mobileAndTabletCheck())
