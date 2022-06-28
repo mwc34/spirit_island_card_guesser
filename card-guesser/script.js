@@ -125,6 +125,14 @@ function startSet(daily) {
 	if (guessTypeOptions.children[1].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x}.png`;
 	}
+	// Picture Only
+	if (guessTypeOptions.children[2].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x}.png`;
+	}
+	// Maximal
+	if (guessTypeOptions.children[3].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
+	}
 	
 	
 	let population = [...completeCards];
@@ -212,17 +220,21 @@ function makeGuess() {
 	
 	cardInput.value = "";
 	if (currentCard) {
-		if (currentCard.title == guess) {
-			incrementScore(true);
-		}
-		else {
-			incrementScore(false);
-		}
 		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
-		decrementCardsLeft();
+		
 		cardImage.onload = () => {
 			cardImage.onload = undefined;
-			setTimeout(newCard, 1000);
+			timeout = 250;
+			if (currentCard.title == guess) {
+				incrementScore(true);
+				timeout += 750;
+			}
+			else {
+				incrementScore(false);
+			}
+			decrementCardsLeft();
+			
+			setTimeout(newCard, timeout);
 		}
 	}
 }
