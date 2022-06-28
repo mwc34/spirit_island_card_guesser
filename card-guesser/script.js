@@ -401,7 +401,27 @@ var currentCard = null;
 var cardsToGuess = [];
 var cardGuessURI = null;
 
-// Set the viewport as page loads
-addEventListener("load", function() {
-  document.getElementById("viewport").setAttribute("content", "width=" + window.innerWidth + ", height=" + window.innerHeight + ", initial-scale=1.0, maximum-scale=1.0, user-scalable=0");
-})
+
+
+
+var currentWidth = 0;
+var currentHeight = 0;
+
+function setSize() {
+	currentWidth = window.innerWidth;
+	currentHeight = window.innerHeight;
+	document.getElementById("viewport").setAttribute("content", "width=" + currentWidth + ", height=" + currentHeight + ", initial-scale=1.0, maximum-scale=1.0, user-scalable=0");
+}
+
+// Set the global orientation variable as soon as the page loads
+addEventListener("load", setSize)
+
+// Adjust viewport values only if width change or increase height (avoids keyboard shrinking)
+function windowSizeChanged() {
+	if (window.innerWidth != currentWidth || window.innerHeight > currentHeight) {
+		setSize();
+	}
+}
+
+// Listen for window resizes to detect orientation changes
+window.addEventListener("resize", windowSizeChanged);
