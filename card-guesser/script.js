@@ -255,9 +255,14 @@ function resetScore() {
 }
 
 function incrementScore(correct) {
+	currentCorrect, currentTotal = getScore();
+	score.innerHTML = `Score: ${currentCorrect + correct}/${currentTotal + 1}`
+}
+
+function getScore() {
 	currentCorrect = parseInt(score.innerHTML.slice(7));
 	currentTotal = parseInt(score.innerHTML.slice(9));
-	score.innerHTML = `Score: ${currentCorrect + correct}/${currentTotal + 1}`
+	return currentCorrect, currentTotal;
 }
 
 function toggleGuessType(idx) {
@@ -279,6 +284,32 @@ function toggleCardType(idx) {
 	else {
 		e.classList.add("activeOption");
 	}
+}
+
+function shareSet() {
+	correct, total = getScore();
+	let d = new Date();
+	let date = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
+	let copyText = `#SI Card Guesser ${total == dailyCount ? date : 'Complete Set'}\n`;
+	for (let c of guessTypeOptions.children) {
+		if (c.classList.contains("activeOption")) {
+			copyText += c.innerHTML + ' ';
+			break;
+		}
+	}
+	for (let c of cardTypeOptions.children) {
+		if (c.classList.contains("activeOption")) {
+			copyText += c.innerHTML + ' ';
+		}
+	}
+	copyText = copyText.slice(0, copyText.length-1) + '\n';
+	copyText += `${correct}/${total} (${Math.floor(correct*100/total)})\n`;
+	copyText += 'https://spirit-island.vercel.app/card-guesser/';
+	
+	navigator.clipboard.writeText(copyText);
+
+	/* Alert the copied text */
+	alert("Copied the text: " + copyText);
 }
 
 const guessTypeOptions = document.getElementById("guessTypeOptions");
