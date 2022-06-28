@@ -102,6 +102,17 @@ function autocomplete(inp, arr) {
 	});
 }
 
+function hideKeyboard(element) {
+    element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
+    element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
+    setTimeout(function() {
+        element.blur();  //actually close the keyboard
+        // Remove readonly attribute after keyboard is hidden.
+        element.removeAttr('readonly');
+        element.removeAttr('disabled');
+    }, 100);
+}
+
 function cyrb128(str) {
     let h1 = 1779033703, h2 = 3144134277,
         h3 = 1013904242, h4 = 2773480762;
@@ -249,9 +260,16 @@ function newCard() {
 
 function makeGuess() {
 	let guess = cardInput.value;
+	
+	// Auto complete answer if only one
+	if (cardInputWrapper.childElementCount == 2 && cardInputWrapper.children[1].childElementCount == 1) {
+		guess = cardInputWrapper.children[1].children[0].children[1].value;
+	}
+	
 	if (!guess.length) return
 	
 	cardInput.value = "";
+	hideKeyboard(cardInput);
 	if (currentCard) {
 		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		
@@ -379,7 +397,7 @@ const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
 const score = document.getElementById("score");
 const dailyCount = 10;
-const differentDaily = true; // For the guess type modes
+const differentDaily = false; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
 const preImg = document.createElement('link');
