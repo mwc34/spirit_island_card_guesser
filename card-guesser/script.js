@@ -102,14 +102,14 @@ function autocomplete(inp, arr) {
 	});
 }
 
-function hideKeyboard(element) {
-    element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
-    element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
+function hideKeyboard(e) {
+	e.setAttribute('readonly', '');
+	e.setAttribute('disabled', '');
     setTimeout(function() {
-        element.blur();  //actually close the keyboard
+        e.blur();  //actually close the keyboard
         // Remove readonly attribute after keyboard is hidden.
-        element.removeAttr('readonly');
-        element.removeAttr('disabled');
+        e.removeAttribute('readonly');
+        e.removeAttribute('disabled');
     }, 100);
 }
 
