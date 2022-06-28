@@ -1,6 +1,10 @@
 * { box-sizing: border-box; }
 body {
-  font: 16px Arial;
+	font: 16px Arial;
+	margin: 0;
+	overflow: hidden;
+	background-image: url("https://pbs.twimg.com/media/DsN6CaeU4AAuMQZ.jpg:large");
+	background-size: cover;
 }
 .autocomplete {
   /*the container must be positioned relative:*/

@@ -206,7 +206,7 @@ function newCard() {
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
 	setTimeout(() => {
-		cardImage.src = `/card-guesser/minimal_cards_img/${currentCard.id}.png`;
+		cardImage.src = cardGuessURI(currentCard.id);
 	}, 1000)
 }
 
