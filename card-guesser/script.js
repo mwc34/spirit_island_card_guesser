@@ -226,6 +226,7 @@ function newCard() {
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
 	cardImage.src = cardGuessURI(currentCard.id);
+	preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 	cardInput.focus();
 }
 
@@ -364,6 +365,11 @@ const score = document.getElementById("score");
 const dailyCount = 10;
 const completeCards = [];
 const cardTitles = [];
+const preImg = document.createElement('link');
+preImg.href = '';
+preImg.rel = 'preload';
+preImg.as = 'image';
+document.head.appendChild(preImg);
 const local = false;
 if (!local) {
 	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {
