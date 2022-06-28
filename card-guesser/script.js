@@ -224,12 +224,12 @@ function makeGuess() {
 		
 		cardImage.onload = () => {
 			cardImage.onload = undefined;
-			timeout = 250;
+			timeout = 500;
 			if (currentCard.title == guess) {
 				incrementScore(true);
 			}
 			else {
-				timeout += 750;
+				timeout += 1000;
 				incrementScore(false);
 			}
 			decrementCardsLeft();
