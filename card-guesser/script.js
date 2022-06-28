@@ -241,14 +241,14 @@ function makeGuess() {
 			timeout = 1000;
 			if (currentCard.title == guess) {
 				incrementScore(true);
-				score.style.backgroundColor = '#db0f0f';
-				cardsLeft.style.backgroundColor = '#db0f0f';
+				score.style.backgroundColor = '#0fd920';
+				cardsLeft.style.backgroundColor = '#0fd920';
 			}
 			else {
 				timeout += 1000;
 				incrementScore(false);
-				score.style.backgroundColor = '#0fd920';
-				cardsLeft.style.backgroundColor = '#0fd920';
+				score.style.backgroundColor = '#db0f0f';
+				cardsLeft.style.backgroundColor = '#db0f0f';
 			}
 			decrementCardsLeft();
 			
