@@ -178,7 +178,7 @@ function startSet(daily) {
 	if (population.length < sample_count)
 		return
 	
-	shareSet.style.display = 'none';
+	shareButton.style.display = 'none';
 	cardInput.style.display = '';
 	submitInput.style.display = '';
 	
@@ -213,7 +213,7 @@ function getSubset(population_count, sample_count, random_seed=null) {
 function newCard() {
 	if (!cardsToGuess.length) {
 		currentCard = null;
-		shareSet.style.display = '';
+		shareButton.style.display = '';
 		cardInput.style.display = 'none';
 		submitInput.style.display = 'none';
 		return;
@@ -328,6 +328,7 @@ const guessTypeOptions = document.getElementById("guessTypeOptions");
 const cardTypeOptions = document.getElementById("cardTypeOptions");
 const cardInput = document.getElementById("cardInput");
 const submitInput = document.getElementById("submitInput");
+const shareButton = document.getElementById("shareButton");
 const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
 const score = document.getElementById("score");
