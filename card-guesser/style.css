@@ -133,6 +133,7 @@ form {
 #cardImage {
 	position: relative;
 	flex-grow: 1;
+	min-height: 0px;
 	max-height: 676px;
 	padding-top: 1%;
 	padding-bottom: 1%;
