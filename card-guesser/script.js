@@ -225,6 +225,7 @@ function newCard() {
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
 	cardImage.src = cardGuessURI(currentCard.id);
+	cardInput.focus();
 }
 
 function makeGuess() {
