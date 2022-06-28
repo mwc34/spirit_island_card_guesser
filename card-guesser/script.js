@@ -126,16 +126,20 @@ function startSet() {
 		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
 	}
 	// No Picture
-	if (guessTypeOptions.children[1].classList.contains("activeOption")) {
+	else if (guessTypeOptions.children[1].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x}.png`;
 	}
 	// Picture Only
-	if (guessTypeOptions.children[2].classList.contains("activeOption")) {
+	else if (guessTypeOptions.children[2].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x}.png`;
 	}
 	// Minimal
-	if (guessTypeOptions.children[3].classList.contains("activeOption")) {
+	else if (guessTypeOptions.children[3].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
+	}
+	// Nothing selected
+	else {
+		return
 	}
 	
 	
