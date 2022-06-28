@@ -36,7 +36,7 @@ input[type=submit] {
   bottom: 100%;
   left: 0;
   right: 0;
-  max-height: 50vh;
+  max-height: 30vh;
   overflow-y: auto;
 }
 .autocomplete-items div {
@@ -86,8 +86,7 @@ input[type=submit] {
 }
 
 #mainWrapper {
-	padding-top: 1%;
-	padding-bottom: 1%;
+	padding: 1%;
 	box-sizing: border-box;
 	position: absolute;
 	width: 100%;
