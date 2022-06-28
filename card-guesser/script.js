@@ -407,7 +407,6 @@ var cardGuessURI = null;
 
 
 
-
 var currentWidth = 0;
 var currentHeight = 0;
 
