@@ -349,6 +349,7 @@ function shareSet() {
 	alert("Copied the text:\n" + copyText);
 }
 
+const mainWrapper = document.getElementById("mainWrapper");
 const guessTypeOptions = document.getElementById("guessTypeOptions");
 const cardTypeOptions = document.getElementById("cardTypeOptions");
 const dailyAllOptions = document.getElementById("dailyAllOptions");
@@ -364,7 +365,14 @@ const completeCards = [];
 const cardTitles = [];
 const local = false;
 if (!local) {
-	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardTitles.push(card.title)}; startSet();});
+	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {
+		for (let card of x) {
+			completeCards.push(card);
+			cardTitles.push(card.title);
+		}
+		startSet();
+		mainWrapper.style.height = window.innerHeight;
+	});
 	autocomplete(cardInput, cardTitles);
 }
 else {
