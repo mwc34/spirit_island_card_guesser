@@ -1,6 +1,7 @@
 * { box-sizing: border-box; }
 body {
-	font: 16px Arial;
+	font-family: Arial;
+	font-size: medium;
 	margin: 0;
 	overflow: hidden;
 	display: flex;
@@ -73,7 +74,6 @@ input[type=submit] {
 	color: #fff;
 	border: 1px solid black;
 	padding: 10px;
-	font-size: 16px;
 }
 
 #topHUD {
@@ -127,7 +127,6 @@ form {
 	color: #fff;
 	border: 1px solid transparent;
 	padding: 10px;
-	font-size: 16px;
 }
 
 #cardImage {
@@ -145,7 +144,6 @@ form {
   color: #fff;
   border: 1px solid transparent;
   padding: 10px;
-  font-size: 16px;
 }
 
 .activeOption  {

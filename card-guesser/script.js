@@ -171,7 +171,8 @@ function startSet() {
 	if (dailyAllOptions.children[0].classList.contains("activeOption")) {
 		// Generate seed from date
 		let d = new Date();
-		random_seed = cyrb128(d.getUTCDate().toString() + d.getUTCMonth() + d.getUTCFullYear()).reduce((x,y)=>x+y)
+		let hashString = d.getUTCDate().toString() + d.getUTCMonth() + d.getUTCFullYear();
+		random_seed = cyrb128(hashString).reduce((x,y)=>x+y)
 		sample_count = dailyCount;
 	}
 	else {
@@ -363,16 +364,13 @@ const score = document.getElementById("score");
 const dailyCount = 10;
 const completeCards = [];
 const cardTitles = [];
-const local = false;
+const local = true;
 if (!local) {
 	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {
 		for (let card of x) {
 			completeCards.push(card);
 			cardTitles.push(card.title);
 		}
-		startSet();
-		mainWrapper.style.height = window.innerHeight;
-		mainWrapper.style.width = window.innerWidth;
 	});
 	autocomplete(cardInput, cardTitles);
 }

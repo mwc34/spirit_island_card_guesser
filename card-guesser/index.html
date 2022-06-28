@@ -4,9 +4,9 @@
         <title>
             Spirit Island Card Guesser
         </title>
-		<meta name="viewport" content="width=device-width; initial-scale=1.0;" charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="/card-guesser/style.css">
-		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" charset="UTF-8">
+		<!-- <link rel="stylesheet" type="text/css" href="/card-guesser/style.css"> -->
+		<link rel="stylesheet" type="text/css" href="style.css">
         <!---<link rel="icon" href="assets/other/favicon.png">--->
     </head>
     <body>
@@ -18,7 +18,7 @@
 			<div id="guessTypeOptions" class="optionWrapper">
 				<div class="option" onclick="toggleGuessType(0)">Easy</div>
 				<div class="option" onclick="toggleGuessType(1)">No Picture</div>
-				<div class="option activeOption" onclick="toggleGuessType(2)">Picture Only</div>
+				<div class="option" onclick="toggleGuessType(2)">Picture Only</div>
 				<div class="option" onclick="toggleGuessType(3)">Impossible</div>
 			</div>
 			<div id="cardTypeOptions" class="optionWrapper">
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		
-		<img id="cardImage" src=""/>
+		<img id="cardImage" src="/card-guesser/welcome_card.png"/>
 
 		<div id="bottomHUD">
 			<!--Make sure the form has the autocomplete function switched off:-->
@@ -55,8 +55,8 @@
 	
     </body>
     
-    <script src="/card-guesser/script.js">
-    <!-- <script src="script.js"> -->
+    <!-- <script src="/card-guesser/script.js"> -->
+    <script src="script.js">
     </script>
     
 </html>
