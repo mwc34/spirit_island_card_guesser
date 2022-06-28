@@ -364,7 +364,7 @@ const score = document.getElementById("score");
 const dailyCount = 10;
 const completeCards = [];
 const cardTitles = [];
-const local = true;
+const local = false;
 if (!local) {
 	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {
 		for (let card of x) {
