@@ -372,6 +372,7 @@ if (!local) {
 		}
 		startSet();
 		mainWrapper.style.height = window.innerHeight;
+		mainWrapper.style.width = window.innerWidth;
 	});
 	autocomplete(cardInput, cardTitles);
 }
