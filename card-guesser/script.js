@@ -227,9 +227,9 @@ function makeGuess() {
 			timeout = 250;
 			if (currentCard.title == guess) {
 				incrementScore(true);
-				timeout += 750;
 			}
 			else {
+				timeout += 750;
 				incrementScore(false);
 			}
 			decrementCardsLeft();
