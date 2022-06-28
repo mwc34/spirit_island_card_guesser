@@ -5,8 +5,8 @@
             Spirit Island Card Guesser
         </title>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0;" charset="UTF-8">
-		<!-- <link rel="stylesheet" type="text/css" href="/card-guesser/style.css"> -->
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="/card-guesser/style.css">
+		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
         <!---<link rel="icon" href="assets/other/favicon.png">--->
     </head>
     <body>
@@ -27,8 +27,8 @@
 				<div class="option activeOption" onclick="toggleCardType(2)">Unique</div>
 			</div>
 			<div id="dailyAllOptions" class="optionWrapper">
-				<div class="option start" onclick="startSet(true)">Start Daily Set</div>
-				<div class="option start" onclick="startSet(false)">Start Complete Set</div>
+				<div class="option activeOption" onclick="toggleDaily(0)">Daily Set</div>
+				<div class="option" onclick="toggleDaily(1)">Complete Set</div>
 			</div>
 		</div>
 		
@@ -55,8 +55,8 @@
 	
     </body>
     
-    <!-- <script src="/card-guesser/script.js"> -->
-    <script src="script.js">
+    <script src="/card-guesser/script.js">
+    <!-- <script src="script.js"> -->
     </script>
     
 </html>

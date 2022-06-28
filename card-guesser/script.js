@@ -119,7 +119,7 @@ function cyrb128(str) {
     return [(h1^h2^h3^h4)>>>0, (h2^h1)>>>0, (h3^h1)>>>0, (h4^h1)>>>0];
 }
 
-function startSet(daily) {
+function startSet() {
 	// Set function to find set urls
 	// Maximal
 	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
@@ -167,7 +167,8 @@ function startSet(daily) {
 	let sample_count = null;
 	let random_seed = null;
 	
-	if (daily) {
+	// Check if Daily or not
+	if (dailyAllOptions.children[0].classList.contains("activeOption")) {
 		// Generate seed from date
 		let d = new Date();
 		random_seed = cyrb128(d.getUTCDate().toString() + d.getUTCMonth() + d.getUTCFullYear()).reduce((x,y)=>x+y)
@@ -213,6 +214,8 @@ function getSubset(population_count, sample_count, random_seed=null) {
 }
 
 function newCard() {
+	score.style.backgroundColor = '';
+	cardsLeft.style.backgroundColor = '';
 	if (!cardsToGuess.length) {
 		currentCard = null;
 		shareButton.style.display = '';
@@ -234,13 +237,18 @@ function makeGuess() {
 		
 		cardImage.onload = () => {
 			cardImage.onload = undefined;
+			
 			timeout = 1000;
 			if (currentCard.title == guess) {
 				incrementScore(true);
+				score.style.backgroundColor = '#db0f0f';
+				cardsLeft.style.backgroundColor = '#db0f0f';
 			}
 			else {
 				timeout += 1000;
 				incrementScore(false);
+				score.style.backgroundColor = '#0fd920';
+				cardsLeft.style.backgroundColor = '#0fd920';
 			}
 			decrementCardsLeft();
 			
@@ -288,6 +296,7 @@ function toggleGuessType(idx) {
 			guessTypeOptions.children[i].classList.remove("activeOption");
 		}
 	}
+	startSet();
 }
 
 function toggleCardType(idx) {
@@ -298,6 +307,19 @@ function toggleCardType(idx) {
 	else {
 		e.classList.add("activeOption");
 	}
+	startSet();
+}
+
+function toggleDaily(idx) {
+	for (let i=0; i<dailyAllOptions.childElementCount; i++) {
+		if (i == idx) {
+			dailyAllOptions.children[i].classList.add("activeOption");
+		}
+		else {
+			dailyAllOptions.children[i].classList.remove("activeOption");
+		}
+	}
+	startSet();
 }
 
 function shareSet() {
@@ -307,7 +329,7 @@ function shareSet() {
 	let copyText = `#SI Card Guesser ${current.total == dailyCount ? date : 'Complete Set'}\n`;
 	for (let c of guessTypeOptions.children) {
 		if (c.classList.contains("activeOption")) {
-			copyText += c.innerHTML + ' ';
+			copyText += c.innerHTML + '\n';
 			break;
 		}
 	}
@@ -328,6 +350,7 @@ function shareSet() {
 
 const guessTypeOptions = document.getElementById("guessTypeOptions");
 const cardTypeOptions = document.getElementById("cardTypeOptions");
+const dailyAllOptions = document.getElementById("dailyAllOptions");
 const cardInput = document.getElementById("cardInput");
 const cardInputWrapper = document.getElementById("cardInputWrapper");
 const submitInput = document.getElementById("submitInput");
@@ -340,7 +363,7 @@ const completeCards = [];
 const cardTitles = [];
 const local = false;
 if (!local) {
-	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardTitles.push(card.title)}});
+	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {for (let card of x) {completeCards.push(card);cardTitles.push(card.title)}; startSet();});
 	autocomplete(cardInput, cardTitles);
 }
 else {

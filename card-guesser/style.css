@@ -77,10 +77,6 @@ input[type=submit] {
 	font-size: 16px;
 }
 
-.start {
-	background-color: DodgerBlue;
-}
-
 #topHUD {
 	width: 100%;
 	position: relative;
