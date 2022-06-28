@@ -400,3 +400,8 @@ else {
 var currentCard = null;
 var cardsToGuess = [];
 var cardGuessURI = null;
+
+// Set the viewport as page loads
+addEventListener("load", function() {
+  document.getElementById("viewport").setAttribute("content", "width=" + window.innerWidth + ", height=" + window.innerHeight + ", initial-scale=1.0, maximum-scale=1.0, user-scalable=0");
+})
