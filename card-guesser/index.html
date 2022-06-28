@@ -5,53 +5,54 @@
             Spirit Island Card Guesser
         </title>
 		<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="/card-guesser/style.css">
-		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="/card-guesser/style.css"> -->
+		<link rel="stylesheet" type="text/css" href="style.css">
         <!---<link rel="icon" href="assets/other/favicon.png">--->
     </head>
     <body>
-	
-	<div id="mainWrapper">
-		<div id="topHUD">
-			<div id="guessTypeOptions" class="optionWrapper">
-				<div class="option" onclick="toggleGuessType(0)">Easy</div>
-				<div class="option" onclick="toggleGuessType(1)">No Picture</div>
-				<div class="option" onclick="toggleGuessType(2)">Picture Only</div>
-				<div class="option" onclick="toggleGuessType(3)">Impossible</div>
-			</div>
-			<div id="cardTypeOptions" class="optionWrapper">
-				<div class="option activeOption" onclick="toggleCardType(0)">Minor</div>
-				<div class="option activeOption" onclick="toggleCardType(1)">Major</div>
-				<div class="option activeOption" onclick="toggleCardType(2)">Unique</div>
-			</div>
-			<div id="dailyAllOptions" class="optionWrapper">
-				<div class="option activeOption" onclick="toggleDaily(0)">Daily Set</div>
-				<div class="option" onclick="toggleDaily(1)">Complete Set</div>
-			</div>
-		</div>
-		
-		<img id="cardImage" src="/card-guesser/welcome_card.png"/>
-
-		<div id="bottomHUD">
-			<!--Make sure the form has the autocomplete function switched off:-->
-			<form autocomplete="off" onsubmit="makeGuess();return false;">
-				<div id="cardInputWrapper" class="autocomplete">
-					<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
+	<div id="bodyWrapper">
+		<div id="mainWrapper">
+			<div id="topHUD">
+				<div id="guessTypeOptions" class="optionWrapper">
+					<div class="option" onclick="toggleGuessType(0)">Easy</div>
+					<div class="option" onclick="toggleGuessType(1)">No Picture</div>
+					<div class="option" onclick="toggleGuessType(2)">Picture Only</div>
+					<div class="option" onclick="toggleGuessType(3)">Impossible</div>
 				</div>
-				<input id="submitInput" type="submit" value="Guess">
-				<button id="shareButton" style="display:none;" onclick="shareSet()">Share</button>
-			</form>
-			<div id="infoWrapper">
-				<div id="score" class="info">Score: 0/0</div>
-				<div id="cardsLeft" class="info">Cards Left: 0</div>
+				<div id="cardTypeOptions" class="optionWrapper">
+					<div class="option activeOption" onclick="toggleCardType(0)">Minor</div>
+					<div class="option activeOption" onclick="toggleCardType(1)">Major</div>
+					<div class="option activeOption" onclick="toggleCardType(2)">Unique</div>
+				</div>
+				<div id="dailyAllOptions" class="optionWrapper">
+					<div class="option activeOption" onclick="toggleDaily(0)">Daily Set</div>
+					<div class="option" onclick="toggleDaily(1)">Complete Set</div>
+				</div>
+			</div>
+			
+			<img id="cardImage" src="/card-guesser/welcome_card.png"/>
+
+			<div id="bottomHUD">
+				<!--Make sure the form has the autocomplete function switched off:-->
+				<form autocomplete="off" onsubmit="makeGuess();return false;">
+					<div id="cardInputWrapper" class="autocomplete">
+						<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
+					</div>
+					<input id="submitInput" type="submit" value="Guess">
+					<button id="shareButton" style="display:none;" onclick="shareSet()">Share</button>
+				</form>
+				<div id="infoWrapper">
+					<div id="score" class="info">Score: 0/0</div>
+					<div id="cardsLeft" class="info">Cards Left: 0</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	
     </body>
     
-    <script src="/card-guesser/script.js">
-    <!-- <script src="script.js"> -->
+    <!-- <script src="/card-guesser/script.js"> -->
+    <script src="script.js">
     </script>
     
 </html>

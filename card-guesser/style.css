@@ -3,9 +3,7 @@ body {
 	font-family: Arial;
 	font-size: medium;
 	margin: 0;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
+	
 }
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -85,13 +83,19 @@ input[type=submit] {
 	flex-direction: column;
 }
 
-#mainWrapper {
-	padding: 1%;
-	box-sizing: border-box;
+#bodyWrapper {
+	display: flex;
+	justify-content: center;
+	overflow: auto;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	bottom: 0;
+}
+
+#mainWrapper {
+	padding: 1%;
+	box-sizing: border-box;
+	bottom: 0%;
 	max-width: 800px;
 	display: flex;
 	justify-content: space-between;

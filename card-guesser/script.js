@@ -248,7 +248,7 @@ function getSubset(population_count, sample_count, random_seed=null) {
 	return samples;
 }
 
-function newCard() {
+function newCard(timeout=10) {
 	score.style.backgroundColor = '';
 	cardsLeft.style.backgroundColor = '';
 	if (!cardsToGuess.length) {
@@ -259,10 +259,14 @@ function newCard() {
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
-	cardImage.src = cardGuessURI(currentCard.id);
-	preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
-	if (!mobileAndTabletCheck())
-		cardInput.focus();
+	
+	preImg.href = cardGuessURI(currentCard.id);
+	setTimeout(() => {
+		cardImage.src = cardGuessURI(currentCard.id);
+		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
+		if (!mobileAndTabletCheck())
+			cardInput.focus();
+	}, timeout);
 }
 
 function makeGuess() {
@@ -292,7 +296,7 @@ function makeGuess() {
 			}
 			decrementCardsLeft();
 			
-			setTimeout(newCard, timeout);
+			newCard(timeout);
 		}
 	}
 }
@@ -387,6 +391,7 @@ function shareSet() {
 	cardImage.src = "/card-guesser/finish_card.png";
 }
 
+const bodyWrapper = document.getElementById("bodyWrapper");
 const mainWrapper = document.getElementById("mainWrapper");
 const guessTypeOptions = document.getElementById("guessTypeOptions");
 const cardTypeOptions = document.getElementById("cardTypeOptions");
@@ -407,7 +412,7 @@ preImg.href = '';
 preImg.rel = 'preload';
 preImg.as = 'image';
 document.head.appendChild(preImg);
-const local = false;
+const local = true;
 if (!local) {
 	window.fetch('/card-guesser/complete_cards.json').then(x => x.json()).then(x => {
 		for (let card of x) {
@@ -431,20 +436,29 @@ var currentWidth = 0;
 var currentHeight = 0;
 
 function setSize() {
+	mainWrapper.style.width = window.innerWidth + 'px';
+	mainWrapper.style.height = window.innerHeight + 'px';
+}
+
+function saveSize() {
 	currentWidth = window.innerWidth;
 	currentHeight = window.innerHeight;
-	document.getElementById("viewport").setAttribute("content", "width=" + currentWidth + ", height=" + currentHeight + ", initial-scale=1.0, maximum-scale=1.0, user-scalable=0");
 }
 
 // Set the global orientation variable as soon as the page loads
-addEventListener("load", setSize)
+addEventListener("load", () => {
+	setSize();
+	saveSize()
+})
 
 // Adjust viewport values only if width change or increase height (avoids keyboard shrinking)
-function windowSizeChanged() {
+window.addEventListener("resize", () => {
 	if (window.innerWidth != currentWidth || window.innerHeight > currentHeight) {
 		setSize();
+		
 	}
-}
-
-// Listen for window resizes to detect orientation changes
-window.addEventListener("resize", windowSizeChanged);
+	else {
+		bodyWrapper.scrollTop = bodyWrapper.scrollHeight;
+	}
+	saveSize();
+});
