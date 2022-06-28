@@ -199,15 +199,11 @@ function getSubset(population_count, sample_count, random_seed=null) {
 function newCard() {
 	if (!cardsToGuess.length) {
 		currentCard = null;
-		setTimeout(() => {
-			cardImage.src = "";
-		}, 1000)
+		cardImage.src = "";
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
-	setTimeout(() => {
-		cardImage.src = cardGuessURI(currentCard.id);
-	}, 1000)
+	cardImage.src = cardGuessURI(currentCard.id);
 }
 
 function makeGuess() {
@@ -224,7 +220,10 @@ function makeGuess() {
 		}
 		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		decrementCardsLeft();
-		newCard();
+		cardImage.onload = () => {
+			cardImage.onload = undefined;
+			setTimeout(newCard, 1000);
+		}
 	}
 }
 
