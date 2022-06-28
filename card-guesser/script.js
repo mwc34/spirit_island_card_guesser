@@ -142,6 +142,7 @@ function startSet() {
 	let population = [...completeCards];
 	
 	// Remove unwanted sections
+	let sections = [];
 	// Minor
 	if (!cardTypeOptions.children[0].classList.contains("activeOption")) {
 		for (let i=population.length-1; i>=0; i--) {
@@ -149,6 +150,8 @@ function startSet() {
 				population.splice(i, 1);
 		}
 	}
+	else
+		sections.push('minor');
 	// Major
 	if (!cardTypeOptions.children[1].classList.contains("activeOption")) {
 		for (let i=population.length-1; i>=0; i--) {
@@ -156,6 +159,8 @@ function startSet() {
 				population.splice(i, 1);
 		}
 	}
+	else
+		sections.push('major');
 	// Unique
 	if (!cardTypeOptions.children[2].classList.contains("activeOption")) {
 		for (let i=population.length-1; i>=0; i--) {
@@ -163,6 +168,10 @@ function startSet() {
 				population.splice(i, 1);
 		}
 	}
+	else
+		sections.push('unique');
+	
+	
 	
 	let sample_count = null;
 	let random_seed = null;
@@ -172,7 +181,8 @@ function startSet() {
 		// Generate seed from date
 		let d = new Date();
 		let hashString = d.getUTCDate().toString() + d.getUTCMonth() + d.getUTCFullYear();
-		random_seed = cyrb128(hashString).reduce((x,y)=>x+y)
+		hashString += sections.reduce((x,y)=>x+y);
+		random_seed = cyrb128(hashString).reduce((x,y)=>x+y);
 		sample_count = dailyCount;
 	}
 	else {
