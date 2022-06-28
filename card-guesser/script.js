@@ -58,13 +58,15 @@ function autocomplete(inp, arr) {
 			addActive(x);
 		} else if (e.keyCode == 13) {
 			/*If the ENTER key is pressed, prevent the form from being submitted,*/
-			e.preventDefault();
 			if (currentFocus > -1) {
 				/*and simulate a click on the "active" item:*/
 				if (x) x[currentFocus].click();
 			}
 			else if (x && x.length == 1) {
 				x[0].click();
+			}
+			else {
+				e.preventDefault();
 			}
 		}
 	});
@@ -168,7 +170,7 @@ function startSet(daily) {
 	if (daily) {
 		// Generate seed from date
 		let d = new Date();
-		random_seed = cyrb128(d.getDate().toString() + d.getMonth() + d.getFullYear()).reduce((x,y)=>x+y)
+		random_seed = cyrb128(d.getUTCDate().toString() + d.getUTCMonth() + d.getUTCFullYear()).reduce((x,y)=>x+y)
 		sample_count = dailyCount;
 	}
 	else {
@@ -179,7 +181,7 @@ function startSet(daily) {
 		return
 	
 	shareButton.style.display = 'none';
-	cardInput.style.display = '';
+	cardInputWrapper.style.display = '';
 	submitInput.style.display = '';
 	
 	
@@ -214,7 +216,7 @@ function newCard() {
 	if (!cardsToGuess.length) {
 		currentCard = null;
 		shareButton.style.display = '';
-		cardInput.style.display = 'none';
+		cardInputWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
 		return;
 	}
@@ -301,7 +303,7 @@ function toggleCardType(idx) {
 function shareSet() {
 	let current = getScore();
 	let d = new Date();
-	let date = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
+	let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
 	let copyText = `#SI Card Guesser ${current.total == dailyCount ? date : 'Complete Set'}\n`;
 	for (let c of guessTypeOptions.children) {
 		if (c.classList.contains("activeOption")) {
@@ -327,6 +329,7 @@ function shareSet() {
 const guessTypeOptions = document.getElementById("guessTypeOptions");
 const cardTypeOptions = document.getElementById("cardTypeOptions");
 const cardInput = document.getElementById("cardInput");
+const cardInputWrapper = document.getElementById("cardInputWrapper");
 const submitInput = document.getElementById("submitInput");
 const shareButton = document.getElementById("shareButton");
 const cardImage = document.getElementById("cardImage");

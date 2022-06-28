@@ -33,8 +33,7 @@ input[type=submit] {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50vh;
-  overflow-y: scroll; 
+  max-height: 50vh;
 }
 .autocomplete-items div {
   padding: 10px;
@@ -87,7 +86,7 @@ input[type=submit] {
 
 #submitForm {
 	position: absolute;
-	top: 20%;
+	top: 80%;
 	left: 10%;
 }
 
@@ -98,7 +97,7 @@ input[type=submit] {
 	width: 25%;
 }
 
-#shareSet {
+#shareButton {
   width: 100%;
   background-color: DodgerBlue;
   color: #fff;
