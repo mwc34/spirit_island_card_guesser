@@ -30,15 +30,15 @@
 	<img id="cardImage" src=""/>
 	
 	<!--Make sure the form has the autocomplete function switched off:-->
-	<div id="submitForm">
-		<form autocomplete="off" onsubmit="makeGuess();return false;">
-		  <div id="cardInputWrapper" class="autocomplete" style="width:300px;">
-			<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
-		  </div>
-		  <input id="submitInput" type="submit" value="Guess">
-		  <button id="shareButton" style="display:none;" onclick="shareSet()">Share</button>
-		</form>
-	</div>
+	<form autocomplete="off" onsubmit="makeGuess();return false;">
+		<div id="submitForm">
+			<div id="cardInputWrapper" class="autocomplete">
+				<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
+			</div>
+			<input id="submitInput" type="submit" value="Guess">
+			<button id="shareButton" style="display:none;" onclick="shareSet()">Share</button>
+		</div>
+	</form>
 	
 	<div id="score">Score: 0/0</div>
 	<div id="cardsLeft">Cards Left: 0</div>
