@@ -47,13 +47,15 @@ function autocomplete(inp, arr) {
 		if (e.keyCode == 40) {
 			/*If the arrow DOWN key is pressed,
 			increase the currentFocus variable:*/
-			currentFocus++;
+			if (currentFocus < x.length-1)
+				currentFocus++;
 			/*and and make the current item more visible:*/
 			addActive(x);
 		} else if (e.keyCode == 38) { //up
 			/*If the arrow UP key is pressed,
 			decrease the currentFocus variable:*/
-			currentFocus--;
+			if (currentFocus != 0)
+				currentFocus--;
 			/*and and make the current item more visible:*/
 			addActive(x);
 		} else if (e.keyCode == 13) {
