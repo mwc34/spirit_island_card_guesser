@@ -65,7 +65,7 @@ function autocomplete(inp, arr) {
 			else if (x && x.length == 1) {
 				x[0].click();
 			}
-			else {
+			else if (x && x.length > 1) {
 				e.preventDefault();
 			}
 		}
@@ -251,11 +251,13 @@ function getSubset(population_count, sample_count, random_seed=null) {
 function newCard(timeout=10) {
 	if (!cardsToGuess.length) {
 		currentCard = null;
-		shareButton.style.display = '';
-		cardInputWrapper.style.display = 'none';
-		submitInput.style.display = 'none';
-		score.style.backgroundColor = '';
-		cardsLeft.style.backgroundColor = '';
+		setTimeout(() => {
+			shareButton.style.display = '';
+			cardInputWrapper.style.display = 'none';
+			submitInput.style.display = 'none';
+			score.style.backgroundColor = '';
+			cardsLeft.style.backgroundColor = '';
+		}, timeout);
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
