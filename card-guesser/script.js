@@ -387,46 +387,43 @@ function toggleDaily(idx) {
 }
 
 function shareSet() {
-	// Already shared
-	if (cardImage.src.includes("/card-guesser/finish_card.png"))
-		return
-	
-	let searchParams = new URLSearchParams();
-	
-	let current = getScore();
-	let d = new Date();
-	let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
-	let daily = current.total == dailyCount;
-	let copyText = `#SI Card Guesser ${daily ? date : 'Complete Set'}\n`;
-	for (let c of guessTypeOptions.children) {
-		if (c.classList.contains("activeOption")) {
-			copyText += c.innerHTML + '\n';
-			break;
+	// First time
+	if (!cardImage.src.includes("/card-guesser/finish_card.png")) {
+		let searchParams = new URLSearchParams();
+		
+		let current = getScore();
+		let d = new Date();
+		let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
+		let daily = current.total == dailyCount;
+		copyText = `#SI Card Guesser ${daily ? date : 'Complete Set'}\n`;
+		for (let c of guessTypeOptions.children) {
+			if (c.classList.contains("activeOption")) {
+				copyText += c.innerHTML + '\n';
+				break;
+			}
+		}
+		for (let c of cardTypeOptions.children) {
+			if (c.classList.contains("activeOption")) {
+				copyText += c.innerHTML + ' ';
+				searchParams.append(c.innerHTML, 1);
+			}
+			else {
+				searchParams.append(c.innerHTML, 0);
+			}
+		}
+		copyText = copyText.slice(0, copyText.length-1) + '\n';
+		copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)}%)\n`;
+		if (daily) {
+			copyText += guessHistory.map((x) => x ? '\ud83d\udfe9' : '\ud83d\udfe5').reduce((x,y)=>x+' '+y) + '\n';
+		}
+		let paramText = searchParams.toString();
+		copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
+		cardImage.src = "/card-guesser/finish_card.png";
+		for (let c of guessTypeOptions.children) {
+			c.classList.remove("activeOption");
 		}
 	}
-	for (let c of cardTypeOptions.children) {
-		if (c.classList.contains("activeOption")) {
-			copyText += c.innerHTML + ' ';
-			searchParams.append(c.innerHTML, 1);
-		}
-		else {
-			searchParams.append(c.innerHTML, 0);
-		}
-	}
-	copyText = copyText.slice(0, copyText.length-1) + '\n';
-	copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)}%)\n`;
-	if (daily) {
-		copyText += guessHistory.map((x) => x ? '\ud83d\udfe9' : '\ud83d\udfe5').reduce((x,y)=>x+' '+y) + '\n';
-	}
-	let paramText = searchParams.toString();
-	copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
-	
 	navigator.clipboard.writeText(copyText);
-
-	cardImage.src = "/card-guesser/finish_card.png";
-	for (let c of guessTypeOptions.children) {
-		c.classList.remove("activeOption");
-	}
 }
 
 const bodyWrapper = document.getElementById("bodyWrapper");
@@ -443,6 +440,7 @@ const cardsLeft = document.getElementById("cardsLeft");
 const score = document.getElementById("score");
 const dailyCount = 10;
 const guessHistory = [];
+var copyText = "";
 const differentDaily = false; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
