@@ -37,8 +37,8 @@ function autocomplete(inp, arr) {
 				});
 				a.appendChild(b);
 			}
-			
 		}
+		bodyWrapper.scrollTop = bodyWrapper.scrollHeight;
 	});
 	/*execute a function presses a key on the keyboard:*/
 	inp.addEventListener("keydown", function(e) {
