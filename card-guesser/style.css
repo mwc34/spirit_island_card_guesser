@@ -139,6 +139,8 @@ form {
 	flex-grow: 1;
 	min-height: 0px;
 	max-height: 676px;
+	min-width: 0px;
+	max-width: 100%;
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
