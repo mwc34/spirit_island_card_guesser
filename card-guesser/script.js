@@ -378,6 +378,10 @@ function toggleDaily(idx) {
 }
 
 function shareSet() {
+	// Already shared
+	if (cardImage.src.includes("/card-guesser/finish_card.png"))
+		return
+	
 	let current = getScore();
 	let d = new Date();
 	let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
