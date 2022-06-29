@@ -382,6 +382,8 @@ function shareSet() {
 	if (cardImage.src.includes("/card-guesser/finish_card.png"))
 		return
 	
+	let searchParams = new URLSearchParams();
+	
 	let current = getScore();
 	let d = new Date();
 	let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
@@ -396,6 +398,10 @@ function shareSet() {
 	for (let c of cardTypeOptions.children) {
 		if (c.classList.contains("activeOption")) {
 			copyText += c.innerHTML + ' ';
+			searchParams.append(c.innerHTML, 1);
+		}
+		else {
+			searchParams.append(c.innerHTML, 0);
 		}
 	}
 	copyText = copyText.slice(0, copyText.length-1) + '\n';
@@ -454,6 +460,13 @@ var cardsToGuess = [];
 var cardGuessURI = null;
 
 
+const searchParams = new URLSearchParams(window.location.search);
+for (let c of cardTypeOptions.children) {
+	let key = c.innerHTML;
+	if (searchParams.get(key) == '0') {
+		c.classList.remove("activeOption");
+	}
+}
 
 var currentWidth = 0;
 var currentHeight = 0;
