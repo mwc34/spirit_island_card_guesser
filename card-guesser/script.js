@@ -397,7 +397,7 @@ function shareSet() {
 	copyText = copyText.slice(0, copyText.length-1) + '\n';
 	copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)}%)\n`;
 	if (daily) {
-		copyText += guessHistory.map((x) => x ? '\ud83d\udfe9' : '\ud83d\udfe5').reduce((x,y)=>x+y) + '\n';
+		copyText += guessHistory.map((x) => x ? '\ud83d\udfe9' : '\ud83d\udfe5').reduce((x,y)=>x+' '+y) + '\n';
 	}
 	copyText += 'https://spirit-island.vercel.app/card-guesser/';
 	
