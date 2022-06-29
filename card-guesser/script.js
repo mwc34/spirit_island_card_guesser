@@ -38,6 +38,7 @@ function autocomplete(inp, arr) {
 				a.appendChild(b);
 			}
 		}
+		// Scroll to show input box
 		bodyWrapper.scrollTop = bodyWrapper.scrollHeight;
 	});
 	/*execute a function presses a key on the keyboard:*/
@@ -396,6 +397,9 @@ function shareSet() {
 	navigator.clipboard.writeText(copyText);
 
 	cardImage.src = "/card-guesser/finish_card.png";
+	for (let c of guessTypeOptions.children) {
+		c.classList.remove("activeOption");
+	}
 }
 
 const bodyWrapper = document.getElementById("bodyWrapper");
