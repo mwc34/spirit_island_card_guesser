@@ -356,7 +356,16 @@ function toggleGuessType(idx) {
 
 function toggleCardType(idx) {
 	let e = cardTypeOptions.children[idx];
+	let count = 0;
+	for (let c of cardTypeOptions.children) {
+		if (c.classList.contains("activeOption"))
+			count++;
+	}
 	if (e.classList.contains("activeOption")) {
+		// Don't let bring to 0
+		if (count == 1) {
+			return
+		}
 		e.classList.remove("activeOption");
 	}
 	else {
@@ -462,12 +471,22 @@ var cardGuessURI = null;
 
 
 const searchParams = new URLSearchParams(window.location.search);
+var count = 0;
 for (let c of cardTypeOptions.children) {
 	let key = c.innerHTML;
 	if (searchParams.get(key) == '0') {
 		c.classList.remove("activeOption");
 	}
+	if (c.classList.contains("activeOption")) {
+		count++;
+	}
 }
+if (!count) {
+	for (let c of cardTypeOptions.children) {
+		c.classList.add("activeOption");
+	}
+}
+
 
 var currentWidth = 0;
 var currentHeight = 0;
