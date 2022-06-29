@@ -509,7 +509,7 @@ addEventListener("load", () => {
 window.addEventListener("resize", () => {
 	if (window.innerWidth != currentWidth || window.innerHeight > currentHeight) {
 		setSize();
-		
+		bodyWrapper.scrollTop = 0;
 	}
 	else {
 		bodyWrapper.scrollTop = bodyWrapper.scrollHeight;
