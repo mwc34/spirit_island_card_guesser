@@ -79,6 +79,7 @@ function autocomplete(inp, arr) {
 		if (currentFocus < 0) currentFocus = (x.length - 1);
 		/*add class "autocomplete-active":*/
 		x[currentFocus].classList.add("autocomplete-active");
+		x[currentFocus].scrollIntoView();
 	}
 	function removeActive(x) {
 		/*a function to remove the "active" class from all autocomplete items:*/
