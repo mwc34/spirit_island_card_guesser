@@ -229,6 +229,7 @@ function startSet() {
 	for (let idx of getSubset(population.length, sample_count, random_seed)) {
 		cardsToGuess.push(population[idx]);
 	}
+	guessHistory.splice(0, guessHistory.length);
 	resetScore();
 	setCardsLeft(sample_count);
 	newCard();
@@ -295,12 +296,14 @@ function makeGuess() {
 				incrementScore(true);
 				score.style.backgroundColor = '#0fd920';
 				cardsLeft.style.backgroundColor = '#0fd920';
+				guessHistory.push(true);
 			}
 			else {
 				timeout += 1000;
 				incrementScore(false);
 				score.style.backgroundColor = '#db0f0f';
 				cardsLeft.style.backgroundColor = '#db0f0f';
+				guessHistory.push(false);
 			}
 			decrementCardsLeft();
 			
@@ -378,7 +381,8 @@ function shareSet() {
 	let current = getScore();
 	let d = new Date();
 	let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
-	let copyText = `#SI Card Guesser ${current.total == dailyCount ? date : 'Complete Set'}\n`;
+	let daily = current.total == dailyCount;
+	let copyText = `#SI Card Guesser ${daily ? date : 'Complete Set'}\n`;
 	for (let c of guessTypeOptions.children) {
 		if (c.classList.contains("activeOption")) {
 			copyText += c.innerHTML + '\n';
@@ -392,6 +396,9 @@ function shareSet() {
 	}
 	copyText = copyText.slice(0, copyText.length-1) + '\n';
 	copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)}%)\n`;
+	if (daily) {
+		copyText += guessHistory.map((x) => {x ? '\ud83d\udfe9' : '\ud83d\udfe5'}).reduce((x,y)=>{x + y}) + '\n';
+	}
 	copyText += 'https://spirit-island.vercel.app/card-guesser/';
 	
 	navigator.clipboard.writeText(copyText);
@@ -415,6 +422,7 @@ const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
 const score = document.getElementById("score");
 const dailyCount = 10;
+const guessHistory = [];
 const differentDaily = false; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
