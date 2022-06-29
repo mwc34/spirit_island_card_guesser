@@ -67,7 +67,7 @@ function autocomplete(inp, arr) {
 			else if (x && x.length == 1) {
 				x[0].click();
 			}
-			else if (x && x.length > 1) {
+			else {
 				e.preventDefault();
 			}
 		}
