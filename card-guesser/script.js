@@ -409,7 +409,8 @@ function shareSet() {
 	if (daily) {
 		copyText += guessHistory.map((x) => x ? '\ud83d\udfe9' : '\ud83d\udfe5').reduce((x,y)=>x+' '+y) + '\n';
 	}
-	copyText += 'https://spirit-island.vercel.app/card-guesser/';
+	let paramText = searchParams.toString();
+	copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
 	
 	navigator.clipboard.writeText(copyText);
 
