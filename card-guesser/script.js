@@ -640,13 +640,13 @@ if (!count) {
 	count = 0;
 	// Check if history
 	if (localStorage.cardType)
-		chosenCardTypes = JSON.parse(localStorage.cardType);
-	for (let c of cardTypeOptions.children) {
-		if (!chosenCardTypes.includes(c.innerHTML))
-			c.classList.remove("activeOption");
-		if (c.classList.contains("activeOption"))
-			count++;
-	}
+		let chosenCardTypes = JSON.parse(localStorage.cardType);
+		for (let c of cardTypeOptions.children) {
+			if (!chosenCardTypes.includes(c.innerHTML))
+				c.classList.remove("activeOption");
+			if (c.classList.contains("activeOption"))
+				count++;
+		}
 	if (!count) {
 		for (let c of cardTypeOptions.children) {
 			c.classList.add("activeOption");
