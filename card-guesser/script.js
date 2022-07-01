@@ -68,7 +68,7 @@ function autocomplete(inp, arr) {
 			else if (x && x.length == 1) {
 				x[0].click();
 			}
-			else {
+			else if (!cardTitles.includes(inp.value)) {
 				e.preventDefault();
 			}
 		}
@@ -206,6 +206,7 @@ function startSet() {
 				shareWrapper.style.display = '';
 				cardInputWrapper.style.display = 'none';
 				submitInput.style.display = 'none';
+				continueButton.style.display = 'none';
 				currentAnswer = -1;
 				infoWrapper.style.backgroundColor = '';
 				cardsLeft.style.display = '';
@@ -277,6 +278,7 @@ function startSet() {
 	shareWrapper.style.display = 'none';
 	cardInputWrapper.style.display = '';
 	submitInput.style.display = '';
+	continueButton.style.display = 'none';
 	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
 	cardCount.style.display = 'none';
@@ -354,23 +356,42 @@ function newCard(timeout=10) {
 		currentCard = null;
 		shareWrapper.style.display = '';
 		cardInputWrapper.style.display = 'none';
+		continueButton.style.display = 'none';
 		submitInput.style.display = 'none';
 		preImg.href = '/card-guesser/finish_card.png';
 		currentAnswer = -1;
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
-	
 	preImg.href = cardGuessURI(currentCard.id);
-	lock = true;
-	setTimeout(() => {
+	
+	let f = () => {
 		lock = false;
 		infoWrapper.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard.id);
 		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		if (!mobileAndTabletCheck())
 			cardInput.focus();
-	}, timeout);
+	};
+	
+	if (timeout) {
+		lock = true;
+		setTimeout(f, timeout);
+	}
+	else {
+		continueButton.style.display = '';
+		cardInputWrapper.style.display = 'none';
+		shareWrapper.style.display = 'none';
+		submitInput.style.display = 'none';
+		continueButton.onclick = () => {
+			if (lock) return
+			shareWrapper.style.display = 'none';
+			cardInputWrapper.style.display = '';
+			submitInput.style.display = '';
+			continueButton.style.display = 'none';
+			f();
+		};
+	}
 }
 
 function makeGuess() {
@@ -584,6 +605,7 @@ const cardsLeft = document.getElementById("cardsLeft");
 const cardCount = document.getElementById("cardCount");
 const score = document.getElementById("score");
 const infoWrapper = document.getElementById("infoWrapper");
+const continueButton = document.getElementById("continueButton");
 const dailyCount = 10;
 const guessHistory = [];
 var currentAnswer = -1;
