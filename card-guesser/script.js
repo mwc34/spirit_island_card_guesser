@@ -141,29 +141,7 @@ function cyrb128(str) {
 }
 
 function startSet() {
-	// Set function to find set urls
-	// Maximal
-	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
-	}
-	// No Picture
-	else if (guessTypeOptions.children[1].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x}.png`;
-	}
-	// Picture Only
-	else if (guessTypeOptions.children[2].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x}.png`;
-	}
-	// Minimal
-	else if (guessTypeOptions.children[3].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
-	}
-	// Nothing selected
-	else {
-		return
-	}
-	
-	
+	// Filter card set
 	let population = [...completeCards];
 	
 	// Remove unwanted sections
@@ -196,6 +174,54 @@ function startSet() {
 	else
 		sections.push('unique');
 	
+	
+	// Check if set already done
+	let d = new Date();
+	let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
+	let cardType = '';
+	for (let c of cardTypeOptions.children) {
+		if (c.classList.contains("activeOption")) {
+			cardType += c.innerHTML;
+		}
+	}
+	// Set to results and return
+	resultsByDate = JSON.parse(localStorage.resultsByDate);
+	if (resultsByDate[date] && resultsByDate[date][cardType]) {
+		shareButton.style.display = '';
+		cardInputWrapper.style.display = 'none';
+		submitInput.style.display = 'none';
+		setScore(resultsByDate[date][cardType]);
+		for (let c of guessTypeOptions.children) {
+			if (c.innerHTML == resultsByDate[date][cardType].guessType)
+				c.classList.add("activeOption");
+			else
+				c.classList.remove("activeOption");
+		}
+		cardImage.src = "/card-guesser/already_done_card.png";
+		return
+	}
+	
+	// Set function to find set urls
+	// Maximal
+	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
+	}
+	// No Picture
+	else if (guessTypeOptions.children[1].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x}.png`;
+	}
+	// Picture Only
+	else if (guessTypeOptions.children[2].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x}.png`;
+	}
+	// Minimal
+	else if (guessTypeOptions.children[3].classList.contains("activeOption")) {
+		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
+	}
+	// Nothing selected
+	else {
+		return
+	}
 	
 	
 	let sample_count = null;
@@ -254,6 +280,7 @@ function getSubset(population_count, sample_count, random_seed=null) {
 }
 
 function newCard(timeout=10) {
+	// No more cards to guess
 	if (!cardsToGuess.length) {
 		currentCard = null;
 		setTimeout(() => {
@@ -262,6 +289,34 @@ function newCard(timeout=10) {
 			submitInput.style.display = 'none';
 			score.style.backgroundColor = '';
 			cardsLeft.style.backgroundColor = '';
+			// Save score to localStorage
+			let d = new Date();
+			let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
+			let current = getScore();
+			let cardType = '';
+			for (let c of cardTypeOptions.children) {
+				if (c.classList.contains("activeOption")) {
+					cardType += c.innerHTML;
+				}
+			}
+			for (let c of guessTypeOptions.children) {
+				if (c.classList.contains("activeOption")) {
+					current.guessType = c.innerHTML;
+					break;
+				}
+			}
+			// Clear old days
+			resultsByDate = JSON.parse(localStorage.resultsByDate);
+			for (let key in resultsByDate) {
+				if (key != date) {
+					delete resultsByDate[key]
+				}
+			}
+			// Add new key
+			if (!resultsByDate[date])
+				resultsByDate[date] = {}
+			resultsByDate[date][cardType] = current;
+			localStorage.resultsByDate = JSON.stringify(resultsByDate);
 		}, timeout);
 		return;
 	}
@@ -328,9 +383,15 @@ function resetScore() {
 	score.innerHTML = "Score: 0/0";
 }
 
+function setScore(target) {
+	score.innerHTML = `Score: ${target.correct}/${target.total}`;
+}
+
 function incrementScore(correct) {
 	current = getScore();
-	score.innerHTML = `Score: ${current.correct + correct}/${current.total + 1}`
+	current.correct += correct;
+	current.total += 1;
+	setScore(current);
 }
 
 function getScore() {
@@ -445,7 +506,7 @@ const differentDaily = false; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
 const preImg = document.createElement('link');
-preImg.href = '';
+preImg.href = '/card-guesser/already_done_card.png';
 preImg.rel = 'preload';
 preImg.as = 'image';
 document.head.appendChild(preImg);
@@ -455,7 +516,8 @@ if (!local) {
 		for (let card of x) {
 			completeCards.push(card);
 			cardTitles.push(card.title);
-		}
+		};
+		startSet();
 	});
 	autocomplete(cardInput, cardTitles);
 }
