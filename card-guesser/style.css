@@ -146,12 +146,22 @@ form {
 	object-fit: contain;
 }
 
+#shareWrapper {
+	width: 100%;
+	padding: 1%;
+	display: flex;
+}
+
 #shareButton {
-  width: 100%;
-  background-color: DodgerBlue;
-  color: #fff;
-  border: 1px solid transparent;
-  padding: 1%;
+	width: 100%;
+	background-color: DodgerBlue;
+	color: #fff;
+	flex-grow: 1;
+}
+
+.cycleButton {
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .activeOption  {

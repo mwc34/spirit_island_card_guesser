@@ -39,7 +39,11 @@
 						<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
 					</div>
 					<input id="submitInput" type="submit" value="Guess">
-					<button id="shareButton" style="display:none;" onclick="shareSet()">Share</button>
+					<div id="shareWrapper" style="display:none;">
+						<button id="backButton" class="cycleButton" onclick="cycleAnswer(-1)">&#8249;</button>
+						<button id="shareButton" onclick="shareSet()">Share</button>
+						<button id="forwardButton" class="cycleButton" onclick="cycleAnswer(0)">&#8250;</button>
+					</div>
 				</form>
 				<div id="infoWrapper">
 					<div id="score" class="info">Score: 0/0</div>
