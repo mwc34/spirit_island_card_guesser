@@ -369,7 +369,6 @@ function newCard(wait) {
 	
 	let f = () => {
 		if (lock) return
-		lock = false;
 		shareWrapper.style.display = 'none';
 		cardInputWrapper.style.display = '';
 		submitInput.style.display = '';
@@ -386,7 +385,6 @@ function newCard(wait) {
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
-		lock = true;
 		continueButton.onclick = f;
 	}
 	else {
