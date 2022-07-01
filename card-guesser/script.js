@@ -415,7 +415,7 @@ function makeGuess() {
 				guessHistory.push([true, currentCard.id]);
 			}
 			else {
-				timeout += 1000;
+				timeout = null;
 				incrementScore(false);
 				infoWrapper.style.backgroundColor = '#db0f0f';
 				guessHistory.push([false, currentCard.id]);
