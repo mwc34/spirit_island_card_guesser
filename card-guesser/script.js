@@ -178,11 +178,10 @@ function startSet() {
 	
 	let daily = dailyAllOptions.children[0].classList.contains("activeOption");
 	let d = new Date();
-	
+	dateString = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
 	// Set to results and return if already done daily
 	let cancel = false;
 	if (localStorage.resultsByDate && daily) {
-		let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
 		let cardType = '';
 		for (let c of cardTypeOptions.children) {
 			if (c.classList.contains("activeOption")) {
@@ -190,7 +189,7 @@ function startSet() {
 			}
 		}
 		resultsByDate = JSON.parse(localStorage.resultsByDate);
-		if (resultsByDate[date] && resultsByDate[date][cardType]) {
+		if (resultsByDate[dateString] && resultsByDate[dateString][cardType]) {
 			shareWrapper.style.display = '';
 			cardInputWrapper.style.display = 'none';
 			submitInput.style.display = 'none';
@@ -200,15 +199,15 @@ function startSet() {
 			cardsLeft.style.display = '';
 			cardCount.style.display = 'none';
 			
-			setScore(resultsByDate[date][cardType]);
+			setScore(resultsByDate[dateString][cardType]);
 			for (let c of guessTypeOptions.children) {
-				if (c.innerHTML == resultsByDate[date][cardType].guessType)
+				if (c.innerHTML == resultsByDate[dateString][cardType].guessType)
 					c.classList.add("activeOption");
 				else
 					c.classList.remove("activeOption");
 			}
 			setCardsLeft(0);
-			guessHistory.splice(0, guessHistory.length, ...resultsByDate[date][cardType].guessHistory);
+			guessHistory.splice(0, guessHistory.length, ...resultsByDate[dateString][cardType].guessHistory);
 			cardImage.src = "/card-guesser/already_done_card.png";
 			preImg.href = getCycleURL(dailyCount*2-1);
 			cancel = true; // Trigger return
@@ -248,7 +247,7 @@ function startSet() {
 	// Check if Daily or not
 	if (daily) {
 		// Generate seed from date
-		let hashString = d.getUTCDate().toString() + (d.getUTCMonth()+1) + d.getUTCFullYear();
+		let hashString = dateString;
 		hashString += sections.reduce((x,y)=>x+y);
 		if (differentDaily) {
 			hashString += cardGuessURI('hash');
@@ -306,11 +305,10 @@ function newCard(timeout=10) {
 		shareWrapper.style.display = '';
 		cardInputWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
+		preImg.href = '/card-guesser/finish_card.png';
 		currentAnswer = -1;
 		if (getScore().total == dailyCount) {
 			// Save score to localStorage
-			let d = new Date();
-			let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
 			let current = getScore();
 			current.guessHistory = [...guessHistory];
 			let cardType = '';
@@ -331,14 +329,14 @@ function newCard(timeout=10) {
 			else
 				resultsByDate = {};
 			for (let key in resultsByDate) {
-				if (key != date) {
+				if (key != dateString) {
 					delete resultsByDate[key]
 				}
 			}
 			// Add new key
-			if (!resultsByDate[date])
-				resultsByDate[date] = {}
-			resultsByDate[date][cardType] = current;
+			if (!resultsByDate[dateString])
+				resultsByDate[dateString] = {}
+			resultsByDate[dateString][cardType] = current;
 			localStorage.resultsByDate = JSON.stringify(resultsByDate);
 		}
 		return;
@@ -487,10 +485,8 @@ function shareSet() {
 		let searchParams = new URLSearchParams();
 		
 		let current = getScore();
-		let d = new Date();
-		let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
 		let daily = current.total == dailyCount;
-		copyText = `#SI Card Guesser ${daily ? date : 'Complete Set'}\n`;
+		copyText = `#SI Card Guesser ${daily ? dateString : 'Complete Set'}\n`;
 		for (let c of guessTypeOptions.children) {
 			if (c.classList.contains("activeOption")) {
 				copyText += c.innerHTML + '\n';
@@ -580,6 +576,7 @@ const guessHistory = [];
 var currentAnswer = -1;
 var copyText = "";
 var lock = false;
+var dateString = null;
 const differentDaily = false; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
