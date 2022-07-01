@@ -356,12 +356,19 @@ function newCard(wait) {
 	// No more cards to guess
 	if (!cardsToGuess.length) {
 		currentCard = null;
-		shareWrapper.style.display = '';
-		cardInputWrapper.style.display = 'none';
-		continueButton.style.display = 'none';
-		submitInput.style.display = 'none';
+		
 		preImg.href = '/card-guesser/finish_card.png';
-		currentAnswer = -1;
+		lock = true;
+		setTimeout(() => {
+			lock = false;
+			cardImage.src = '/card-guesser/finish_card.png';
+			shareWrapper.style.display = '';
+			cardInputWrapper.style.display = 'none';
+			continueButton.style.display = 'none';
+			submitInput.style.display = 'none';
+			infoWrapper.style.backgroundColor = '';
+			currentAnswer = -1;
+		}, 1500);
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
@@ -512,7 +519,7 @@ function toggleDaily(idx) {
 function shareSet() {
 	if (lock) return
 	// First time
-	if (!cardImage.src.includes("/card-guesser/finish_card.png")) {
+	if (!cardImage.src.includes("/card-guesser/share_card.png")) {
 		let searchParams = new URLSearchParams();
 		
 		let current = getScore();
@@ -540,7 +547,7 @@ function shareSet() {
 		}
 		let paramText = searchParams.toString();
 		copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
-		cardImage.src = "/card-guesser/finish_card.png";
+		cardImage.src = "/card-guesser/share_card.png";
 	}
 	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
