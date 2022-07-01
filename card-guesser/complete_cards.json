@@ -2337,7 +2337,7 @@
         "meeple": false,
         "id": "draw_of_the_fruitful_earth",
         "title": "Draw Of The Fruitful Earth",
-        "type": "major"
+        "type": "unique"
     },
     {
         "name": "Draw Towards A Consuming Void",
@@ -2382,7 +2382,7 @@
         "meeple": false,
         "id": "draw_towards_a_consuming_void",
         "title": "Draw Towards A Consuming Void",
-        "type": "unique"
+        "type": "major"
     },
     {
         "name": "Dread Apparitions",
