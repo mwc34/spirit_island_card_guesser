@@ -389,12 +389,12 @@ function makeGuess() {
 	}
 }
 
-function setCardsLeft(v) {
-	cardsLeft.innerHTML = `Cards Left: ${v}`;
-}
-
 function setCardCount(v) {
 	cardCount.innerHTML = `Card: ${v}`;
+}
+
+function setCardsLeft(v) {
+	cardsLeft.innerHTML = `Cards Left: ${v}`;
 }
 
 function decrementCardsLeft() {
@@ -506,9 +506,6 @@ function shareSet() {
 		let paramText = searchParams.toString();
 		copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
 		cardImage.src = "/card-guesser/finish_card.png";
-		for (let c of guessTypeOptions.children) {
-			c.classList.remove("activeOption");
-		}
 	}
 	score.style.backgroundColor = '';
 	cardsLeft.style.backgroundColor = '';
@@ -518,9 +515,9 @@ function shareSet() {
 }
 
 function cycleAnswer(shift) {
+	let maxValue = getScore().total * 2;
 	if ((currentAnswer != 0 || shift == 1) && (currentAnswer != maxValue-1 || shift == -1)) 
 		currentAnswer += shift;
-	let maxValue = getScore().total * 2;
 	if (currentAnswer < 0)
 		currentAnswer = maxValue-1;
 	if (currentAnswer >= maxValue)
@@ -545,8 +542,6 @@ function cycleAnswer(shift) {
 		cardImage.src = cardGuessURI(card_id);
 	else
 		cardImage.src = `/card-guesser/complete_cards_img/${card_id}.png`;
-	
-	
 }
 
 const bodyWrapper = document.getElementById("bodyWrapper");
