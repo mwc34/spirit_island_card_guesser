@@ -208,6 +208,7 @@ function startSet() {
 			setCardsLeft(0);
 			guessHistory.splice(0, guessHistory.length, ...resultsByDate[date][cardType].guessHistory);
 			cardImage.src = "/card-guesser/already_done_card.png";
+			preImg.href = getCycleURL(dailyCount*2-1);
 			cancel = true; // Trigger return
 		}
 	}
@@ -514,14 +515,25 @@ function shareSet() {
 	navigator.clipboard.writeText(copyText);
 }
 
+function getCycleURL(v) {
+	let card_id = guessHistory[Math.floor(v/2)][1];
+	if (currentAnswer % 2 == 0)
+		return cardGuessURI(card_id);
+	else
+		return `/card-guesser/complete_cards_img/${card_id}.png`;
+}
+
+function clampModVal(a, b, v) {
+	if (v < a)
+		return b-1;
+	if (v >= b)
+		return a;
+	return v
+}
+
 function cycleAnswer(shift) {
 	let maxValue = getScore().total * 2;
-	if ((currentAnswer != 0 || shift == 1) && (currentAnswer != maxValue-1 || shift == -1)) 
-		currentAnswer += shift;
-	if (currentAnswer < 0)
-		currentAnswer = maxValue-1;
-	if (currentAnswer >= maxValue)
-		currentAnswer = 0;
+	currentAnswer = clampModVal(0, maxValue, currentAnswer + shift);
 	
 	cardsLeft.style.display = 'none';
 	cardCount.style.display = '';
@@ -538,10 +550,8 @@ function cycleAnswer(shift) {
 	}
 	
 	let card_id = guessHistory[Math.floor(currentAnswer/2)][1];
-	if (currentAnswer % 2 == 0)
-		cardImage.src = cardGuessURI(card_id);
-	else
-		cardImage.src = `/card-guesser/complete_cards_img/${card_id}.png`;
+	cardImage.src = getCycleURL(currentAnswer);
+	preImg.href = getCycleURL(clampModVal(0, maxValue, currentAnswer + shift));
 }
 
 const bodyWrapper = document.getElementById("bodyWrapper");
