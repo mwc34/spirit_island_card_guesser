@@ -639,7 +639,7 @@ for (let c of cardTypeOptions.children) {
 if (!count) {
 	count = 0;
 	// Check if history
-	if (localStorage.cardType)
+	if (localStorage.cardType) {
 		let chosenCardTypes = JSON.parse(localStorage.cardType);
 		for (let c of cardTypeOptions.children) {
 			if (!chosenCardTypes.includes(c.innerHTML))
@@ -647,6 +647,7 @@ if (!count) {
 			if (c.classList.contains("activeOption"))
 				count++;
 		}
+	}
 	if (!count) {
 		for (let c of cardTypeOptions.children) {
 			c.classList.add("activeOption");
