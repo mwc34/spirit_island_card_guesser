@@ -123,6 +123,7 @@ window.mobileAndTabletCheck = function() {
 	return check;
 };
 
+// Hash function
 function cyrb128(str) {
     let h1 = 1779033703, h2 = 3144134277,
         h3 = 1013904242, h4 = 2773480762;
@@ -141,6 +142,7 @@ function cyrb128(str) {
 }
 
 function startSet() {
+	if (lock) return
 	// Filter card set
 	let population = [...completeCards];
 	
@@ -301,52 +303,52 @@ function newCard(timeout=10) {
 	// No more cards to guess
 	if (!cardsToGuess.length) {
 		currentCard = null;
-		setTimeout(() => {
-			shareWrapper.style.display = '';
-			cardInputWrapper.style.display = 'none';
-			submitInput.style.display = 'none';
-			currentAnswer = -1;
-			if (getScore().total == dailyCount) {
-				// Save score to localStorage
-				let d = new Date();
-				let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
-				let current = getScore();
-				current.guessHistory = [...guessHistory];
-				let cardType = '';
-				for (let c of cardTypeOptions.children) {
-					if (c.classList.contains("activeOption")) {
-						cardType += c.innerHTML;
-					}
+		shareWrapper.style.display = '';
+		cardInputWrapper.style.display = 'none';
+		submitInput.style.display = 'none';
+		currentAnswer = -1;
+		if (getScore().total == dailyCount) {
+			// Save score to localStorage
+			let d = new Date();
+			let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
+			let current = getScore();
+			current.guessHistory = [...guessHistory];
+			let cardType = '';
+			for (let c of cardTypeOptions.children) {
+				if (c.classList.contains("activeOption")) {
+					cardType += c.innerHTML;
 				}
-				for (let c of guessTypeOptions.children) {
-					if (c.classList.contains("activeOption")) {
-						current.guessType = c.innerHTML;
-						break;
-					}
-				}
-				// Clear old days
-				if (localStorage.resultsByDate)
-					resultsByDate = JSON.parse(localStorage.resultsByDate);
-				else
-					resultsByDate = {};
-				for (let key in resultsByDate) {
-					if (key != date) {
-						delete resultsByDate[key]
-					}
-				}
-				// Add new key
-				if (!resultsByDate[date])
-					resultsByDate[date] = {}
-				resultsByDate[date][cardType] = current;
-				localStorage.resultsByDate = JSON.stringify(resultsByDate);
 			}
-		}, timeout);
+			for (let c of guessTypeOptions.children) {
+				if (c.classList.contains("activeOption")) {
+					current.guessType = c.innerHTML;
+					break;
+				}
+			}
+			// Clear old days
+			if (localStorage.resultsByDate)
+				resultsByDate = JSON.parse(localStorage.resultsByDate);
+			else
+				resultsByDate = {};
+			for (let key in resultsByDate) {
+				if (key != date) {
+					delete resultsByDate[key]
+				}
+			}
+			// Add new key
+			if (!resultsByDate[date])
+				resultsByDate[date] = {}
+			resultsByDate[date][cardType] = current;
+			localStorage.resultsByDate = JSON.stringify(resultsByDate);
+		}
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
 	
 	preImg.href = cardGuessURI(currentCard.id);
+	lock = true;
 	setTimeout(() => {
+		lock = false;
 		score.style.backgroundColor = '';
 		cardsLeft.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard.id);
@@ -365,8 +367,9 @@ function makeGuess() {
 	hideKeyboard(cardInput);
 	if (currentCard) {
 		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
-		
+		lock = true;
 		cardImage.onload = () => {
+			lock = false;
 			cardImage.onload = undefined;
 			
 			timeout = 1000;
@@ -431,6 +434,7 @@ function getScore() {
 }
 
 function toggleGuessType(idx) {
+	if (lock) return
 	for (let i=0; i<guessTypeOptions.childElementCount; i++) {
 		if (i == idx) {
 			guessTypeOptions.children[i].classList.add("activeOption");
@@ -443,6 +447,7 @@ function toggleGuessType(idx) {
 }
 
 function toggleCardType(idx) {
+	if (lock) return
 	let e = cardTypeOptions.children[idx];
 	let count = 0;
 	for (let c of cardTypeOptions.children) {
@@ -463,6 +468,7 @@ function toggleCardType(idx) {
 }
 
 function toggleDaily(idx) {
+	if (lock) return
 	for (let i=0; i<dailyAllOptions.childElementCount; i++) {
 		if (i == idx) {
 			dailyAllOptions.children[i].classList.add("activeOption");
@@ -475,6 +481,7 @@ function toggleDaily(idx) {
 }
 
 function shareSet() {
+	if (lock) return
 	// First time
 	if (!cardImage.src.includes("/card-guesser/finish_card.png")) {
 		let searchParams = new URLSearchParams();
@@ -532,6 +539,7 @@ function clampModVal(a, b, v) {
 }
 
 function cycleAnswer(shift) {
+	if (lock) return
 	let maxValue = getScore().total * 2;
 	currentAnswer = clampModVal(0, maxValue, currentAnswer + shift);
 	
@@ -571,6 +579,7 @@ const dailyCount = 10;
 const guessHistory = [];
 var currentAnswer = -1;
 var copyText = "";
+var lock = false;
 const differentDaily = false; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
