@@ -121,6 +121,7 @@ form {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	background-color: #1f5e3e;
 }
 
 .info {
@@ -128,7 +129,7 @@ form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #1f5e3e;
+	background-color: inherit;
 	color: #fff;
 	border: 1px solid transparent;
 	padding: 1%;

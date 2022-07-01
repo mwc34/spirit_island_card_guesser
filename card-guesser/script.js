@@ -207,8 +207,7 @@ function startSet() {
 				cardInputWrapper.style.display = 'none';
 				submitInput.style.display = 'none';
 				currentAnswer = -1;
-				score.style.backgroundColor = '';
-				cardsLeft.style.backgroundColor = '';
+				infoWrapper.style.backgroundColor = '';
 				cardsLeft.style.display = '';
 				cardCount.style.display = 'none';
 				cardImage.src = "/card-guesser/already_done_card.png";
@@ -278,8 +277,7 @@ function startSet() {
 	shareWrapper.style.display = 'none';
 	cardInputWrapper.style.display = '';
 	submitInput.style.display = '';
-	score.style.backgroundColor = '';
-	cardsLeft.style.backgroundColor = '';
+	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
 	cardCount.style.display = 'none';
 	
@@ -367,8 +365,7 @@ function newCard(timeout=10) {
 	lock = true;
 	setTimeout(() => {
 		lock = false;
-		score.style.backgroundColor = '';
-		cardsLeft.style.backgroundColor = '';
+		infoWrapper.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard.id);
 		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		if (!mobileAndTabletCheck())
@@ -393,15 +390,13 @@ function makeGuess() {
 			timeout = 1000;
 			if (currentCard.title == guess) {
 				incrementScore(true);
-				score.style.backgroundColor = '#0fd920';
-				cardsLeft.style.backgroundColor = '#0fd920';
+				infoWrapper.style.backgroundColor = '#0fd920';
 				guessHistory.push([true, currentCard.id]);
 			}
 			else {
 				timeout += 1000;
 				incrementScore(false);
-				score.style.backgroundColor = '#db0f0f';
-				cardsLeft.style.backgroundColor = '#db0f0f';
+				infoWrapper.style.backgroundColor = '#db0f0f';
 				guessHistory.push([false, currentCard.id]);
 			}
 			decrementCardsLeft();
@@ -531,8 +526,7 @@ function shareSet() {
 		copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
 		cardImage.src = "/card-guesser/finish_card.png";
 	}
-	score.style.backgroundColor = '';
-	cardsLeft.style.backgroundColor = '';
+	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
 	cardCount.style.display = 'none';
 	navigator.clipboard.writeText(copyText);
@@ -565,12 +559,10 @@ function cycleAnswer(shift) {
 	setCardCount(1 + Math.floor(currentAnswer/2));
 	
 	if (guessHistory[Math.floor(currentAnswer/2)][0]) {
-		score.style.backgroundColor = '#0fd920';
-		cardsLeft.style.backgroundColor = '#0fd920';
+		infoWrapper.style.backgroundColor = '#0fd920';
 	}
 	else {
-		score.style.backgroundColor = '#db0f0f';
-		cardsLeft.style.backgroundColor = '#db0f0f';
+		infoWrapper.style.backgroundColor = '#db0f0f';
 	}
 	
 	let card_id = guessHistory[Math.floor(currentAnswer/2)][1];
@@ -591,6 +583,7 @@ const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
 const cardCount = document.getElementById("cardCount");
 const score = document.getElementById("score");
+const infoWrapper = document.getElementById("infoWrapper");
 const dailyCount = 10;
 const guessHistory = [];
 var currentAnswer = -1;
