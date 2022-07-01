@@ -185,20 +185,22 @@ function startSet() {
 		}
 	}
 	// Set to results and return
-	resultsByDate = JSON.parse(localStorage.resultsByDate);
-	if (resultsByDate[date] && resultsByDate[date][cardType]) {
-		shareButton.style.display = '';
-		cardInputWrapper.style.display = 'none';
-		submitInput.style.display = 'none';
-		setScore(resultsByDate[date][cardType]);
-		for (let c of guessTypeOptions.children) {
-			if (c.innerHTML == resultsByDate[date][cardType].guessType)
-				c.classList.add("activeOption");
-			else
-				c.classList.remove("activeOption");
+	if (localStorage.resultsByDate) {
+		resultsByDate = JSON.parse(localStorage.resultsByDate);
+		if (resultsByDate[date] && resultsByDate[date][cardType]) {
+			shareButton.style.display = '';
+			cardInputWrapper.style.display = 'none';
+			submitInput.style.display = 'none';
+			setScore(resultsByDate[date][cardType]);
+			for (let c of guessTypeOptions.children) {
+				if (c.innerHTML == resultsByDate[date][cardType].guessType)
+					c.classList.add("activeOption");
+				else
+					c.classList.remove("activeOption");
+			}
+			cardImage.src = "/card-guesser/already_done_card.png";
+			return
 		}
-		cardImage.src = "/card-guesser/already_done_card.png";
-		return
 	}
 	
 	// Set function to find set urls
@@ -306,7 +308,10 @@ function newCard(timeout=10) {
 				}
 			}
 			// Clear old days
-			resultsByDate = JSON.parse(localStorage.resultsByDate);
+			if (localStorage.resultsByDate)
+				resultsByDate = JSON.parse(localStorage.resultsByDate);
+			else
+				resultsByDate = {};
 			for (let key in resultsByDate) {
 				if (key != date) {
 					delete resultsByDate[key]
