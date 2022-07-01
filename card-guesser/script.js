@@ -198,6 +198,8 @@ function startSet() {
 				else
 					c.classList.remove("activeOption");
 			}
+			setCardsLeft(0);
+			guessHistory.splice(0, guessHistory.length, resultsByDate[date][cardType].guessHistory);
 			cardImage.src = "/card-guesser/already_done_card.png";
 			return
 		}
@@ -251,6 +253,8 @@ function startSet() {
 	shareButton.style.display = 'none';
 	cardInputWrapper.style.display = '';
 	submitInput.style.display = '';
+	score.style.backgroundColor = '';
+	cardsLeft.style.backgroundColor = '';
 	
 	
 	cardsToGuess = [];
@@ -289,12 +293,11 @@ function newCard(timeout=10) {
 			shareButton.style.display = '';
 			cardInputWrapper.style.display = 'none';
 			submitInput.style.display = 'none';
-			score.style.backgroundColor = '';
-			cardsLeft.style.backgroundColor = '';
 			// Save score to localStorage
 			let d = new Date();
 			let date = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
 			let current = getScore();
+			current.guessHistory = [...guessHistory];
 			let cardType = '';
 			for (let c of cardTypeOptions.children) {
 				if (c.classList.contains("activeOption")) {
@@ -489,6 +492,8 @@ function shareSet() {
 			c.classList.remove("activeOption");
 		}
 	}
+	score.style.backgroundColor = '';
+	cardsLeft.style.backgroundColor = '';
 	navigator.clipboard.writeText(copyText);
 }
 
