@@ -38,7 +38,7 @@ input[type=submit] {
   overflow-y: auto;
 }
 .autocomplete-items div {
-  padding: 1vh;
+  padding: 1%;
   cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;

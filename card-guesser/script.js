@@ -318,7 +318,7 @@ function getSubset(population_count, sample_count, random_seed=null) {
 	return samples;
 }
 
-function newCard(timeout=10) {
+function newCard() {
 	// Save current progress if daily
 	if (dailyAllOptions.children[0].classList.contains("activeOption") && getScore().total) {
 		// Save score to localStorage
@@ -366,33 +366,22 @@ function newCard(timeout=10) {
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
 	preImg.href = cardGuessURI(currentCard.id);
-	
-	let f = () => {
-		lock = false;
+
+	continueButton.style.display = '';
+	cardInputWrapper.style.display = 'none';
+	shareWrapper.style.display = 'none';
+	submitInput.style.display = 'none';
+	continueButton.onclick = () => {
+		if (lock) return
+		shareWrapper.style.display = 'none';
+		cardInputWrapper.style.display = '';
+		submitInput.style.display = '';
+		continueButton.style.display = 'none';
 		infoWrapper.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard.id);
 		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		if (!mobileAndTabletCheck())
 			cardInput.focus();
-	};
-	
-	if (timeout) {
-		lock = true;
-		setTimeout(f, timeout);
-	}
-	else {
-		continueButton.style.display = '';
-		cardInputWrapper.style.display = 'none';
-		shareWrapper.style.display = 'none';
-		submitInput.style.display = 'none';
-		continueButton.onclick = () => {
-			if (lock) return
-			shareWrapper.style.display = 'none';
-			cardInputWrapper.style.display = '';
-			submitInput.style.display = '';
-			continueButton.style.display = 'none';
-			f();
-		};
 	}
 }
 
@@ -409,22 +398,19 @@ function makeGuess() {
 		cardImage.onload = () => {
 			lock = false;
 			cardImage.onload = undefined;
-			
-			timeout = 1000;
 			if (currentCard.title == guess) {
 				incrementScore(true);
 				infoWrapper.style.backgroundColor = '#0fd920';
 				guessHistory.push([true, currentCard.id]);
 			}
 			else {
-				timeout = null;
 				incrementScore(false);
 				infoWrapper.style.backgroundColor = '#db0f0f';
 				guessHistory.push([false, currentCard.id]);
 			}
 			decrementCardsLeft();
 			
-			newCard(timeout);
+			newCard();
 		}
 	}
 }
