@@ -362,6 +362,7 @@ function newCard(wait) {
 		setTimeout(() => {
 			lock = false;
 			cardImage.src = '/card-guesser/finish_card.png';
+			preImg.href = '/card-guesser/share_card.png';
 			shareWrapper.style.display = '';
 			cardInputWrapper.style.display = 'none';
 			continueButton.style.display = 'none';
