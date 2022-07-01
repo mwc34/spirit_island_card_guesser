@@ -523,11 +523,11 @@ function cycleAnswer(shift) {
 		cardsLeft.style.backgroundColor = '#db0f0f';
 	}
 	
-	let card_id = guessHistory[Math.floor(currentAnswer/2)][1].id;
+	let card_id = guessHistory[Math.floor(currentAnswer/2)][1];
 	if (currentAnswer % 2 == 0)
 		cardImage.src = cardGuessURI(card_id);
 	else
-		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
+		cardImage.src = `/card-guesser/complete_cards_img/${card_id}.png`;
 	
 	
 }
