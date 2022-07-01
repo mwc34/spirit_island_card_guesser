@@ -195,6 +195,9 @@ function startSet() {
 			currentAnswer = -1;
 			score.style.backgroundColor = '';
 			cardsLeft.style.backgroundColor = '';
+			cardsLeft.style.display = '';
+			cardCount.style.display = 'none';
+			
 			setScore(resultsByDate[date][cardType]);
 			for (let c of guessTypeOptions.children) {
 				if (c.innerHTML == resultsByDate[date][cardType].guessType)
@@ -262,6 +265,8 @@ function startSet() {
 	submitInput.style.display = '';
 	score.style.backgroundColor = '';
 	cardsLeft.style.backgroundColor = '';
+	cardsLeft.style.display = '';
+	cardCount.style.display = 'none';
 	
 	
 	cardsToGuess = [];
@@ -388,6 +393,10 @@ function setCardsLeft(v) {
 	cardsLeft.innerHTML = `Cards Left: ${v}`;
 }
 
+function setCardCount(v) {
+	cardCount.innerHTML = `Card: ${v}`;
+}
+
 function decrementCardsLeft() {
 	setCardsLeft(getCardsLeft() - 1);
 }
@@ -503,27 +512,24 @@ function shareSet() {
 	}
 	score.style.backgroundColor = '';
 	cardsLeft.style.backgroundColor = '';
+	cardsLeft.style.display = '';
+	cardCount.style.display = 'none';
 	navigator.clipboard.writeText(copyText);
 }
 
 function cycleAnswer(shift) {
-	currentAnswer += shift;
+	if ((currentAnswer != 0 || shift == 1) && (currentAnswer != maxValue-1 || shift == -1)) 
+		currentAnswer += shift;
 	let maxValue = getScore().total * 2;
 	if (currentAnswer < 0)
 		currentAnswer = maxValue-1;
 	if (currentAnswer >= maxValue)
 		currentAnswer = 0;
 	
-	setCardsLeft(getScore().total - 1 - Math.floor(currentAnswer/2));
-	let currentScore = {
-		'correct' : 0,
-		'total' : 0,
-	}
-	for (let guess of guessHistory.slice(0, 1 + Math.floor(currentAnswer/2))) {
-		if (guess[0])
-			currentScore.correct += 1;
-		currentScore.total += 1;
-	}
+	cardsLeft.style.display = 'none';
+	cardCount.style.display = '';
+	
+	setCardCount(1 + Math.floor(currentAnswer/2));
 	
 	if (guessHistory[Math.floor(currentAnswer/2)][0]) {
 		score.style.backgroundColor = '#0fd920';
@@ -554,6 +560,7 @@ const submitInput = document.getElementById("submitInput");
 const shareWrapper = document.getElementById("shareWrapper");
 const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
+const cardCount = document.getElementById("cardCount");
 const score = document.getElementById("score");
 const dailyCount = 10;
 const guessHistory = [];
