@@ -298,7 +298,7 @@ function startSet() {
 		resetScore();
 		setCardsLeft(sample_count);
 	}
-	newCard();
+	newCard(false);
 }
 
 function getSubset(population_count, sample_count, random_seed=null) {
@@ -318,7 +318,7 @@ function getSubset(population_count, sample_count, random_seed=null) {
 	return samples;
 }
 
-function newCard() {
+function newCard(wait) {
 	// Save current progress if daily
 	if (dailyAllOptions.children[0].classList.contains("activeOption") && getScore().total) {
 		// Save score to localStorage
@@ -366,13 +366,10 @@ function newCard() {
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
 	preImg.href = cardGuessURI(currentCard.id);
-
-	continueButton.style.display = '';
-	cardInputWrapper.style.display = 'none';
-	shareWrapper.style.display = 'none';
-	submitInput.style.display = 'none';
-	continueButton.onclick = () => {
+	
+	let f = () => {
 		if (lock) return
+		lock = false;
 		shareWrapper.style.display = 'none';
 		cardInputWrapper.style.display = '';
 		submitInput.style.display = '';
@@ -382,6 +379,18 @@ function newCard() {
 		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		if (!mobileAndTabletCheck())
 			cardInput.focus();
+	}
+	
+	if (wait) {
+		continueButton.style.display = '';
+		cardInputWrapper.style.display = 'none';
+		shareWrapper.style.display = 'none';
+		submitInput.style.display = 'none';
+		lock = true;
+		continueButton.onclick = f;
+	}
+	else {
+		f();
 	}
 }
 
@@ -410,7 +419,7 @@ function makeGuess() {
 			}
 			decrementCardsLeft();
 			
-			newCard();
+			newCard(true);
 		}
 	}
 }

@@ -14,7 +14,7 @@ body {
 input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
-  padding: 1%;
+  padding: 2%;
 }
 input[type=text] {
   background-color: #f1f1f1;
@@ -38,7 +38,7 @@ input[type=submit] {
   overflow-y: auto;
 }
 .autocomplete-items div {
-  padding: 1%;
+  padding: 2%;
   cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;
@@ -71,8 +71,8 @@ input[type=submit] {
 	background-color: #db0f0f;
 	color: #fff;
 	border: 1px solid black;
-	padding-top: 1%;
-	padding-bottom: 1%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 #topHUD {
@@ -132,7 +132,7 @@ form {
 	background-color: inherit;
 	color: #fff;
 	border: 1px solid transparent;
-	padding: 1%;
+	padding: 2%;
 }
 
 #cardImage {
@@ -157,7 +157,7 @@ form {
 	background-color: DodgerBlue;
 	color: #fff;
 	flex-grow: 1;
-	padding: 1%;
+	padding: 2%;
 	border: 1px solid transparent;
 }
 
@@ -166,7 +166,7 @@ form {
 	background-color: DodgerBlue;
 	color: #fff;
 	flex-grow: 1;
-	padding: 1%;
+	padding: 2%;
 	border: 1px solid transparent;
 	display: flex;
 	justify-content: center;
@@ -176,8 +176,8 @@ form {
 .cycleButton {
 	padding-left: 5%;
 	padding-right: 5%;
-	padding-top: 1%;
-	padding-bottom: 1%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 	background-color: #1f5e3e;
 	border: 1px solid transparent;
 	font-weight: bold;
