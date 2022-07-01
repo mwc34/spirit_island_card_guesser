@@ -148,8 +148,8 @@ form {
 
 #shareWrapper {
 	width: 100%;
-	padding: 1%;
 	display: flex;
+	color: #fff;
 }
 
 #shareButton {
@@ -157,11 +157,17 @@ form {
 	background-color: DodgerBlue;
 	color: #fff;
 	flex-grow: 1;
+	padding: 1%;
+	border: 1px solid transparent;
 }
 
 .cycleButton {
 	padding-left: 5%;
 	padding-right: 5%;
+	padding: 1%;
+	background-color: #1f5e3e;
+	border: 1px solid transparent;
+	font-weight: bold;
 }
 
 .activeOption  {
