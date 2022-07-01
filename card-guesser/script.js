@@ -514,6 +514,17 @@ function cycleAnswer(shift) {
 	if (currentAnswer >= maxValue)
 		currentAnswer = 0;
 	
+	setCardsLeft(getScore().total - 1 - Math.floor(currentAnswer/2));
+	let currentScore = {
+		'correct' : 0,
+		'total' : 0,
+	}
+	for (let guess of guessHistory.slice(0, 1 + Math.floor(currentAnswer/2))) {
+		if (guess[0])
+			currentScore.correct += 1;
+		currentScore.total += 1;
+	}
+	
 	if (guessHistory[Math.floor(currentAnswer/2)][0]) {
 		score.style.backgroundColor = '#0fd920';
 		cardsLeft.style.backgroundColor = '#0fd920';

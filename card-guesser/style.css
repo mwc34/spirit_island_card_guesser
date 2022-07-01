@@ -164,7 +164,8 @@ form {
 .cycleButton {
 	padding-left: 5%;
 	padding-right: 5%;
-	padding: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	background-color: #1f5e3e;
 	border: 1px solid transparent;
 	font-weight: bold;
