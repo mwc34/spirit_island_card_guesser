@@ -34,6 +34,8 @@ function autocomplete(inp, arr) {
 					/*close the list of autocompleted values,
 					(or any other open lists of autocompleted values:*/
 					closeAllLists();
+					if (!mobileAndTabletCheck())
+						inp.focus();
 				});
 				a.appendChild(b);
 			}
@@ -699,4 +701,12 @@ window.addEventListener("resize", () => {
 		bodyWrapper.scrollTop = bodyWrapper.scrollHeight;
 	}
 	saveSize();
+});
+
+window.addEventListener("keydown", function(e) {
+	if (e.keyCode == 13) {
+		// Enter
+		if (continueButton.style.display != 'none')
+			continueButton.click();
+	}
 });
