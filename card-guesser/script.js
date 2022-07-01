@@ -243,6 +243,15 @@ function startSet() {
 		return
 	}
 	
+	// Set last cardType mode to localStorage
+	chosenCardTypes = [];
+	for (let c of cardTypeOptions.children) {
+		if (c.classList.contains("activeOption")) {
+			chosenCardTypes.push(c.innerHTML);
+		}
+	}
+	localStorage.cardType = JSON.stringify(chosenCardTypes);
+	
 	// Return if already done after set cardGuessURI
 	if (cancel)
 		return
@@ -265,9 +274,6 @@ function startSet() {
 	else {
 		sample_count = population.length;
 	}
-	
-	if (population.length < sample_count)
-		return
 	
 	shareWrapper.style.display = 'none';
 	cardInputWrapper.style.display = '';
@@ -631,8 +637,20 @@ for (let c of cardTypeOptions.children) {
 	}
 }
 if (!count) {
+	count = 0;
+	// Check if history
+	if (localStorage.cardType)
+		chosenCardTypes = JSON.parse(localStorage.cardType);
 	for (let c of cardTypeOptions.children) {
-		c.classList.add("activeOption");
+		if (!chosenCardTypes.includes(c.innerHTML))
+			c.classList.remove("activeOption");
+		if (c.classList.contains("activeOption"))
+			count++;
+	}
+	if (!count) {
+		for (let c of cardTypeOptions.children) {
+			c.classList.add("activeOption");
+		}
 	}
 }
 
