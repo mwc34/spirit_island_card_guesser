@@ -318,7 +318,7 @@ function getSubset(population_count, sample_count, random_seed=null) {
 
 function newCard(timeout=10) {
 	// Save current progress if daily
-	if (dailyAllOptions.children[0].classList.contains("activeOption")) {
+	if (dailyAllOptions.children[0].classList.contains("activeOption") && getScore().total) {
 		// Save score to localStorage
 		let current = getScore();
 		current.guessHistory = [...guessHistory];
