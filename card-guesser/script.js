@@ -179,8 +179,9 @@ function startSet() {
 	let daily = dailyAllOptions.children[0].classList.contains("activeOption");
 	let d = new Date();
 	dateString = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
-	// Set to results and return if already done daily
+	// Set to results and return if already done daily or resume if in the middle
 	let cancel = false;
+	let resume = false;
 	if (localStorage.resultsByDate && daily) {
 		let cardType = '';
 		for (let c of cardTypeOptions.children) {
@@ -190,27 +191,33 @@ function startSet() {
 		}
 		resultsByDate = JSON.parse(localStorage.resultsByDate);
 		if (resultsByDate[dateString] && resultsByDate[dateString][cardType]) {
-			shareWrapper.style.display = '';
-			cardInputWrapper.style.display = 'none';
-			submitInput.style.display = 'none';
-			currentAnswer = -1;
-			score.style.backgroundColor = '';
-			cardsLeft.style.backgroundColor = '';
-			cardsLeft.style.display = '';
-			cardCount.style.display = 'none';
-			
-			setScore(resultsByDate[dateString][cardType]);
+			let resultInfo = resultsByDate[dateString][cardType];
+			setScore(resultInfo);
+			setCardsLeft(dailyCount - resultInfo.total);
 			for (let c of guessTypeOptions.children) {
-				if (c.innerHTML == resultsByDate[dateString][cardType].guessType)
+				if (c.innerHTML == resultInfo.guessType)
 					c.classList.add("activeOption");
 				else
 					c.classList.remove("activeOption");
 			}
-			setCardsLeft(0);
-			guessHistory.splice(0, guessHistory.length, ...resultsByDate[dateString][cardType].guessHistory);
-			cardImage.src = "/card-guesser/already_done_card.png";
-			preImg.href = getCycleURL(dailyCount*2-1);
-			cancel = true; // Trigger return
+			guessHistory.splice(0, guessHistory.length, ...resultInfo.guessHistory);
+			
+			if (resultInfo.total == dailyCount) {
+				shareWrapper.style.display = '';
+				cardInputWrapper.style.display = 'none';
+				submitInput.style.display = 'none';
+				currentAnswer = -1;
+				score.style.backgroundColor = '';
+				cardsLeft.style.backgroundColor = '';
+				cardsLeft.style.display = '';
+				cardCount.style.display = 'none';
+				cardImage.src = "/card-guesser/already_done_card.png";
+				preImg.href = getCycleURL(dailyCount*2-1);
+				cancel = true; // Trigger return
+			}
+			else {
+				resume = true; // Trigger resume
+			}
 		}
 	}
 	
@@ -270,14 +277,19 @@ function startSet() {
 	cardsLeft.style.display = '';
 	cardCount.style.display = 'none';
 	
-	
 	cardsToGuess = [];
 	for (let idx of getSubset(population.length, sample_count, random_seed)) {
 		cardsToGuess.push(population[idx]);
 	}
-	guessHistory.splice(0, guessHistory.length);
-	resetScore();
-	setCardsLeft(sample_count);
+	
+	if (resume) {
+		cardsToGuess.splice(0, guessHistory.length);
+	}
+	else {
+		guessHistory.splice(0, guessHistory.length);
+		resetScore();
+		setCardsLeft(sample_count);
+	}
 	newCard();
 }
 
@@ -299,6 +311,40 @@ function getSubset(population_count, sample_count, random_seed=null) {
 }
 
 function newCard(timeout=10) {
+	// Save current progress if daily
+	if (dailyAllOptions.children[0].classList.contains("activeOption")) {
+		// Save score to localStorage
+		let current = getScore();
+		current.guessHistory = [...guessHistory];
+		let cardType = '';
+		for (let c of cardTypeOptions.children) {
+			if (c.classList.contains("activeOption")) {
+				cardType += c.innerHTML;
+			}
+		}
+		for (let c of guessTypeOptions.children) {
+			if (c.classList.contains("activeOption")) {
+				current.guessType = c.innerHTML;
+				break;
+			}
+		}
+		// Clear old days
+		if (localStorage.resultsByDate)
+			resultsByDate = JSON.parse(localStorage.resultsByDate);
+		else
+			resultsByDate = {};
+		for (let key in resultsByDate) {
+			if (key != dateString) {
+				delete resultsByDate[key]
+			}
+		}
+		// Add new key
+		if (!resultsByDate[dateString])
+			resultsByDate[dateString] = {}
+		resultsByDate[dateString][cardType] = current;
+		localStorage.resultsByDate = JSON.stringify(resultsByDate);
+	}
+	
 	// No more cards to guess
 	if (!cardsToGuess.length) {
 		currentCard = null;
@@ -307,38 +353,6 @@ function newCard(timeout=10) {
 		submitInput.style.display = 'none';
 		preImg.href = '/card-guesser/finish_card.png';
 		currentAnswer = -1;
-		if (getScore().total == dailyCount) {
-			// Save score to localStorage
-			let current = getScore();
-			current.guessHistory = [...guessHistory];
-			let cardType = '';
-			for (let c of cardTypeOptions.children) {
-				if (c.classList.contains("activeOption")) {
-					cardType += c.innerHTML;
-				}
-			}
-			for (let c of guessTypeOptions.children) {
-				if (c.classList.contains("activeOption")) {
-					current.guessType = c.innerHTML;
-					break;
-				}
-			}
-			// Clear old days
-			if (localStorage.resultsByDate)
-				resultsByDate = JSON.parse(localStorage.resultsByDate);
-			else
-				resultsByDate = {};
-			for (let key in resultsByDate) {
-				if (key != dateString) {
-					delete resultsByDate[key]
-				}
-			}
-			// Add new key
-			if (!resultsByDate[dateString])
-				resultsByDate[dateString] = {}
-			resultsByDate[dateString][cardType] = current;
-			localStorage.resultsByDate = JSON.stringify(resultsByDate);
-		}
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
