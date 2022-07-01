@@ -632,12 +632,11 @@ for (let c of cardTypeOptions.children) {
 	if (searchParams.get(key) == '0') {
 		c.classList.remove("activeOption");
 	}
-	if (c.classList.contains("activeOption")) {
+	else if (searchParams.get(key) == '1') {
 		count++;
 	}
 }
 if (!count) {
-	count = 0;
 	// Check if history
 	if (localStorage.cardType) {
 		let chosenCardTypes = JSON.parse(localStorage.cardType);
