@@ -287,22 +287,27 @@ function startSet() {
 		}
 	}
 	
-	// Set function to find set urls
+	// Set function to find set urls and get example url
+	let example_url = null;
 	// Maximal
 	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
+		example_url = '/card-guesser/maximal_card.png';
 	}
 	// No Picture
 	else if (guessTypeOptions.children[1].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x}.png`;
+		example_url = '/card-guesser/no_picture_card.png';
 	}
 	// Picture Only
 	else if (guessTypeOptions.children[2].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x}.png`;
+		example_url = '/card-guesser/picture_only_card.png';
 	}
 	// Minimal
 	else if (guessTypeOptions.children[3].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
+		example_url = '/card-guesser/minimal_card.png';
 	}
 	// Nothing selected
 	else {
@@ -362,7 +367,17 @@ function startSet() {
 		resetScore();
 		setCardsLeft(sample_count);
 	}
-	newCard(false);
+	
+	// Show starting example card
+	preImg.href = cardGuessURI(cardsToGuess[0].id);
+	continueButton.style.display = '';
+	cardInputWrapper.style.display = 'none';
+	shareWrapper.style.display = 'none';
+	submitInput.style.display = 'none';
+	continueButton.onclick = () => {
+		if (lock) return;
+		newCard(false);
+	};
 }
 
 function getSubset(population_count, sample_count, random_seed=null) {
@@ -383,7 +398,7 @@ function getSubset(population_count, sample_count, random_seed=null) {
 }
 
 function newCard(wait) {
-	// Save current progress if daily
+	// Save current progress if daily and answered at least one
 	if (dailyAllOptions.children[0].classList.contains("activeOption") && getScore().total) {
 		// Save score to localStorage
 		let current = getScore();
@@ -440,7 +455,7 @@ function newCard(wait) {
 	preImg.href = cardGuessURI(currentCard.id);
 	
 	let f = () => {
-		if (lock) return
+		if (lock) return;
 		shareWrapper.style.display = 'none';
 		cardInputWrapper.style.display = '';
 		submitInput.style.display = '';
