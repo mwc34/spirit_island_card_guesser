@@ -368,6 +368,7 @@ function startSet() {
 		resetScore();
 		setCardsLeft(sample_count);
 		// Show starting example card
+		cardImage.src = example_url;
 		preImg.href = cardGuessURI(cardsToGuess[0].id);
 		continueButton.style.display = '';
 		cardInputWrapper.style.display = 'none';
