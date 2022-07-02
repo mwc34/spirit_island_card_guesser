@@ -507,8 +507,8 @@
             "enabled": true,
             "text": "{dahan}"
         },
-        "effect": "Remove 1 of your {presence} on the island from the game, setting it on the Reminder Card.\n\nFrom now on: each {dahan} within Range-1 of your {presence} provides Defend 1 in its land, and you gain 1 less Energy each turn.\n_(This effect stacks if used multiple times.)_",
-        "effectFontScale": 0.73,
+        "effect": "Remove 1 of your {presence} on the island from the game, setting it on the Reminder Card.\n\nFrom now on: each {dahan} within {range,1} of your {presence} provides Defend 1 in its land, and you gain 1 less Energy each turn.\n_(This effect stacks if used multiple times.)_",
+        "effectFontScale": 0.7,
         "elements": {
             "sun": true,
             "moon": false,
@@ -642,7 +642,7 @@
             "enabled": true,
             "text": "{any_spirit}"
         },
-        "effect": "Target Spirit adds 2 of their Destroyed {presence} into a single land, up to Range-2 from your {presence}. If any {presence} was added, 2 Damage to each {town}/{city} in that land.",
+        "effect": "Target Spirit adds 2 of their Destroyed {presence} into a single land, up to {range,2} from your {presence}. If any {presence} was added, 2 Damage to each {town}/{city} in that land.",
         "effectFontScale": 0.92,
         "elements": {
             "sun": false,
@@ -1543,7 +1543,7 @@
             "text": "{coastal}"
         },
         "effect": "6 {fear}.\nDestroy all Invaders.",
-        "effectFontScale": 0.82,
+        "effectFontScale": 0.75,
         "elements": {
             "sun": true,
             "moon": true,
@@ -1767,7 +1767,7 @@
             "enabled": true,
             "text": "{coastal}"
         },
-        "effect": "If there are {dahan}, add 1 {dahan}.\n\nIf there are no {dahan}, Remove 1 {blight}.",
+        "effect": "If there are {dahan}, add 1 {dahan}.\n\nIf there are no {dahan}, remove 1 {blight}.",
         "effectFontScale": 1,
         "elements": {
             "sun": true,
@@ -2458,7 +2458,7 @@
             "enabled": true,
             "relativeHeight": 0.78,
             "conditionText": "3{moon} 2{water} 3{earth} 2{plant}",
-            "effectText": "*(Max. 1x/game)* Add a random new Island Board next to target board. Ignore its Setup icons; add 2 Beasts, 2 Wilds, 2 Badlands and up to 2 Presence (from any Spirits) anywhere on it. From now on, Build cards and \"Each board / Each land\" Adversary Actions skip 1 Board."
+            "effectText": "*(Max. 1x/game)* Add a random new Island Board next to target board. Ignore its Setup icons; add 2 {beasts}, 2 {wilds}, 2 {badlands} and up to 2 {presence} (from any Spirits) anywhere on it. From now on, Build cards and \"Each board / Each land\" Adversary Actions skip 1 board."
         },
         "art": {
             "image": null,
@@ -3342,8 +3342,8 @@
             "enabled": true,
             "text": "{any_spirit}"
         },
-        "effect": "Cost to Use: Target Spirit Removes 1 of their Destroyed {presence} from the game.\n\n1 {fear} and 1 Damage in one of target Spirit's lands.\n\n(This is your Power, so {blight} counts as {badlands}{spacer_tiny}, even if target is another Spirit.)",
-        "effectFontScale": 0.92,
+        "effect": "Cost to Use: Target Spirit Removes \n1 of their Destroyed {presence} from the game.\n\n1 {fear} and 1 Damage\n in one of target Spirit's lands.\n\n(This is your Power, so {blight} counts as {badlands}{spacer_tiny}, even if target is another Spirit.)",
+		"effectFontScale": 0.8,
         "elements": {
             "sun": true,
             "moon": false,
@@ -4872,9 +4872,9 @@
             "enabled": true,
             "text": "{any_land}"
         },
-        "effect": "Choose a type of token\nfrom {badlands}/{beast}/{disease}/{strife}/{wilds}\n that exists in an adjacent land",
-        "effectFontScale": 1,
-        "elements": {
+        "effect": "Choose a type of token\nfrom {badlands}/{beast}/{disease}/{strife}/{wilds}\n that exists in an adjacent land; choosing {disease} costs 1 energy. \n\nAdd 1 of that type of token to target land.",
+		"effectFontScale": 0.95,
+		"elements": {
             "sun": false,
             "moon": false,
             "fire": true,
@@ -6942,7 +6942,7 @@
             "enabled": true,
             "text": "{any_land}"
         },
-        "effect": "If target land has your {presence},\n1 {fear} and 1 Damage.\n\nIf target land is {sand}{wetland},\n1 Damage.",
+        "effect": "If target land has your {presence},\n1 {fear} and 1 Damage.\n\nIf target land is {sand_wetland},\n1 Damage.",
         "effectFontScale": 1,
         "elements": {
             "sun": false,
@@ -8338,7 +8338,7 @@
             "text": "{any_land}"
         },
         "effect": "Each time {dahan} would be Destroyed in target land, Destroy 2 fewer {dahan}.\n{wide_or}\nGather up to 2 {dahan}.",
-        "effectFontScale": 1,
+        "effectFontScale": 0.9,
         "elements": {
             "sun": true,
             "moon": false,
@@ -9597,7 +9597,7 @@
             "enabled": true,
             "text": "{any_land}"
         },
-        "effect": "Push 2 {explorer}/{town}/{dahan}.\nPush another 2 {explorer}/{town}/{dahan}\nper {beast} in target land.\n\nIf you Pushed any Invaders, 2 {fear}.",
+        "effect": "Push 2 {explorer}/{town}/{dahan}.\nPush another 2 {explorer}/{town}/{dahan}\nper {beast} in target land.\n\nIf you Pushed any Invaders,\n2 {fear}.",
         "effectFontScale": 1,
         "elements": {
             "sun": true,
@@ -9732,9 +9732,9 @@
             "enabled": true,
             "text": "{invaders}"
         },
-        "effect": "If the Terror Level is...\n\nTerror Level 1: 3 {fear}.\nTerror Level 2: 2 {fear} or add 1 {strife}{spacer_tiny}.\nTerror Level 3: Add 1 {strife}{spacer_tiny}.",
-        "effectFontScale": 1,
-        "elements": {
+        "effect": "If the Terror Level is...              \n{terror1}\nTerror Level 1: 3 {fear}.                  \nTerror Level 2: 2 {fear} or add 1 {strife}{spacer_tiny}.\nTerror Level 3: Add 1 {strife}{spacer_tiny}.           ",
+		"effectFontScale": 0.95,
+		"elements": {
             "sun": false,
             "moon": true,
             "fire": false,

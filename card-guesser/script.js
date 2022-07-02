@@ -361,23 +361,23 @@ function startSet() {
 	
 	if (resume) {
 		cardsToGuess.splice(0, guessHistory.length);
+		newCard(false);
 	}
 	else {
 		guessHistory.splice(0, guessHistory.length);
 		resetScore();
 		setCardsLeft(sample_count);
+		// Show starting example card
+		preImg.href = cardGuessURI(cardsToGuess[0].id);
+		continueButton.style.display = '';
+		cardInputWrapper.style.display = 'none';
+		shareWrapper.style.display = 'none';
+		submitInput.style.display = 'none';
+		continueButton.onclick = () => {
+			if (lock) return;
+			newCard(false);
+		};
 	}
-	
-	// Show starting example card
-	preImg.href = cardGuessURI(cardsToGuess[0].id);
-	continueButton.style.display = '';
-	cardInputWrapper.style.display = 'none';
-	shareWrapper.style.display = 'none';
-	submitInput.style.display = 'none';
-	continueButton.onclick = () => {
-		if (lock) return;
-		newCard(false);
-	};
 }
 
 function getSubset(population_count, sample_count, random_seed=null) {
@@ -398,8 +398,8 @@ function getSubset(population_count, sample_count, random_seed=null) {
 }
 
 function newCard(wait) {
-	// Save current progress if daily and answered at least one
-	if (dailyAllOptions.children[0].classList.contains("activeOption") && getScore().total) {
+	// Save current progress if daily
+	if (dailyAllOptions.children[0].classList.contains("activeOption")) {
 		// Save score to localStorage
 		let current = getScore();
 		current.guessHistory = [...guessHistory];
