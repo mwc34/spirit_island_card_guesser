@@ -35,6 +35,7 @@
 			<div id="bottomHUD">
 				<!--Make sure the form has the autocomplete function switched off:-->
 				<form autocomplete="off" onsubmit="makeGuess();return false;">
+					<input id="skipInput" type="button" onclick="makeGuess(false)" value="Skip">
 					<div id="cardInputWrapper" class="autocomplete">
 						<input id="cardInput" type="text" name="cardNameInput" placeholder="Card Name">
 					</div>

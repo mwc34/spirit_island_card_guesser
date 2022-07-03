@@ -272,6 +272,7 @@ function startSet() {
 				shareWrapper.style.display = '';
 				cardInputWrapper.style.display = 'none';
 				submitInput.style.display = 'none';
+				skipInput.style.display = 'none';
 				continueButton.style.display = 'none';
 				currentAnswer = -1;
 				infoWrapper.style.backgroundColor = '';
@@ -349,6 +350,7 @@ function startSet() {
 	shareWrapper.style.display = 'none';
 	cardInputWrapper.style.display = '';
 	submitInput.style.display = '';
+	skipInput.style.display = '';
 	continueButton.style.display = 'none';
 	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
@@ -374,6 +376,7 @@ function startSet() {
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
+		skipInput.style.display = 'none';
 		continueButton.onclick = () => {
 			if (lock) return;
 			newCard(false);
@@ -447,6 +450,7 @@ function newCard(wait) {
 			cardInputWrapper.style.display = 'none';
 			continueButton.style.display = 'none';
 			submitInput.style.display = 'none';
+			skipInput.style.display = 'none';
 			infoWrapper.style.backgroundColor = '';
 			currentAnswer = -1;
 		}, 1500);
@@ -460,6 +464,7 @@ function newCard(wait) {
 		shareWrapper.style.display = 'none';
 		cardInputWrapper.style.display = '';
 		submitInput.style.display = '';
+		skipInput.style.display = '';
 		continueButton.style.display = 'none';
 		infoWrapper.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard.id);
@@ -473,6 +478,7 @@ function newCard(wait) {
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
+		skipInput.style.display = 'none';
 		continueButton.onclick = f;
 	}
 	else {
@@ -480,10 +486,10 @@ function newCard(wait) {
 	}
 }
 
-function makeGuess() {
+function makeGuess(require_text=true) {
 	let guess = cardInput.value;
 	
-	if (!guess.length) return
+	if (!guess.length && require_text) return
 	
 	cardInput.value = "";
 	hideKeyboard(cardInput);
@@ -682,6 +688,7 @@ const dailyAllOptions = document.getElementById("dailyAllOptions");
 const cardInput = document.getElementById("cardInput");
 const cardInputWrapper = document.getElementById("cardInputWrapper");
 const submitInput = document.getElementById("submitInput");
+const skipInput = document.getElementById("skipInput");
 const shareWrapper = document.getElementById("shareWrapper");
 const cardImage = document.getElementById("cardImage");
 const cardsLeft = document.getElementById("cardsLeft");
