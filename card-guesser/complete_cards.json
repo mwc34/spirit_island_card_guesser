@@ -11712,7 +11712,7 @@
             "enabled": true,
             "text": "{any_land}"
         },
-        "effect": "Target land and a land adjacent to it\become a single land for this turn.\n\n(It has the terrain and land # of both lands.\n When this effect expires, divide pieces as\nyou wish; all of them are considered moved.)",
+        "effect": "Target land and a land adjacent to it\nbecome a single land for this turn.\n\n(It has the terrain and land # of both lands.\n When this effect expires, divide pieces as\nyou wish; all of them are considered moved.)",
         "effectFontScale": 0.7,
         "elements": {
             "sun": true,
