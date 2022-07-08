@@ -486,7 +486,7 @@ function newCard(wait) {
 		return;
 	}
 	currentCard = cardsToGuess.splice(0, 1)[0];
-	preImg.href = cardGuessURI(currentCard.id);
+	preImg.href = cardGuessURI(currentCard);
 	
 	let f = () => {
 		if (lock) return;
