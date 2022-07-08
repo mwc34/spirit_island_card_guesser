@@ -825,7 +825,7 @@
         "id": "blur_the_arc_of_years",
         "title": "Blur The Arc Of Years",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Boon Of Ancient\nMemories",
@@ -963,7 +963,7 @@
         "id": "boon_of_reimagining",
         "title": "Boon Of Reimagining",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Boon Of Swarming\nBedevilment",
@@ -1699,7 +1699,7 @@
         "id": "concealing_shadows",
         "title": "Concealing Shadows",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Confounding Mists",
@@ -1745,7 +1745,7 @@
         "id": "confounding_mists",
         "title": "Confounding Mists",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Crops Wither And Fade",
@@ -2021,7 +2021,7 @@
         "id": "delusions_of_danger",
         "title": "Delusions Of Danger",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Desiccating Winds",
@@ -2573,7 +2573,7 @@
         "id": "dreams_of_the_dahan",
         "title": "Dreams Of The Dahan",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Drift Down Into Slumber",
@@ -2757,7 +2757,7 @@
         "id": "elemental_aegis",
         "title": "Elemental Aegis",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Elemental Boon",
@@ -2803,7 +2803,7 @@
         "id": "elemental_boon",
         "title": "Elemental Boon",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Elemental Teachings",
@@ -2941,7 +2941,7 @@
         "id": "encompassing_ward",
         "title": "Encompassing Ward",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Enticing Splendor",
@@ -3309,7 +3309,7 @@
         "id": "favors_called_due",
         "title": "Favors Called Due",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Fetid Breath Spreads Infection",
@@ -3447,7 +3447,7 @@
         "id": "fiery_vengeance",
         "title": "Fiery Vengeance",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Fire And Flood",
@@ -3585,7 +3585,7 @@
         "id": "flames_fury",
         "title": "Flame's Fury",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Flash Floods",
@@ -3999,7 +3999,7 @@
         "id": "foundations_sink_into_mud",
         "title": "Foundations Sink Into Mud",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Gather The Scattered Light Of Stars",
@@ -4045,7 +4045,7 @@
         "id": "gather_the_scattered_light_of_stars",
         "title": "Gather The Scattered Light Of Stars",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Gift Of Abundance",
@@ -4229,7 +4229,7 @@
         "id": "gift_of_living_energy",
         "title": "Gift Of Living Energy",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Gift Of Nature's Connection",
@@ -4275,7 +4275,7 @@
         "id": "gift_of_natures_connection",
         "title": "Gift Of Nature's Connection",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Gift Of Power",
@@ -4413,7 +4413,7 @@
         "id": "gift_of_the_primordial_deeps",
         "title": "Gift Of The Primordial Deeps",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Gift Of The Untamed Wild",
@@ -4689,7 +4689,7 @@
         "id": "grasping_tide",
         "title": "Grasping Tide",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Growth Through Sacrifice",
@@ -5655,7 +5655,7 @@
         "id": "lava_flows",
         "title": "Lava Flows",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Lightning's Boon",
@@ -5701,7 +5701,7 @@
         "id": "lightnings_boon",
         "title": "Lightning's Boon",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Like Calls To Like",
@@ -6161,7 +6161,7 @@
         "id": "offer_passage_between_worlds",
         "title": "Offer Passage Between Worlds",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Overenthusiastic Arson",
@@ -6437,7 +6437,7 @@
         "id": "peace_of_the_nighttime_sky",
         "title": "Peace Of The Nighttime Sky",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Pent-up Calamity",
@@ -6667,7 +6667,7 @@
         "id": "plows_shatter_on_rocky_ground",
         "title": "Plows Shatter On Rocky Ground",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Poisoned Dew",
@@ -8599,7 +8599,7 @@
         "id": "shatter_homesteads",
         "title": "Shatter Homesteads",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Skies Herald The\nSeason Of Return",
@@ -9427,7 +9427,7 @@
         "id": "sudden_ambush",
         "title": "Sudden Ambush",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Sunset's Fire Flows Across The Land",
@@ -11083,7 +11083,7 @@
         "id": "uncanny_melting",
         "title": "Uncanny Melting",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Unexpected Tigers",
@@ -11727,7 +11727,7 @@
         "id": "voice_of_thunder",
         "title": "Voice Of Thunder",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Volcanic Eruption",
@@ -11819,7 +11819,7 @@
         "id": "voracious_growth",
         "title": "Voracious Growth",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Walls Of Rock\nAnd Thorn",
@@ -11911,7 +11911,7 @@
         "id": "wash_away",
         "title": "Wash Away",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Ways Of Shore\nAnd Heartland",

@@ -109,8 +109,7 @@ def generate_minimal_cards():
             
         if not valid_checklists:
             print(f"------------------------------------------{complete_card['title']} had no unique subset")
-            valid_checklists = set([('effect',)])
-            card['effect'] = complete_card['effect']
+            valid_checklists = set([('effect',), ('art',)])
 
         for idx, checklist in enumerate(valid_checklists):
             card = json.loads(json.dumps(base_card))
@@ -122,6 +121,9 @@ def generate_minimal_cards():
                 elif e == 'threshold':
                     card[e]['conditionText'] = complete_card[e]['conditionText']
                     card[e]['enabled'] = True
+                elif e == 'art':
+                    card['art']['url'] = complete_card[e]['url']
+                    card['art']['artist'] = complete_card[e]['artist']
                 else:
                     card['elements'][e] = complete_card['elements'][e]
             print(checklist)
