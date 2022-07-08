@@ -125,6 +125,16 @@ window.mobileAndTabletCheck = function() {
 	return check;
 };
 
+String.prototype.rjust = function(num, padding){
+    if(!padding) padding = ' ';
+    var s = this.toString();
+    if(1 != padding.length) throw new Error('Padding must be one character.');
+    if(s.length >= num) return s;
+    for(var i=0; i<=num-s.length; i++)
+        s = padding + s;/*from  w  w  w .j  a va2  s  .  c  om*/
+    return s;
+};
+
 // Hash function
 function MurmurHash3_x86_128(key, seed = 0) {
     function fmix32(h) {
@@ -292,22 +302,43 @@ function startSet() {
 	let example_url = null;
 	// Maximal
 	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x}.png`;
+		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x.id}.png`;
 		example_url = '/card-guesser/maximal_card.png';
 	}
 	// No Picture
 	else if (guessTypeOptions.children[1].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x}.png`;
+		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x.id}.png`;
 		example_url = '/card-guesser/no_picture_card.png';
 	}
 	// Picture Only
 	else if (guessTypeOptions.children[2].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x}.png`;
+		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x.id}.png`;
 		example_url = '/card-guesser/picture_only_card.png';
 	}
 	// Minimal
 	else if (guessTypeOptions.children[3].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/minimal_cards_img/${x}.png`;
+		cardGuessURI = (x) => {
+			let daily = dailyAllOptions.children[0].classList.contains("activeOption");
+			let idx = null;
+			if (daily) {
+				let cardType = '';
+				for (let c of cardTypeOptions.children) {
+					if (c.classList.contains("activeOption")) {
+						cardType += c.innerHTML;
+					}
+				}
+				let hashString = x.id + dateString + cardType;
+				let random_seed = MurmurHash3_x86_128(hashString).reduce((x,y)=>x+y);
+				idx = random_seed % x.minimal_count;
+			}
+			else {
+				idx = Math.floor(Math.random()*x.minimal_count);
+			}
+			
+			let url = `${x.id}_{idx.toString().rjust(2, '0')}`;
+			
+			return `/card-guesser/minimal_cards_img/${url}.png`;
+		}
 		example_url = '/card-guesser/minimal_card.png';
 	}
 	// Nothing selected
@@ -337,9 +368,6 @@ function startSet() {
 		// Generate seed from date
 		let hashString = dateString;
 		hashString += sections.reduce((x,y)=>x+y);
-		if (differentDaily) {
-			hashString += cardGuessURI('hash');
-		}
 		random_seed = MurmurHash3_x86_128(hashString).reduce((x,y)=>x+y);
 		sample_count = dailyCount;
 	}
@@ -371,7 +399,7 @@ function startSet() {
 		setCardsLeft(sample_count);
 		// Show starting example card
 		cardImage.src = example_url;
-		preImg.href = cardGuessURI(cardsToGuess[0].id);
+		preImg.href = cardGuessURI(cardsToGuess[0]);
 		continueButton.style.display = '';
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
@@ -467,7 +495,7 @@ function newCard(wait) {
 		skipInput.style.display = '';
 		continueButton.style.display = 'none';
 		infoWrapper.style.backgroundColor = '';
-		cardImage.src = cardGuessURI(currentCard.id);
+		cardImage.src = cardGuessURI(currentCard);
 		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		if (!mobileAndTabletCheck())
 			cardInput.focus();
@@ -502,12 +530,12 @@ function makeGuess(require_text=true) {
 			if (currentCard.title == guess) {
 				incrementScore(true);
 				infoWrapper.style.backgroundColor = '#0fd920';
-				guessHistory.push([true, currentCard.id]);
+				guessHistory.push([true, completeCards.indexOf(currentCard)]);
 			}
 			else {
 				incrementScore(false);
 				infoWrapper.style.backgroundColor = '#db0f0f';
-				guessHistory.push([false, currentCard.id]);
+				guessHistory.push([false, completeCards.indexOf(currentCard.id)]);
 			}
 			decrementCardsLeft();
 			
@@ -643,11 +671,12 @@ function shareSet() {
 }
 
 function getCycleURL(v) {
-	let card_id = guessHistory[Math.floor(v/2)][1];
+	let card_idx = guessHistory[Math.floor(v/2)][1];
+	let card = completeCards[card_idx];
 	if (currentAnswer % 2 == 0)
-		return cardGuessURI(card_id);
+		return cardGuessURI(card);
 	else
-		return `/card-guesser/complete_cards_img/${card_id}.png`;
+		return `/card-guesser/complete_cards_img/${card.id}.png`;
 }
 
 function clampModVal(a, b, v) {
@@ -675,7 +704,6 @@ function cycleAnswer(shift) {
 		infoWrapper.style.backgroundColor = '#db0f0f';
 	}
 	
-	let card_id = guessHistory[Math.floor(currentAnswer/2)][1];
 	cardImage.src = getCycleURL(currentAnswer);
 	preImg.href = getCycleURL(clampModVal(0, maxValue, currentAnswer + shift));
 }
@@ -702,7 +730,6 @@ var currentAnswer = -1;
 var copyText = "";
 var lock = false;
 var dateString = null;
-const differentDaily = false; // For the guess type modes
 const completeCards = [];
 const cardTitles = [];
 const preImg = document.createElement('link');
