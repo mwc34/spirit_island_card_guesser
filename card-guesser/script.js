@@ -335,7 +335,7 @@ function startSet() {
 				idx = Math.floor(Math.random()*x.minimal_count);
 			}
 			
-			let url = `${x.id}_{idx.toString().rjust(2, '0')}`;
+			let url = `${x.id}_${idx.toString().rjust(2, '0')}`;
 			
 			return `/card-guesser/minimal_cards_img/${url}.png`;
 		}
