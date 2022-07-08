@@ -530,12 +530,12 @@ function makeGuess(require_text=true) {
 			if (currentCard.title == guess) {
 				incrementScore(true);
 				infoWrapper.style.backgroundColor = '#0fd920';
-				guessHistory.push([true, completeCards.indexOf(currentCard)]);
+				guessHistory.push([true, currentCard.id]);
 			}
 			else {
 				incrementScore(false);
 				infoWrapper.style.backgroundColor = '#db0f0f';
-				guessHistory.push([false, completeCards.indexOf(currentCard.id)]);
+				guessHistory.push([false, currentCard.id]);
 			}
 			decrementCardsLeft();
 			
@@ -670,9 +670,17 @@ function shareSet() {
 	navigator.clipboard.writeText(copyText);
 }
 
+function getCardByID(id) {
+	for (let c of completeCards) {
+		if (c.id == id)
+			return c;
+	}
+	return null;
+}
+
 function getCycleURL(v) {
-	let card_idx = guessHistory[Math.floor(v/2)][1];
-	let card = completeCards[card_idx];
+	let card_id = guessHistory[Math.floor(v/2)][1];
+	let card = getCardByID(card_id);
 	if (currentAnswer % 2 == 0)
 		return cardGuessURI(card);
 	else
