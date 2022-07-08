@@ -330,7 +330,6 @@ function startSet() {
 				let hashString = x.id + dateString + cardType;
 				let random_seed = MurmurHash3_x86_128(hashString).reduce((x,y)=>x+y);
 				idx = random_seed % x.minimal_count;
-				console.log(random_seed, x.minimal_count, idx, x.title);
 			}
 			else {
 				idx = Math.floor(Math.random()*x.minimal_count);
