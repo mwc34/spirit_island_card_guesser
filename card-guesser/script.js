@@ -515,17 +515,18 @@ function newCard(wait) {
 }
 
 function makeGuess(require_text=true) {
-	let guess = cardInput.value;
+	if (lock) return
+	let guess = cardInput.value.trim();
 	
 	if (!guess.length && require_text) return
 	
-	cardInput.value = "";
 	hideKeyboard(cardInput);
 	if (currentCard) {
 		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
 		lock = true;
 		cardImage.onload = () => {
 			lock = false;
+			cardInput.value = "";
 			cardImage.onload = undefined;
 			if (currentCard.title == guess) {
 				incrementScore(true);
