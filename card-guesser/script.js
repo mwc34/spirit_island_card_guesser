@@ -47,7 +47,9 @@ function autocomplete(inp, arr) {
 	}
 	/*execute a function when someone writes in the text field:*/
 	inp.addEventListener("input", f);
-
+	if (mobileAndTabletCheck())
+		inp.addEventListener("focus", f);
+	
 	/*execute a function presses a key on the keyboard:*/
 	inp.addEventListener("keydown", function(e) {
 		var x = document.getElementById(this.id + "autocomplete-list");
