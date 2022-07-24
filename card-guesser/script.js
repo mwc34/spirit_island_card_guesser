@@ -6,7 +6,7 @@ function autocomplete(inp, arr) {
 		var a, b, i, val = inp.value;
 		/*close any already open lists of autocompleted values*/
 		closeAllLists();
-		if (!val) { return false;}
+		// if (!val) { return false;}
 		currentFocus = -1;
 		/*create a DIV element that will contain the items (values):*/
 		a = document.createElement("DIV");
@@ -15,6 +15,7 @@ function autocomplete(inp, arr) {
 		/*append the DIV element as a child of the autocomplete container:*/
 		inp.parentNode.appendChild(a);
 		/*for each item in the array...*/
+		console.log("here");
 		for (i = 0; i < arr.length; i++) {
 			let start_idx = arr[i].toUpperCase().indexOf(val.toUpperCase())
 			if (!val.length) {
