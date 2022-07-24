@@ -2,22 +2,24 @@ function autocomplete(inp, arr) {
 	/*the autocomplete function takes two arguments,
 	the text field element and an array of possible autocompleted values:*/
 	var currentFocus;
-	/*execute a function when someone writes in the text field:*/
-	inp.addEventListener("input", function(e) {
-		var a, b, i, val = this.value;
+	let f = (e) => {
+		var a, b, i, val = inp.value;
 		/*close any already open lists of autocompleted values*/
 		closeAllLists();
-		if (!val) { return false;}
+		// if (!val) { return false;}
 		currentFocus = -1;
 		/*create a DIV element that will contain the items (values):*/
 		a = document.createElement("DIV");
-		a.setAttribute("id", this.id + "autocomplete-list");
+		a.setAttribute("id", inp.id + "autocomplete-list");
 		a.setAttribute("class", "autocomplete-items");
 		/*append the DIV element as a child of the autocomplete container:*/
-		this.parentNode.appendChild(a);
+		inp.parentNode.appendChild(a);
 		/*for each item in the array...*/
 		for (i = 0; i < arr.length; i++) {
 			let start_idx = arr[i].toUpperCase().indexOf(val.toUpperCase())
+			if (!val.length) {
+				start_idx = 0;
+			}
 			if (start_idx >= 0) {
 				/*create a DIV element for each matching element:*/
 				b = document.createElement("DIV");
@@ -42,7 +44,10 @@ function autocomplete(inp, arr) {
 		}
 		// Scroll to show input box
 		bodyWrapper.scrollTop = bodyWrapper.scrollHeight;
-	});
+	}
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener("input", f);
+
 	/*execute a function presses a key on the keyboard:*/
 	inp.addEventListener("keydown", function(e) {
 		var x = document.getElementById(this.id + "autocomplete-list");
@@ -345,6 +350,8 @@ function startSet() {
 	else {
 		return
 	}
+	
+	cardInput.value = "";
 	
 	// Set last cardType mode to localStorage
 	chosenCardTypes = [];
