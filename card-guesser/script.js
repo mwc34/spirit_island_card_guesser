@@ -2,8 +2,7 @@ function autocomplete(inp, arr) {
 	/*the autocomplete function takes two arguments,
 	the text field element and an array of possible autocompleted values:*/
 	var currentFocus;
-	/*execute a function when someone writes in the text field:*/
-	inp.addEventListener("input", function(e) {
+	let f = (e) => {
 		var a, b, i, val = this.value;
 		/*close any already open lists of autocompleted values*/
 		closeAllLists();
@@ -18,6 +17,9 @@ function autocomplete(inp, arr) {
 		/*for each item in the array...*/
 		for (i = 0; i < arr.length; i++) {
 			let start_idx = arr[i].toUpperCase().indexOf(val.toUpperCase())
+			if (!val.length) {
+				start_idx = 0;
+			}
 			if (start_idx >= 0) {
 				/*create a DIV element for each matching element:*/
 				b = document.createElement("DIV");
@@ -42,7 +44,10 @@ function autocomplete(inp, arr) {
 		}
 		// Scroll to show input box
 		bodyWrapper.scrollTop = bodyWrapper.scrollHeight;
-	});
+	}
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener("input", f);
+	inp.addEventListener("focus", f);
 	/*execute a function presses a key on the keyboard:*/
 	inp.addEventListener("keydown", function(e) {
 		var x = document.getElementById(this.id + "autocomplete-list");
