@@ -3,19 +3,18 @@ function autocomplete(inp, arr) {
 	the text field element and an array of possible autocompleted values:*/
 	var currentFocus;
 	let f = (e) => {
-		var a, b, i, val = this.value;
+		var a, b, i, val = inp.value;
 		/*close any already open lists of autocompleted values*/
 		closeAllLists();
 		if (!val) { return false;}
 		currentFocus = -1;
 		/*create a DIV element that will contain the items (values):*/
 		a = document.createElement("DIV");
-		a.setAttribute("id", this.id + "autocomplete-list");
+		a.setAttribute("id", inp.id + "autocomplete-list");
 		a.setAttribute("class", "autocomplete-items");
 		/*append the DIV element as a child of the autocomplete container:*/
-		this.parentNode.appendChild(a);
+		inp.parentNode.appendChild(a);
 		/*for each item in the array...*/
-		console.log("here");
 		for (i = 0; i < arr.length; i++) {
 			let start_idx = arr[i].toUpperCase().indexOf(val.toUpperCase())
 			if (!val.length) {
