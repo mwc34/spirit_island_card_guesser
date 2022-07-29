@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Spirit Island Invader Board
+        </title>
+		<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" charset="UTF-8">
+		<!-- <link rel="stylesheet" type="text/css" href="/invader-board/style.css"> -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+        <!---<link rel="icon" href="assets/other/favicon.png">--->
+    </head>
+	
+    <body>
+	
+		<div id="cardSelection">
+			<div class="rowWrapper"></div>
+			<div class="rowWrapper"></div>
+			<div class="rowWrapper"></div>
+		</div>
+		
+		<div class="columnWrapper" style="align-items: stretch; justify-content: space-around;">
+			<div id="fearBoard">
+				<!-- <div class="columnWrapper background"> -->
+					<!-- <input type="range" min="4" max="48" class="slider" id="earnedFearSlider"> -->
+					<!-- <div class="fearTitle">Earned Fear</div> -->
+					<!-- <div class="fearCounter" onclick="changeFear(1);">0</div> -->
+				<!-- </div> -->
+				<div class="columnWrapper background" style="align-items: stretch;">
+					<input type="range" min="4" max="48" class="slider" id="fearPoolSlider">
+					<div class="fearTitle">Fear Pool</div>
+					<div class="rowWrapper" style="justify-content: space-around;">
+						<div class="fearCounter" onclick="changeFear(1);">0</div>
+						<div class="fearCounter" onclick="changeFear(-1);">0</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="advanceCards" onclick="advanceCards();">Advance Invader Cards</div>
+			
+			<div id="cardBoard">
+				<div class="columnWrapper">
+					<div class="rowWrapper"></div>
+					<div class="invaderActionTitle">Ravage</div>
+				</div>
+				<div class="columnWrapper">
+					<div class="rowWrapper"></div>
+					<div class="invaderActionTitle">Build</div>				
+				</div>
+				<div class="columnWrapper">
+					<div class="rowWrapper"></div>
+					<div class="invaderActionTitle">Explore</div>			
+				</div>
+			</div>
+		
+		</div>
+		
+	
+    </body>
+    
+    <!-- <script src="/invader-board/script.js"> -->
+    <script src="script.js">
+    </script>
+    
+</html>
