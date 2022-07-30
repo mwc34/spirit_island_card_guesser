@@ -1,5 +1,8 @@
 * { box-sizing: border-box; }
 body {
+	min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
 	font-family: Arial;
 	margin: 0;
 	background: url("https://cdnb.artstation.com/p/assets/images/images/024/044/203/large/emily-hancock-starmini.jpg") no-repeat center center fixed;
@@ -16,6 +19,10 @@ body {
 		2px -2px 0 #000,
 		-2px 2px 0 #000,
 		2px 2px 0 #000;
+}
+html {
+    height: fill-available;
+    height: -webkit-fill-available;
 }
 
 .slider {
@@ -98,6 +105,7 @@ body {
 .card {
 	position: relative;
 	border: black solid 1px;
+	border-radius: 2vh;
 	min-width: 18vh;
 	height: 30vh;
 	display: flex;
