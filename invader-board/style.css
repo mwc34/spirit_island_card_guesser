@@ -49,14 +49,6 @@ html {
 	user-select: none;
 }
 
-.fearTitle {
-	font-size: 100%;
-}
-
-.fearCounter {
-	font-size: 100%;
-}
-
 #advanceCards {
 	display: flex;
 	justify-content: center;
@@ -69,7 +61,7 @@ html {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding: 5vh;
+	padding: 3vh;
 }
 
 #cardSelection {
@@ -107,7 +99,6 @@ html {
 }
 
 .invaderActionTitle {
-	font-size: 100%;
 	user-select: none;
 }
 
@@ -124,7 +115,7 @@ html {
 	background-color: rgba(255,255,255,0.5);
 	user-select: none;
 	overflow: hidden;
-	margin: 1vh;
+	margin: 0.5vh;
 }
 
 .card > div {
