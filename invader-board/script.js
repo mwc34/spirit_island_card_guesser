@@ -1,5 +1,6 @@
 const cardSelection = document.getElementById("cardSelection");
 const cardBoard = document.getElementById("cardBoard");
+const mainWrapper = document.getElementById("mainWrapper");
 const fearPoolSlider = document.getElementById("fearPoolSlider");
 const earnedFear = document.getElementsByClassName("fearCounter")[0];
 const fearPool = document.getElementsByClassName("fearCounter")[1];
@@ -11,6 +12,7 @@ function generateCardSelection() {
 		let div = document.createElement("div");
 		div.classList.add("card");
 		div.onclick = () => {
+			mainWrapper.style.opacity = "";
 			cardFocus.innerHTML = div.innerHTML;
 			cardSelection.style.visibility = "";
 		}
@@ -21,6 +23,7 @@ function generateCardSelection() {
 	let c = emptyCard();
 	c.style.backgroundColor = "white";
 	c.onclick = () => {
+		mainWrapper.style.opacity = "";
 		if (cardFocus.parentElement.childElementCount > 1)
 			cardFocus.parentElement.removeChild(cardFocus);
 		else
@@ -48,6 +51,7 @@ function generateCardSelection() {
 	d.innerHTML = "+";
 	addCard.appendChild(d);
 	addCard.onclick = () => {
+		mainWrapper.style.opacity = "";
 		let newCard = getEmptyBoardCard();
 		cardFocus.parentElement.appendChild(newCard);
 		cardSelection.style.visibility = "";
@@ -93,6 +97,7 @@ function getEmptyBoardCard() {
 	let div = document.createElement("div");
 	div.classList.add("card");
 	div.onclick = () => {
+		mainWrapper.style.opacity = "50%";
 		cardFocus = div;
 		cardSelection.style.visibility = "visible";
 	}
