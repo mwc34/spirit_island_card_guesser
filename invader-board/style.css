@@ -1,0 +1,160 @@
+* { box-sizing: border-box; }
+body {
+	font-size: 8vh;
+	min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
+	font-family: Arial;
+	margin: 0;
+	background: url("https://cdnb.artstation.com/p/assets/images/images/024/044/203/large/emily-hancock-starmini.jpg") no-repeat center center fixed;
+	background-size: cover;
+	color: white;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+html {
+    height: fill-available;
+    height: -webkit-fill-available;
+}
+
+.slider {
+  min-width: 30vw;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.background {
+	background-color: rgba(110,110,110,0.8);
+	border: white 1px solid;
+	border-radius: 2vh;
+	padding: 2vh;
+}
+
+#fearBoard {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5vh;
+	user-select: none;
+}
+
+#advanceCards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 100%;
+	user-select: none;
+	white-space: nowrap;
+}
+
+#cardBoard {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 3vh;
+}
+
+#cardSelection {
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	visibility: hidden;
+	z-index: 5;
+}
+
+#mainWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+.columnWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.rowWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.invaderActionTitle {
+	user-select: none;
+}
+
+.card {
+	position: relative;
+	border: black solid 1px;
+	border-radius: 2vh;
+	min-width: 18vh;
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	background-color: rgba(255,255,255,0.5);
+	user-select: none;
+	overflow: hidden;
+	margin: 0.5vh;
+}
+
+.card > div {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 15vh;
+	overflow: hidden;
+}
+
+.card span {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.coastal {
+	background-color: blue;
+}
+
+.mountain {
+	background-color: grey;
+}
+
+.jungle {
+	background-color: green;
+}
+
+.sand {
+	background-color: yellow;
+}
+
+.wetland {
+	background-color: cyan;
+}
+
+.escalation {
+	position: absolute;
+	bottom: 0px;
+	font-size: 7vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
