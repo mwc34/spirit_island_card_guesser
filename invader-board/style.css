@@ -1,5 +1,6 @@
 * { box-sizing: border-box; }
 body {
+	font-size: 8vh;
 	min-height: 100vh;
     min-height: fill-available;
     min-height: -webkit-fill-available;
@@ -49,19 +50,18 @@ html {
 }
 
 .fearTitle {
-	font-size: 5vw;
-	min-width: 10wh;
+	font-size: 100%;
 }
 
 .fearCounter {
-	font-size: 5vw;
+	font-size: 100%;
 }
 
 #advanceCards {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 5vw;
+	font-size: 100%;
 	user-select: none;
 }
 
@@ -84,6 +84,16 @@ html {
 	z-index: 5;
 }
 
+#mainWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
 .columnWrapper {
 	display: flex;
 	flex-direction: column;
@@ -97,8 +107,7 @@ html {
 }
 
 .invaderActionTitle {
-	font-size: 5vw;
-	min-width: 10vw;
+	font-size: 100%;
 	user-select: none;
 }
 
