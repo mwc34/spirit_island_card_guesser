@@ -512,7 +512,7 @@ function newCard(wait) {
 	}
 	
 	if (wait) {
-		continueButton.style.display = '';
+		continueWrapper.style.display = '';
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
