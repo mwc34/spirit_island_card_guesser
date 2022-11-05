@@ -545,10 +545,18 @@ function makeGuess(require_text=true) {
 				setWrongAnswers(false);
 			}
 			else {
+				let guessCard = getCardByTitle(guess);
+				if (guessCard) {
+					preImg.href = `/card-guesser/complete_cards_img/${guessCard.id}.png`;
+					setWrongAnswers(true);
+				}
+				else {
+					setWrongAnswers(false);
+				}
 				incrementScore(false);
 				infoWrapper.style.backgroundColor = '#db0f0f';
 				guessHistory.push([false, currentCard.id, guess]);
-				setWrongAnswers(true);
+				
 			}
 			decrementCardsLeft();
 			
@@ -751,6 +759,7 @@ function setWrongAnswers(visible) {
 function cycleCard() {
 	let guess_title = guessHistory[guessHistory.length-1][2];
 	let guess = getCardByTitle(guess_title);
+	if (!guess) return
 	let card_id = guessHistory[guessHistory.length-1][1];
 	let card = getCardByID(card_id);
 	if (cardImage.src.includes(`/card-guesser/complete_cards_img/${card.id}.png`)) {
