@@ -754,7 +754,7 @@ function cycleCard() {
 	let card_id = guessHistory[guessHistory.length-1][1];
 	let card = getCardByID(card_id);
 	if (cardImage.src == `/card-guesser/complete_cards_img/${card.id}.png`) {
-		cardImage.src == `/card-guesser/complete_cards_img/${guess.id}.png`;
+		cardImage.src = `/card-guesser/complete_cards_img/${guess.id}.png`;
 	}
 	else {
 		cardImage.src = `/card-guesser/complete_cards_img/${card.id}.png`;
