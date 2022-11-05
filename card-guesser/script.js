@@ -290,7 +290,7 @@ function startSet() {
 				cardInputWrapper.style.display = 'none';
 				submitInput.style.display = 'none';
 				skipInput.style.display = 'none';
-				continueButton.style.display = 'none';
+				continueWrapper.style.display = 'none';
 				currentAnswer = -1;
 				infoWrapper.style.backgroundColor = '';
 				cardsLeft.style.display = '';
@@ -388,7 +388,7 @@ function startSet() {
 	cardInputWrapper.style.display = '';
 	submitInput.style.display = '';
 	skipInput.style.display = '';
-	continueButton.style.display = 'none';
+	continueWrapper.style.display = 'none';
 	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
 	cardCount.style.display = 'none';
@@ -409,7 +409,8 @@ function startSet() {
 		// Show starting example card
 		cardImage.src = example_url;
 		preImg.href = cardGuessURI(cardsToGuess[0]);
-		continueButton.style.display = '';
+		continueWrapper.style.display = '';
+		setWrongAnswers(false);
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
@@ -485,7 +486,7 @@ function newCard(wait) {
 			preImg.href = '/card-guesser/share_card.png';
 			shareWrapper.style.display = '';
 			cardInputWrapper.style.display = 'none';
-			continueButton.style.display = 'none';
+			continueWrapper.style.display = 'none';
 			submitInput.style.display = 'none';
 			skipInput.style.display = 'none';
 			infoWrapper.style.backgroundColor = '';
@@ -502,7 +503,7 @@ function newCard(wait) {
 		cardInputWrapper.style.display = '';
 		submitInput.style.display = '';
 		skipInput.style.display = '';
-		continueButton.style.display = 'none';
+		continueWrapper.style.display = 'none';
 		infoWrapper.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard);
 		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
@@ -540,12 +541,14 @@ function makeGuess(require_text=true) {
 			if (currentCard.title == guess) {
 				incrementScore(true);
 				infoWrapper.style.backgroundColor = '#0fd920';
-				guessHistory.push([true, currentCard.id]);
+				guessHistory.push([true, currentCard.id, guess]);
+				setWrongAnswers(false);
 			}
 			else {
 				incrementScore(false);
 				infoWrapper.style.backgroundColor = '#db0f0f';
-				guessHistory.push([false, currentCard.id]);
+				guessHistory.push([false, currentCard.id, guess]);
+				setWrongAnswers(true);
 			}
 			decrementCardsLeft();
 			
@@ -688,6 +691,14 @@ function getCardByID(id) {
 	return null;
 }
 
+function getCardByTitle(title) {
+	for (let c of completeCards) {
+		if (c.title == title)
+			return c;
+	}
+	return null;
+}
+
 function getCycleURL(v) {
 	let card_id = guessHistory[Math.floor(v/2)][1];
 	let card = getCardByID(card_id);
@@ -724,6 +735,30 @@ function cycleAnswer(shift) {
 	
 	cardImage.src = getCycleURL(currentAnswer);
 	preImg.href = getCycleURL(clampModVal(0, maxValue, currentAnswer + shift));
+}
+
+function setWrongAnswers(visible) {
+	for (let e of document.getElementsByClassName("wrongAnswer")) {
+		if (visible) {
+			e.style.display = '';
+		}
+		else {
+			e.style.display = 'none';
+		}
+	}
+}
+
+function cycleCard() {
+	let guess_title = guessHistory[guessHistory.length-1][2];
+	let guess = getCardByTitle(guess_title);
+	let card_id = guessHistory[guessHistory.length-1][1];
+	let card = getCardByID(card_id);
+	if (cardImage.src == `/card-guesser/complete_cards_img/${card.id}.png`) {
+		cardImage.src == `/card-guesser/complete_cards_img/${guess.id}.png`;
+	}
+	else {
+		cardImage.src = `/card-guesser/complete_cards_img/${card.id}.png`;
+	}
 }
 
 const bodyWrapper = document.getElementById("bodyWrapper");
@@ -839,7 +874,7 @@ window.addEventListener("resize", () => {
 window.addEventListener("keydown", function(e) {
 	if (e.keyCode == 13) {
 		// Enter
-		if (continueButton.style.display != 'none')
+		if (continueWrapper.style.display != 'none')
 			continueButton.click();
 	}
 });
