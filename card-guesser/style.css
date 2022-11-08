@@ -191,7 +191,10 @@ form {
 
 #wrongAnswerHidden {
 	background-color: transparent;
-	color: #311475;
+	color: transparent;
+}
+
+#wrongAnswerText {
 	position: absolute;
 }
 
