@@ -410,6 +410,7 @@ function startSet() {
 		cardImage.src = example_url;
 		preImg.href = cardGuessURI(cardsToGuess[0]);
 		continueWrapper.style.display = '';
+		updateWrongAnswerHTML();
 		setWrongAnswers(false);
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
@@ -513,6 +514,7 @@ function newCard(wait) {
 	
 	if (wait) {
 		continueWrapper.style.display = '';
+		updateWrongAnswerHTML();
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
@@ -768,6 +770,21 @@ function cycleCard() {
 	else {
 		cardImage.src = `/card-guesser/complete_cards_img/${card.id}.png`;
 	}
+	updateWrongAnswerHTML();
+}
+
+function updateWrongAnswerHTML() {
+	let guess_title = guessHistory[guessHistory.length-1][2];
+	let guess = getCardByTitle(guess_title);
+	if (!guess) return
+	let card_id = guessHistory[guessHistory.length-1][1];
+	let card = getCardByID(card_id);
+	if (cardImage.src.includes(`/card-guesser/complete_cards_img/${card.id}.png`)) {
+		wrongAnswerButton.innerHTML = 'Show Guess';
+	}
+	else {
+		wrongAnswerButton.innerHTML = 'Show Answer';
+	}
 }
 
 const bodyWrapper = document.getElementById("bodyWrapper");
@@ -786,6 +803,7 @@ const cardCount = document.getElementById("cardCount");
 const score = document.getElementById("score");
 const infoWrapper = document.getElementById("infoWrapper");
 const continueButton = document.getElementById("continueButton");
+const wrongAnswerButton = document.getElementsByClassName("wrongAnswer")[0];
 const dailyCount = 10;
 const guessHistory = [];
 var currentAnswer = -1;
