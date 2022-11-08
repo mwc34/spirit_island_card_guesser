@@ -189,6 +189,12 @@ form {
 	font-weight: bold;
 }
 
+#wrongAnswerHidden {
+	background-color: transparent;
+	color: #311475;
+	position: absolute;
+}
+
 .activeOption  {
 	background-color: #0fd920;
 }
