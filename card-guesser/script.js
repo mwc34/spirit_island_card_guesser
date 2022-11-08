@@ -410,7 +410,6 @@ function startSet() {
 		cardImage.src = example_url;
 		preImg.href = cardGuessURI(cardsToGuess[0]);
 		continueWrapper.style.display = '';
-		updateWrongAnswerHTML();
 		setWrongAnswers(false);
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
@@ -514,7 +513,6 @@ function newCard(wait) {
 	
 	if (wait) {
 		continueWrapper.style.display = '';
-		updateWrongAnswerHTML();
 		cardInputWrapper.style.display = 'none';
 		shareWrapper.style.display = 'none';
 		submitInput.style.display = 'none';
@@ -551,6 +549,7 @@ function makeGuess(require_text=true) {
 				if (guessCard) {
 					preImg.href = `/card-guesser/complete_cards_img/${guessCard.id}.png`;
 					setWrongAnswers(true);
+					updateWrongAnswerHTML();
 				}
 				else {
 					setWrongAnswers(false);
@@ -759,8 +758,9 @@ function setWrongAnswers(visible) {
 }
 
 function cycleCard() {
-	let guess_title = guessHistory[guessHistory.length-1][2];
-	let guess = getCardByTitle(guess_title);
+	let last_guess = guessHistory[guessHistory.length-1];
+	if (!last_guess) return
+	let guess = getCardByTitle(last_guess[2]);
 	if (!guess) return
 	let card_id = guessHistory[guessHistory.length-1][1];
 	let card = getCardByID(card_id);
@@ -774,8 +774,9 @@ function cycleCard() {
 }
 
 function updateWrongAnswerHTML() {
-	let guess_title = guessHistory[guessHistory.length-1][2];
-	let guess = getCardByTitle(guess_title);
+	let last_guess = guessHistory[guessHistory.length-1];
+	if (!last_guess) return
+	let guess = getCardByTitle(last_guess[2]);
 	if (!guess) return
 	let card_id = guessHistory[guessHistory.length-1][1];
 	let card = getCardByID(card_id);
