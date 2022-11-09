@@ -41,11 +41,18 @@
 					</div>
 					<input id="submitInput" type="submit" value="Guess">
 					<div id="shareWrapper" style="display:none;">
-						<button id="backButton" class="cycleButton" onclick="cycleAnswer(-1)">«</button>
+						<button class="cycleButton" onclick="cycleAnswer(-1)">«</button>
 						<button id="shareButton" onclick="shareSet()">Share</button>
-						<button id="forwardButton" class="cycleButton" onclick="cycleAnswer(1)">»</button>
+						<button class="cycleButton" onclick="cycleAnswer(1)">»</button>
 					</div>
-					<button id="continueButton" style="display:none;">Continue</button>
+					<div id="continueWrapper" style="display:none;">
+						<button class="cycleButton wrongAnswer" onclick="cycleCard()">
+							<span id="wrongAnswerText">Show Correct</span>
+							<span id="wrongAnswerHidden">Show Answer</span>
+						</button>
+						<button id="continueButton">Continue</button>
+						<!-- <button class="cycleButton wrongAnswer" onclick="cycleCard()">»</button> -->
+					</div>
 				</form>
 				<div id="infoWrapper">
 					<div id="score" class="info">Score: 0/0</div>

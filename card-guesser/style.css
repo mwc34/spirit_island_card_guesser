@@ -164,16 +164,18 @@ form {
 	border: 1px solid transparent;
 }
 
-#continueButton {
+#continueWrapper {
 	width: 100%;
+	display: flex;
+	color: #fff;
+}
+
+#continueButton {
 	background-color: DodgerBlue;
 	color: #fff;
 	flex-grow: 1;
 	padding: 2%;
 	border: 1px solid transparent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .cycleButton {
@@ -185,6 +187,15 @@ form {
 	color: #fff;
 	border: 1px solid transparent;
 	font-weight: bold;
+}
+
+#wrongAnswerHidden {
+	background-color: transparent;
+	color: transparent;
+}
+
+#wrongAnswerText {
+	position: absolute;
 }
 
 .activeOption  {
