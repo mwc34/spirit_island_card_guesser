@@ -201,8 +201,24 @@ def generate_complete_cards():
             json.dump(card, fp, indent=4)
 
 
-generate_minimal_cards()
-generate_no_picture_cards()
-generate_picture_only_cards()
-generate_maximal_cards()
-generate_complete_cards()
+def get_unique_range_target():
+    ranges = set()
+    targets = set()
+    with open(complete_cards_path) as fp:
+        complete_cards = json.load(fp)
+
+    for card in complete_cards:
+        ranges.add(card["range"]["text"])
+        targets.add(card["target"]["text"])
+    
+    print(ranges)
+    print(len(ranges))
+    print(targets)
+    print(len(targets))
+    
+# generate_minimal_cards()
+# generate_no_picture_cards()
+# generate_picture_only_cards()
+# generate_maximal_cards()
+# generate_complete_cards()
+get_unique_range_target()
