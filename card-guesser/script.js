@@ -540,7 +540,7 @@ function makeGuess(require_text=true) {
 			cardImage.onload = undefined;
 			if (currentCard.title == guess) {
 				incrementScore(true);
-				infoWrapper.style.backgroundColor = '#0fd920';
+				infoWrapper.style.backgroundColor = correctColour;
 				guessHistory.push([true, currentCard.id, guess]);
 				setWrongAnswers(false);
 			}
@@ -555,7 +555,7 @@ function makeGuess(require_text=true) {
 					setWrongAnswers(false);
 				}
 				incrementScore(false);
-				infoWrapper.style.backgroundColor = '#db0f0f';
+				infoWrapper.style.backgroundColor = incorrectColour;
 				guessHistory.push([false, currentCard.id, guess]);
 				
 			}
@@ -736,10 +736,10 @@ function cycleAnswer(shift) {
 	setCardCount(1 + Math.floor(currentAnswer/2));
 	
 	if (guessHistory[Math.floor(currentAnswer/2)][0]) {
-		infoWrapper.style.backgroundColor = '#0fd920';
+		infoWrapper.style.backgroundColor = correctColour;
 	}
 	else {
-		infoWrapper.style.backgroundColor = '#db0f0f';
+		infoWrapper.style.backgroundColor = incorrectColour;
 	}
 	
 	cardImage.src = getCycleURL(currentAnswer);
@@ -807,6 +807,8 @@ const continueButton = document.getElementById("continueButton");
 const wrongAnswerButton = document.getElementById("wrongAnswerText");
 const dailyCount = 10;
 const guessHistory = [];
+const correctColour = '#63a873';
+const incorrectColour = '#d36256';
 var currentAnswer = -1;
 var copyText = "";
 var lock = false;
