@@ -133,7 +133,7 @@
         "language": "English",
         "meeple": false,
         "id": "a_year_of_perfect_stillness",
-        "title": "A Year Of  Perfect Stillness",
+        "title": "A Year Of Perfect Stillness",
         "type": "unique",
         "minimal_count": 3
     },
@@ -457,7 +457,7 @@
         "id": "animated_wrackroot",
         "title": "Animated Wrackroot",
         "type": "minor",
-        "minimal_count": 3
+        "minimal_count": 2
     },
     {
         "name": "Asphyxiating Smoke",
@@ -595,7 +595,7 @@
         "id": "bats_scout_for_raids_by_darkness",
         "title": "Bats Scout For Raids By Darkness",
         "type": "minor",
-        "minimal_count": 3
+        "minimal_count": 2
     },
     {
         "name": "Birds Cry Warning",
@@ -1058,6 +1058,52 @@
         "minimal_count": 1
     },
     {
+        "name": "Boon Of Watchful\nGuarding",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "In one of Target Spirit's lands, \nDefend 4. \n\nTarget Spirit may pay 1 Energy to \ninstead Defend 8. \n\n_(This Power Defends a single land,_\n_letting you use your Special Rule_\n_\"Dahan Trust the Watchers.\")_",
+        "effectFontScale": 0.88,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": true,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/boon_of_watchful_guarding.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "boon_of_watchful_guarding",
+        "title": "Boon Of Watchful Guarding",
+        "type": "unique",
+        "minimal_count": 2
+    },
+    {
         "name": "Call Of The Dahan Ways",
         "nameFontScale": 1,
         "cost": 1,
@@ -1146,6 +1192,52 @@
         "meeple": false,
         "id": "call_of_the_deeps",
         "title": "Call Of The Deeps",
+        "type": "unique",
+        "minimal_count": 1
+    },
+    {
+        "name": "Call on Herders for Aid",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Gather up to 2 {dahan}.\n\n\nFor each {dahan} present, \nPush up to 1 {explorer}/{town}/{dahan}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/call_on_herders_for_aid.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "call_on_herders_for_aid",
+        "title": "Call on Herders for Aid",
         "type": "unique",
         "minimal_count": 1
     },
@@ -1285,7 +1377,7 @@
         "id": "call_to_ferocity",
         "title": "Call To Ferocity",
         "type": "minor",
-        "minimal_count": 6
+        "minimal_count": 5
     },
     {
         "name": "Call To Guard",
@@ -1561,7 +1653,7 @@
         "id": "carapaced_land",
         "title": "Carapaced Land",
         "type": "minor",
-        "minimal_count": 3
+        "minimal_count": 1
     },
     {
         "name": "Cast Down Into\nThe Briny Deep",
@@ -1883,7 +1975,7 @@
         "id": "dark_and_tangled_woods",
         "title": "Dark And Tangled Woods",
         "type": "minor",
-        "minimal_count": 4
+        "minimal_count": 2
     },
     {
         "name": "Dark Skies Loose A Stinging Rain",
@@ -2714,6 +2806,52 @@
         "minimal_count": 1
     },
     {
+        "name": "Eerie Noises and\nMoving Trees",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "2 {fear}.\n\nPush up to 2 {explorer}/{town}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/eerie_noises_and_moving_trees.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "eerie_noises_and_moving_trees",
+        "title": "Eerie Noises and Moving Trees",
+        "type": "unique",
+        "minimal_count": 4
+    },
+    {
         "name": "Elemental Aegis",
         "nameFontScale": 1,
         "cost": 1,
@@ -3033,7 +3171,7 @@
         "id": "entrancing_apparitions",
         "title": "Entrancing Apparitions",
         "type": "minor",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Entrap The Forces Of Corruption",
@@ -3171,7 +3309,7 @@
         "id": "evermultiplying_swarm",
         "title": "Ever-Multiplying Swarm",
         "type": "unique",
-        "minimal_count": 5
+        "minimal_count": 4
     },
     {
         "name": "Exaltation Of\nMolten Stone",
@@ -3220,6 +3358,52 @@
         "minimal_count": 2
     },
     {
+        "name": "Exaltation of\nTangled Growth",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": " Target Spirit may pay 1 Energy\nto gain a Power Card.\n\n\nYou may pay 2 Energy\nto gain a Power Card.",
+        "effectFontScale": 0.88,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": true,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/exaltation_of_tangled_growth.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "exaltation_of_tangled_growth",
+        "title": "Exaltation of Tangled Growth",
+        "type": "unique",
+        "minimal_count": 1
+    },
+    {
         "name": "Favor of the Sun and Star-Lit Dark",
         "nameFontScale": 1,
         "cost": 1,
@@ -3263,7 +3447,7 @@
         "id": "favor_of_the_sun_and_starlit_dark",
         "title": "Favor of the Sun and Star-Lit Dark",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 4
     },
     {
         "name": "Favors Called Due",
@@ -3310,6 +3494,52 @@
         "title": "Favors Called Due",
         "type": "unique",
         "minimal_count": 2
+    },
+    {
+        "name": "Ferocious Rampage",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}.\n\n3 Damage to {explorer}/{town} only.\n\n_(+1 Damage to {explorer}/{town} from your_\n_\"Territorial Aggression\" Special Rule.)_",
+        "effectFontScale": 0.83,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/ferocious_rampage.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "ferocious_rampage",
+        "title": "Ferocious Rampage",
+        "type": "unique",
+        "minimal_count": 3
     },
     {
         "name": "Fetid Breath Spreads Infection",
@@ -3769,7 +3999,7 @@
         "id": "flow_downriver_blow_downwind",
         "title": "Flow Downriver, Blow Downwind",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 3
     },
     {
         "name": "Flow Like Water, Reach Like Air",
@@ -3953,6 +4183,52 @@
         "id": "forests_of_living_obsidian",
         "title": "Forests Of Living Obsidian",
         "type": "major",
+        "minimal_count": 1
+    },
+    {
+        "name": "Foul Vapors and\nFetid Muck",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": "1 {fear}.\n\n\nPush up to 2 {explorer}",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": true,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/foul_vapors_and_fetid_muck.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "foul_vapors_and_fetid_muck",
+        "title": "Foul Vapors and Fetid Muck",
+        "type": "unique",
         "minimal_count": 1
     },
     {
@@ -4186,6 +4462,52 @@
         "minimal_count": 1
     },
     {
+        "name": "Gift of Furious Might",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": "Once this turn, Target Spirit may\ndeal +3 Damage when using a\nDamage-dealing Power.\n\n\n_(This adds +3 Damage total,_\n_even for a Power that Damages_\n_multiple Invaders or \"each Invader\".)_",
+        "effectFontScale": 0.85,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/gift_of_furious_might.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "gift_of_furious_might",
+        "title": "Gift of Furious Might",
+        "type": "unique",
+        "minimal_count": 1
+    },
+    {
         "name": "Gift Of Living Energy",
         "nameFontScale": 1,
         "cost": 0,
@@ -4370,6 +4692,52 @@
         "minimal_count": 1
     },
     {
+        "name": "Gift of Searing Heat",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": "Target Spirit gains 2 Energy.\n{wide_or}\nTarget Spirit may pay 1 Energy to\ndo 1 Damage in one of their lands.",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/gift_of_searing_heat.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "gift_of_searing_heat",
+        "title": "Gift of Searing Heat",
+        "type": "unique",
+        "minimal_count": 3
+    },
+    {
         "name": "Gift Of The\nPrimordial Deeps",
         "nameFontScale": 1,
         "cost": 1,
@@ -4414,6 +4782,52 @@
         "title": "Gift Of The Primordial Deeps",
         "type": "unique",
         "minimal_count": 2
+    },
+    {
+        "name": "Gift of the Sunlit Air",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "Target Spirit gets {range,+1}\nwith all their Powers.\n\nIf you target another Spirit,\nthey gain 1 Energy.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/gift_of_the_sunlit_air.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "gift_of_the_sunlit_air",
+        "title": "Gift of the Sunlit Air",
+        "type": "unique",
+        "minimal_count": 1
     },
     {
         "name": "Gift Of The Untamed Wild",
@@ -4506,6 +4920,52 @@
         "title": "Gift Of Twinned Days",
         "type": "minor",
         "minimal_count": 1
+    },
+    {
+        "name": "Gift of Wind-Sped Steps",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "Once this turn, Target Spirit may\nchoose 1 of their {slow} Powers with a\n\"Push\" or \"Gather\" instruction and\nmake that Power {fast} _(for this turn)._\n\nIf you target another Spirit,\nthey gain 1 Energy.",
+        "effectFontScale": 0.88,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/gift_of_windsped_steps.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "gift_of_windsped_steps",
+        "title": "Gift of Wind-Sped Steps",
+        "type": "unique",
+        "minimal_count": 5
     },
     {
         "name": "Gnawing Rootbiters",
@@ -5014,6 +5474,52 @@
         "minimal_count": 4
     },
     {
+        "name": "Herd Towards\nthe Lurking Maw",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}.\n\nGather up to 1 {explorer}/{town}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": true,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/herd_towards_the_lurking_maw.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "herd_towards_the_lurking_maw",
+        "title": "Herd Towards the Lurking Maw",
+        "type": "unique",
+        "minimal_count": 1
+    },
+    {
         "name": "Here There Be Monsters",
         "nameFontScale": 1,
         "cost": 0,
@@ -5287,7 +5793,7 @@
         "id": "infested_aquifers",
         "title": "Infested Aquifers",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 9
     },
     {
         "name": "Infinite Vitality",
@@ -5472,6 +5978,52 @@
         "title": "Instruments Of Their Own Ruin",
         "type": "major",
         "minimal_count": 4
+    },
+    {
+        "name": "Intractable Thickets\nand Thorns",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}.\n\nDefend 5.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": true,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/intractable_thickets_and_thorns.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "intractable_thickets_and_thorns",
+        "title": "Intractable Thickets and Thorns",
+        "type": "unique",
+        "minimal_count": 3
     },
     {
         "name": "Irresistible Call",
@@ -5934,6 +6486,52 @@
         "minimal_count": 2
     },
     {
+        "name": "Mark Territory with\nScars and Teeth",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Defend 9.\n\n2 {fear} if Invaders are present.\n\nPush 2 {dahan}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/mark_territory_with_scars_and_teeth.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "mark_territory_with_scars_and_teeth",
+        "title": "Mark Territory with Scars and Teeth",
+        "type": "unique",
+        "minimal_count": 2
+    },
+    {
         "name": "Melt Earth Into Quicksand",
         "nameFontScale": 1,
         "cost": 4,
@@ -6072,6 +6670,52 @@
         "minimal_count": 2
     },
     {
+        "name": "Mysterious Abductions",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}. \n\n1 Damage.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/mysterious_abductions.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "mysterious_abductions",
+        "title": "Mysterious Abductions",
+        "type": "unique",
+        "minimal_count": 3
+    },
+    {
         "name": "Nature's Resilience",
         "nameFontScale": 1,
         "cost": 1,
@@ -6162,6 +6806,52 @@
         "title": "Offer Passage Between Worlds",
         "type": "unique",
         "minimal_count": 2
+    },
+    {
+        "name": "Open Shifting Waterways",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Gather up to 2 {dahan}.\n\n\nIf {dahan} and Invaders are present,\n1 {fear} and 1 Damage.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/open_shifting_waterways.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "open_shifting_waterways",
+        "title": "Open Shifting Waterways",
+        "type": "unique",
+        "minimal_count": 1
     },
     {
         "name": "Overenthusiastic Arson",
@@ -6391,7 +7081,7 @@
         "id": "paths_tied_by_nature",
         "title": "Paths Tied By Nature",
         "type": "unique",
-        "minimal_count": 2
+        "minimal_count": 16
     },
     {
         "name": "Peace Of The\nNighttime Sky",
@@ -8142,6 +8832,52 @@
         "minimal_count": 2
     },
     {
+        "name": "Scatter to the Winds",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Choose up to 5 {explorer}/{town}/{dahan}.\nPush them to as many different\nlands as possible.",
+        "effectFontScale": 0.95,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": true,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/scatter_to_the_winds.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "scatter_to_the_winds",
+        "title": "Scatter to the Winds",
+        "type": "unique",
+        "minimal_count": 5
+    },
+    {
         "name": "Scour The Land",
         "nameFontScale": 1,
         "cost": 1,
@@ -8185,7 +8921,7 @@
         "id": "scour_the_land",
         "title": "Scour The Land",
         "type": "minor",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Scream Disease Into The Wind",
@@ -8369,7 +9105,7 @@
         "id": "set_them_on_an_evertwisting_trail",
         "title": "Set Them On An Ever-Twisting Trail",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 4
     },
     {
         "name": "Settle Into Hunting-Grounds",
@@ -9062,6 +9798,52 @@
         "minimal_count": 1
     },
     {
+        "name": "Stinging Sandstorm",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Gather up to 1 of your {presence}.\n1 {fear} and 1 Damage.\n\n_(If this power makes a {sacredsite}, your_\n_Special Rule applies immediately,_\n_giving Invaders there -1 Health_\n_and possibly Destroying Damaged_\n_Invaders.)_",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/stinging_sandstorm.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "stinging_sandstorm",
+        "title": "Stinging Sandstorm",
+        "type": "unique",
+        "minimal_count": 4
+    },
+    {
         "name": "Storm-Swath",
         "nameFontScale": 1,
         "cost": 3,
@@ -9657,7 +10439,53 @@
         "id": "sweep_into_the_sea",
         "title": "Sweep Into The Sea",
         "type": "major",
-        "minimal_count": 5
+        "minimal_count": 4
+    },
+    {
+        "name": "Sweltering Exhaustion",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}.\n\nSkip up to 1 Ravage/Build Action.",
+        "effectFontScale": 0.93,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/sweltering_exhaustion.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "sweltering_exhaustion",
+        "title": "Sweltering Exhaustion",
+        "type": "unique",
+        "minimal_count": 2
     },
     {
         "name": "Talons Of Lightning",
@@ -9796,6 +10624,52 @@
         "title": "Teeth Gleam From Darkness",
         "type": "unique",
         "minimal_count": 4
+    },
+    {
+        "name": "Tempest of Leaves\nand Branches",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Choose up to 5 different Invaders\n_(in target land)._\n\n1 Damage to each of them.",
+        "effectFontScale": 0.92,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Lucas Durham",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/tempest_of_leaves_and_branches.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "tempest_of_leaves_and_branches",
+        "title": "Tempest of Leaves and Branches",
+        "type": "unique",
+        "minimal_count": 1
     },
     {
         "name": "Terrifying Chase",
@@ -10577,7 +11451,7 @@
         "id": "too_near_the_jungle",
         "title": "Too Near The Jungle",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 3
     },
     {
         "name": "Tormenting Rotflies",
@@ -11173,7 +12047,7 @@
         "language": "English",
         "meeple": false,
         "id": "unleash_a_torrent_of_the_selfs_own_essence",
-        "title": "Unleash a Torrent of  the Self's Own Essence",
+        "title": "Unleash a Torrent of the Self's Own Essence",
         "type": "major",
         "minimal_count": 3
     },
@@ -11957,7 +12831,7 @@
         "id": "ways_of_shore_and_heartland",
         "title": "Ways Of Shore And Heartland",
         "type": "unique",
-        "minimal_count": 5
+        "minimal_count": 3
     },
     {
         "name": "Weave Together The Fabric Of Place",
@@ -12050,6 +12924,52 @@
         "title": "Weep For What Is Lost",
         "type": "minor",
         "minimal_count": 2
+    },
+    {
+        "name": "Whispered Guidance\nThrough the Night",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{jungle_with_presence} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Gather up to 3 {dahan}\n\nIf Invaders and {dahan} are present,\n1 {fear}.",
+        "effectFontScale": 0.95,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Moro Rogers",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/whispered_guidance_through_the_night.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "whispered_guidance_through_the_night",
+        "title": "Whispered Guidance Through the Night",
+        "type": "unique",
+        "minimal_count": 1
     },
     {
         "name": "Winds Of Rust And Atrophy",
