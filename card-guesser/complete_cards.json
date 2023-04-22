@@ -1064,7 +1064,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -3364,7 +3364,7 @@
         "speed": "slow",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4468,7 +4468,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4698,7 +4698,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4790,7 +4790,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4928,7 +4928,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
