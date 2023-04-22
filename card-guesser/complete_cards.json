@@ -1064,7 +1064,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -1101,7 +1101,7 @@
         "id": "boon_of_watchful_guarding",
         "title": "Boon Of Watchful Guarding",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Call Of The Dahan Ways",
@@ -3364,7 +3364,7 @@
         "speed": "slow",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -3447,7 +3447,7 @@
         "id": "favor_of_the_sun_and_starlit_dark",
         "title": "Favor of the Sun and Star-Lit Dark",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 4
     },
     {
         "name": "Favors Called Due",
@@ -3999,7 +3999,7 @@
         "id": "flow_downriver_blow_downwind",
         "title": "Flow Downriver, Blow Downwind",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 3
     },
     {
         "name": "Flow Like Water, Reach Like Air",
@@ -4468,7 +4468,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4505,7 +4505,7 @@
         "id": "gift_of_furious_might",
         "title": "Gift of Furious Might",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 1
     },
     {
         "name": "Gift Of Living Energy",
@@ -4698,7 +4698,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4790,7 +4790,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4928,7 +4928,7 @@
         "speed": "fast",
         "range": {
             "enabled": false,
-            "text": ""
+            "text": "{norange}"
         },
         "target": {
             "enabled": true,
@@ -4965,7 +4965,7 @@
         "id": "gift_of_windsped_steps",
         "title": "Gift of Wind-Sped Steps",
         "type": "unique",
-        "minimal_count": 2
+        "minimal_count": 5
     },
     {
         "name": "Gnawing Rootbiters",
@@ -8921,7 +8921,7 @@
         "id": "scour_the_land",
         "title": "Scour The Land",
         "type": "minor",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Scream Disease Into The Wind",
@@ -9105,7 +9105,7 @@
         "id": "set_them_on_an_evertwisting_trail",
         "title": "Set Them On An Ever-Twisting Trail",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 4
     },
     {
         "name": "Settle Into Hunting-Grounds",
@@ -10485,7 +10485,7 @@
         "id": "sweltering_exhaustion",
         "title": "Sweltering Exhaustion",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 2
     },
     {
         "name": "Talons Of Lightning",
@@ -11451,7 +11451,7 @@
         "id": "too_near_the_jungle",
         "title": "Too Near The Jungle",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 3
     },
     {
         "name": "Tormenting Rotflies",
