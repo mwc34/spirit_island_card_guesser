@@ -40,4 +40,4 @@ def horizons_only(files):
 time.sleep(2)
 for f in files:
     print(f)
-    process_card(f)
+    process_card(os.path.splitext(f)[0])

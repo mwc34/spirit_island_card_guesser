@@ -27,7 +27,7 @@ def check_unique_subset(complete_cards, checklist, debug=True):
     for c in complete_cards:
         for e in checklist:
             if e in ['cost', 'speed']:
-                if c[e] != checklist[e]: break
+                if str(c[e]) != str(checklist[e]): break
             elif e in ['range', 'target']:
                 if c[e]['text'].replace(' ', '') != checklist[e].replace(' ', ''): break
             elif e == 'threshold':
@@ -216,9 +216,9 @@ def get_unique_range_target():
     print(targets)
     print(len(targets))
     
-# generate_minimal_cards()
+generate_minimal_cards()
 # generate_no_picture_cards()
 # generate_picture_only_cards()
 # generate_maximal_cards()
 # generate_complete_cards()
-get_unique_range_target()
+# get_unique_range_target()
