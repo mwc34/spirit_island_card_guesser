@@ -334,7 +334,7 @@ function startSet() {
 						cardType += c.innerHTML;
 					}
 				}
-				let hashString = x.id + cardType + dateString;
+				let hashString = x.id + dateString + cardType;
 				let random_seed = MurmurHash3_x86_128(hashString).reduce((x,y)=>x+y);
 				idx = random_seed % x.minimal_count;
 			}
@@ -375,8 +375,8 @@ function startSet() {
 	// Check if Daily or not
 	if (daily) {
 		// Generate seed from date
-		let hashString = sections.reduce((x,y)=>x+y);
-		hashString += dateString;
+		let hashString = dateString;
+		hashString += sections.reduce((x,y)=>x+y);
 		random_seed = MurmurHash3_x86_128(hashString).reduce((x,y)=>x+y);
 		sample_count = dailyCount;
 	}
