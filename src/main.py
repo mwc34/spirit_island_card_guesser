@@ -215,7 +215,8 @@ def get_unique_range_target():
     print(len(ranges))
     print(targets)
     print(len(targets))
-    
+
+
 generate_minimal_cards()
 # generate_no_picture_cards()
 # generate_picture_only_cards()
