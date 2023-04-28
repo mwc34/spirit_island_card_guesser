@@ -365,7 +365,7 @@
         "id": "aid_from_the_spiritspeakers",
         "title": "Aid From The Spirit-Speakers",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 8
     },
     {
         "name": "Angry Bears",
@@ -503,7 +503,7 @@
         "id": "asphyxiating_smoke",
         "title": "Asphyxiating Smoke",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 3
     },
     {
         "name": "Bargains Of Power\nAnd Protection",
@@ -549,7 +549,7 @@
         "id": "bargains_of_power_and_protection",
         "title": "Bargains Of Power And Protection",
         "type": "major",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Bats Scout For\nRaids By Darkness",
@@ -1009,7 +1009,7 @@
         "id": "boon_of_swarming_bedevilment",
         "title": "Boon Of Swarming Bedevilment",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 3
     },
     {
         "name": "Boon Of Vigor",
@@ -1101,7 +1101,7 @@
         "id": "boon_of_watchful_guarding",
         "title": "Boon Of Watchful Guarding",
         "type": "unique",
-        "minimal_count": 2
+        "minimal_count": 4
     },
     {
         "name": "Call Of The Dahan Ways",
@@ -1198,7 +1198,7 @@
     {
         "name": "Call on Herders for Aid",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "slow",
         "range": {
             "enabled": true,
@@ -1239,7 +1239,7 @@
         "id": "call_on_herders_for_aid",
         "title": "Call on Herders for Aid",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 5
     },
     {
         "name": "Call On Midnight's Dream",
@@ -2389,7 +2389,7 @@
         "id": "dissolving_vapors",
         "title": "Dissolving Vapors",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 2
     },
     {
         "name": "Domesticated Animals\nGo Berserk",
@@ -2757,7 +2757,7 @@
         "id": "drought",
         "title": "Drought",
         "type": "minor",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Dry Wood Explodes In Smoldering Splinters",
@@ -2808,7 +2808,7 @@
     {
         "name": "Eerie Noises and\nMoving Trees",
         "nameFontScale": 1,
-        "cost": "2",
+        "cost": 2,
         "speed": "slow",
         "range": {
             "enabled": true,
@@ -2849,7 +2849,7 @@
         "id": "eerie_noises_and_moving_trees",
         "title": "Eerie Noises and Moving Trees",
         "type": "unique",
-        "minimal_count": 4
+        "minimal_count": 3
     },
     {
         "name": "Elemental Aegis",
@@ -3309,7 +3309,7 @@
         "id": "evermultiplying_swarm",
         "title": "Ever-Multiplying Swarm",
         "type": "unique",
-        "minimal_count": 4
+        "minimal_count": 3
     },
     {
         "name": "Exaltation Of\nMolten Stone",
@@ -3355,7 +3355,7 @@
         "id": "exaltation_of_molten_stone",
         "title": "Exaltation Of Molten Stone",
         "type": "unique",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Exaltation of\nTangled Growth",
@@ -3498,7 +3498,7 @@
     {
         "name": "Ferocious Rampage",
         "nameFontScale": 1,
-        "cost": "2",
+        "cost": 2,
         "speed": "slow",
         "range": {
             "enabled": true,
@@ -3539,7 +3539,7 @@
         "id": "ferocious_rampage",
         "title": "Ferocious Rampage",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 2
     },
     {
         "name": "Fetid Breath Spreads Infection",
@@ -4367,7 +4367,7 @@
         "id": "gift_of_abundance",
         "title": "Gift Of Abundance",
         "type": "unique",
-        "minimal_count": 7
+        "minimal_count": 6
     },
     {
         "name": "Gift Of Constancy",
@@ -4464,7 +4464,7 @@
     {
         "name": "Gift of Furious Might",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "fast",
         "range": {
             "enabled": false,
@@ -4505,7 +4505,7 @@
         "id": "gift_of_furious_might",
         "title": "Gift of Furious Might",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 3
     },
     {
         "name": "Gift Of Living Energy",
@@ -4643,7 +4643,7 @@
         "id": "gift_of_power",
         "title": "Gift Of Power",
         "type": "minor",
-        "minimal_count": 2
+        "minimal_count": 4
     },
     {
         "name": "Gift Of Proliferation",
@@ -4735,7 +4735,7 @@
         "id": "gift_of_searing_heat",
         "title": "Gift of Searing Heat",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 4
     },
     {
         "name": "Gift Of The\nPrimordial Deeps",
@@ -4924,7 +4924,7 @@
     {
         "name": "Gift of Wind-Sped Steps",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "fast",
         "range": {
             "enabled": false,
@@ -4965,7 +4965,7 @@
         "id": "gift_of_windsped_steps",
         "title": "Gift of Wind-Sped Steps",
         "type": "unique",
-        "minimal_count": 5
+        "minimal_count": 2
     },
     {
         "name": "Gnawing Rootbiters",
@@ -5287,7 +5287,7 @@
         "id": "guardian_serpents",
         "title": "Guardian Serpents",
         "type": "minor",
-        "minimal_count": 5
+        "minimal_count": 2
     },
     {
         "name": "Guide The Way On Feathered Wings",
@@ -5476,7 +5476,7 @@
     {
         "name": "Herd Towards\nthe Lurking Maw",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "slow",
         "range": {
             "enabled": true,
@@ -5517,7 +5517,7 @@
         "id": "herd_towards_the_lurking_maw",
         "title": "Herd Towards the Lurking Maw",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Here There Be Monsters",
@@ -5793,7 +5793,7 @@
         "id": "infested_aquifers",
         "title": "Infested Aquifers",
         "type": "minor",
-        "minimal_count": 9
+        "minimal_count": 6
     },
     {
         "name": "Infinite Vitality",
@@ -5982,7 +5982,7 @@
     {
         "name": "Intractable Thickets\nand Thorns",
         "nameFontScale": 1,
-        "cost": "2",
+        "cost": 2,
         "speed": "fast",
         "range": {
             "enabled": true,
@@ -6023,7 +6023,7 @@
         "id": "intractable_thickets_and_thorns",
         "title": "Intractable Thickets and Thorns",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 1
     },
     {
         "name": "Irresistible Call",
@@ -6488,7 +6488,7 @@
     {
         "name": "Mark Territory with\nScars and Teeth",
         "nameFontScale": 1,
-        "cost": "2",
+        "cost": 2,
         "speed": "fast",
         "range": {
             "enabled": true,
@@ -6529,7 +6529,7 @@
         "id": "mark_territory_with_scars_and_teeth",
         "title": "Mark Territory with Scars and Teeth",
         "type": "unique",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Melt Earth Into Quicksand",
@@ -6672,7 +6672,7 @@
     {
         "name": "Mysterious Abductions",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "fast",
         "range": {
             "enabled": true,
@@ -6713,7 +6713,7 @@
         "id": "mysterious_abductions",
         "title": "Mysterious Abductions",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 6
     },
     {
         "name": "Nature's Resilience",
@@ -6810,7 +6810,7 @@
     {
         "name": "Open Shifting Waterways",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "slow",
         "range": {
             "enabled": true,
@@ -6851,7 +6851,7 @@
         "id": "open_shifting_waterways",
         "title": "Open Shifting Waterways",
         "type": "unique",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Overenthusiastic Arson",
@@ -7633,7 +7633,7 @@
         "id": "predatory_nightmares",
         "title": "Predatory Nightmares",
         "type": "unique",
-        "minimal_count": 11
+        "minimal_count": 10
     },
     {
         "name": "Prey On The Builders",
@@ -8277,7 +8277,7 @@
         "id": "reaching_grasp",
         "title": "Reaching Grasp",
         "type": "minor",
-        "minimal_count": 1
+        "minimal_count": 2
     },
     {
         "name": "Regrow From Roots",
@@ -8369,7 +8369,7 @@
         "id": "renewing_boon",
         "title": "Renewing Boon",
         "type": "minor",
-        "minimal_count": 3
+        "minimal_count": 2
     },
     {
         "name": "Renewing Rain",
@@ -8834,7 +8834,7 @@
     {
         "name": "Scatter to the Winds",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "slow",
         "range": {
             "enabled": true,
@@ -8875,7 +8875,7 @@
         "id": "scatter_to_the_winds",
         "title": "Scatter to the Winds",
         "type": "unique",
-        "minimal_count": 5
+        "minimal_count": 1
     },
     {
         "name": "Scour The Land",
@@ -8967,7 +8967,7 @@
         "id": "scream_disease_into_the_wind",
         "title": "Scream Disease Into The Wind",
         "type": "minor",
-        "minimal_count": 3
+        "minimal_count": 1
     },
     {
         "name": "Sea Monsters",
@@ -9800,7 +9800,7 @@
     {
         "name": "Stinging Sandstorm",
         "nameFontScale": 1,
-        "cost": "1",
+        "cost": 1,
         "speed": "slow",
         "range": {
             "enabled": true,
@@ -9841,7 +9841,7 @@
         "id": "stinging_sandstorm",
         "title": "Stinging Sandstorm",
         "type": "unique",
-        "minimal_count": 4
+        "minimal_count": 2
     },
     {
         "name": "Storm-Swath",
@@ -10444,7 +10444,7 @@
     {
         "name": "Sweltering Exhaustion",
         "nameFontScale": 1,
-        "cost": "2",
+        "cost": 2,
         "speed": "fast",
         "range": {
             "enabled": true,
@@ -10485,7 +10485,7 @@
         "id": "sweltering_exhaustion",
         "title": "Sweltering Exhaustion",
         "type": "unique",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Talons Of Lightning",
@@ -10628,7 +10628,7 @@
     {
         "name": "Tempest of Leaves\nand Branches",
         "nameFontScale": 1,
-        "cost": "2",
+        "cost": 2,
         "speed": "fast",
         "range": {
             "enabled": true,
@@ -11359,7 +11359,7 @@
         "id": "tidal_boon",
         "title": "Tidal Boon",
         "type": "unique",
-        "minimal_count": 2
+        "minimal_count": 1
     },
     {
         "name": "Tigers Hunting",
@@ -12831,7 +12831,7 @@
         "id": "ways_of_shore_and_heartland",
         "title": "Ways Of Shore And Heartland",
         "type": "unique",
-        "minimal_count": 3
+        "minimal_count": 2
     },
     {
         "name": "Weave Together The Fabric Of Place",
