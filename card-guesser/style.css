@@ -69,6 +69,7 @@ input[type=button] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	user-select: none;
 	flex-grow: 1;
 	background-color: #d36256;
@@ -181,8 +182,8 @@ form {
 .cycleButton {
 	padding-left: 5%;
 	padding-right: 5%;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	background-color: #311475;
 	color: #fff;
 	border: 1px solid transparent;

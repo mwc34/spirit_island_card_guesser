@@ -1031,7 +1031,7 @@ if (!count || !params_given) {
 			if (c.classList.contains("activeOption"))
 				count++;
 		}
-		if (count > 0) {
+		if (count > 0 && localStorage.setType) {
 			let chosenSetTypes = JSON.parse(localStorage.setType);
 			for (let c of setTypeOptions.children) {
 				if (!chosenSetTypes.includes(c.innerHTML))
