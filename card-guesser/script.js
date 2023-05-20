@@ -226,6 +226,10 @@ function MurmurHash3_x86_128(key, seed = 0) {
 
 function startSet() {
 	if (lock) return
+	
+	// Remove current card
+	currentCard = null;
+	
 	// Filter card set
 	let population = [...completeCards];
 	
@@ -259,22 +263,48 @@ function startSet() {
 	else
 		sections.push('unique');
 	
+	// Remove unwanted sets
+	let unwanted_sets = [];
+	let set_names = ["base", "b&c", "je", "f&f", "horizons"];
+	for (let s=0; s<set_names.length; s++) {
+		if (!setTypeOptions.children[s].classList.contains("activeOption")) {
+			unwanted_sets.push(set_names[s]);
+			for (let i=population.length-1; i>=0; i--) {
+				if (population[i].set == set_names[s])
+					population.splice(i, 1);
+			}
+		}
+	}
+	
 	let daily = dailyAllOptions.children[0].classList.contains("activeOption");
 	let d = new Date();
 	dateString = `${d.getUTCDate()}/${d.getUTCMonth()+1}/${d.getUTCFullYear()}`;
+	
+	// Check if there are enough cards in the chosen mode
+	if ((daily && population.length < dailyCount) || population.length == 0) {
+		cardImage.src = '/card-guesser/too_small_mode_card.png';
+		shareWrapper.style.display = 'none';
+		cardInputWrapper.style.display = '';
+		submitInput.style.display = '';
+		skipInput.style.display = '';
+		continueWrapper.style.display = 'none';
+		infoWrapper.style.backgroundColor = '';
+		cardsLeft.style.display = '';
+		cardCount.style.display = 'none';
+		return
+	}
+	
+	// Calculate populationHash
+	let card_ids = population.reduce((x,y)=>x+y['id'], '');
+	populationHash = MurmurHash3_x86_128(card_ids).reduce((x,y)=>x+y);
+	
 	// Set to results and return if already done daily or resume if in the middle
 	let cancel = false;
 	let resume = false;
 	if (localStorage.resultsByDate && daily) {
-		let cardType = '';
-		for (let c of cardTypeOptions.children) {
-			if (c.classList.contains("activeOption")) {
-				cardType += c.innerHTML;
-			}
-		}
 		resultsByDate = JSON.parse(localStorage.resultsByDate);
-		if (resultsByDate[dateString] && resultsByDate[dateString][cardType]) {
-			let resultInfo = resultsByDate[dateString][cardType];
+		if (resultsByDate[dateString] && resultsByDate[dateString][populationHash]) {
+			let resultInfo = resultsByDate[dateString][populationHash];
 			setScore(resultInfo);
 			setCardsLeft(dailyCount - resultInfo.total);
 			for (let c of guessTypeOptions.children) {
@@ -328,13 +358,7 @@ function startSet() {
 			let daily = dailyAllOptions.children[0].classList.contains("activeOption");
 			let idx = null;
 			if (daily) {
-				let cardType = '';
-				for (let c of cardTypeOptions.children) {
-					if (c.classList.contains("activeOption")) {
-						cardType += c.innerHTML;
-					}
-				}
-				let hashString = x.id + dateString + cardType;
+				let hashString = x.id + dateString + populationHash;
 				let random_seed = MurmurHash3_x86_128(hashString).reduce((x,y)=>x+y);
 				idx = random_seed % x.minimal_count;
 			}
@@ -364,6 +388,15 @@ function startSet() {
 	}
 	localStorage.cardType = JSON.stringify(chosenCardTypes);
 	
+	// Set last setType mode to localStorage
+	chosenSetTypes = [];
+	for (let c of setTypeOptions.children) {
+		if (c.classList.contains("activeOption")) {
+			chosenSetTypes.push(c.innerHTML);
+		}
+	}
+	localStorage.setType = JSON.stringify(chosenSetTypes);
+	
 	// Return if already done after set cardGuessURI
 	if (cancel)
 		return
@@ -376,7 +409,7 @@ function startSet() {
 	if (daily) {
 		// Generate seed from date
 		let hashString = dateString;
-		hashString += sections.reduce((x,y)=>x+y);
+		hashString += populationHash;
 		random_seed = MurmurHash3_x86_128(hashString).reduce((x,y)=>x+y);
 		sample_count = dailyCount;
 	}
@@ -445,12 +478,6 @@ function newCard(wait) {
 		// Save score to localStorage
 		let current = getScore();
 		current.guessHistory = [...guessHistory];
-		let cardType = '';
-		for (let c of cardTypeOptions.children) {
-			if (c.classList.contains("activeOption")) {
-				cardType += c.innerHTML;
-			}
-		}
 		for (let c of guessTypeOptions.children) {
 			if (c.classList.contains("activeOption")) {
 				current.guessType = c.innerHTML;
@@ -470,7 +497,7 @@ function newCard(wait) {
 		// Add new key
 		if (!resultsByDate[dateString])
 			resultsByDate[dateString] = {}
-		resultsByDate[dateString][cardType] = current;
+		resultsByDate[dateString][populationHash] = current;
 		localStorage.resultsByDate = JSON.stringify(resultsByDate);
 	}
 	
@@ -640,6 +667,27 @@ function toggleCardType(idx) {
 	startSet();
 }
 
+function toggleSetType(idx) {
+	if (lock) return
+	let e = setTypeOptions.children[idx];
+	let count = 0;
+	for (let c of setTypeOptions.children) {
+		if (c.classList.contains("activeOption"))
+			count++;
+	}
+	if (e.classList.contains("activeOption")) {
+		// Don't let bring to 0
+		if (count == 1) {
+			return
+		}
+		e.classList.remove("activeOption");
+	}
+	else {
+		e.classList.add("activeOption");
+	}
+	startSet();
+}
+
 function toggleDaily(idx) {
 	if (lock) return
 	for (let i=0; i<dailyAllOptions.childElementCount; i++) {
@@ -668,16 +716,59 @@ function shareSet() {
 				break;
 			}
 		}
+		
+		let count = 0;
 		for (let c of cardTypeOptions.children) {
 			if (c.classList.contains("activeOption")) {
-				copyText += c.innerHTML + ' ';
-				searchParams.append(c.innerHTML, 1);
-			}
-			else {
-				searchParams.append(c.innerHTML, 0);
+				count++;
 			}
 		}
-		copyText = copyText.slice(0, copyText.length-1) + '\n';
+		if (count == cardTypeOptions.childElementCount) {
+			copyText += "All Cards\n";
+			searchParams.append("All Cards", 1);
+		}
+		else {
+			for (let i=0; i<cardTypeOptions.childElementCount; i++) {
+				let c = cardTypeOptions.children[i];
+				if (c.classList.contains("activeOption") && count <= cardTypeOptions.childElementCount/2) {
+					copyText += cardTypes[i] + ' ';
+					if (count <= cardTypeOptions.childElementCount/2) {
+						searchParams.append(cardTypes[i], '1');
+					}
+				}
+				else if (!c.classList.contains("activeOption") && count > cardTypeOptions.childElementCount/2) {
+					searchParams.append(cardTypes[i], '0');
+				}
+			}
+			copyText = copyText.slice(0, copyText.length-1) + '\n';
+		}
+		
+		count = 0;
+		for (let c of setTypeOptions.children) {
+			if (c.classList.contains("activeOption")) {
+				count++;
+			}
+		}
+		if (count == setTypeOptions.childElementCount) {
+			copyText += "All Sets\n";
+			searchParams.append("All Sets", 1);
+		}
+		else {
+			for (let i=0; i<setTypeOptions.childElementCount; i++) {
+				let c = setTypeOptions.children[i];
+				if (c.classList.contains("activeOption")) {
+					copyText += setTypes[i] + ' ';
+					if (count <= setTypeOptions.childElementCount/2) {
+						searchParams.append(setTypes[i], '1');
+					}
+				}
+				else if (!c.classList.contains("activeOption") && count > setTypeOptions.childElementCount/2) {
+					searchParams.append(setTypes[i], '0');
+				}
+			}
+			copyText = copyText.slice(0, copyText.length-1) + '\n';
+		}
+
 		copyText += `${current.correct}/${current.total} (${Math.floor(current.correct*100/current.total)}%)\n`;
 		if (daily) {
 			copyText += guessHistory.map((x) => x[0] ? '\ud83d\udfe9' : '\ud83d\udfe5').reduce((x,y)=>x+' '+y) + '\n';
@@ -792,6 +883,7 @@ const bodyWrapper = document.getElementById("bodyWrapper");
 const mainWrapper = document.getElementById("mainWrapper");
 const guessTypeOptions = document.getElementById("guessTypeOptions");
 const cardTypeOptions = document.getElementById("cardTypeOptions");
+const setTypeOptions = document.getElementById("setTypeOptions");
 const dailyAllOptions = document.getElementById("dailyAllOptions");
 const cardInput = document.getElementById("cardInput");
 const cardInputWrapper = document.getElementById("cardInputWrapper");
@@ -809,10 +901,13 @@ const dailyCount = 10;
 const guessHistory = [];
 const correctColour = '#63a873';
 const incorrectColour = '#d36256';
+const cardTypes = ["Minor", "Major", "Unique"];
+const setTypes = ["Base", "BnC", "JE", "FnF", "Horizons"];
 var currentAnswer = -1;
 var copyText = "";
 var lock = false;
 var dateString = null;
+var populationHash = null;
 const completeCards = [];
 const cardTitles = [];
 const preImg = document.createElement('link');
@@ -841,17 +936,92 @@ var cardGuessURI = null;
 
 
 const searchParams = new URLSearchParams(window.location.search);
+var params_given = false;
 var count = 0;
-for (let c of cardTypeOptions.children) {
-	let key = c.innerHTML;
-	if (searchParams.get(key) == '0') {
-		c.classList.remove("activeOption");
+if (searchParams.get("All Cards") == '1') {
+	count = cardTypeOptions.childElementCount;
+	params_given = true;
+}
+else {
+	// First find out if its negative or positive
+	for (let i=0; i<cardTypeOptions.childElementCount; i++) {
+		let c = cardTypeOptions.children[i];
+		let key = cardTypes[i];
+		// 0 key is given so default is ON
+		if (searchParams.get(key) == '0') {
+			params_given = true;
+			break;
+		}
+		// 1 key is given so default is OFF
+		else if (searchParams.get(key) == '1') {
+			params_given = true;
+			for (let c of cardTypeOptions.children) {
+				c.classList.remove("activeOption");
+			}
+			break;
+		}
 	}
-	else if (searchParams.get(key) == '1') {
-		count++;
+	// Now we know default, calculate count
+	if (params_given) {
+		for (let i=0; i<cardTypeOptions.childElementCount; i++) {
+			let c = cardTypeOptions.children[i];
+			let key = cardTypes[i];
+			if (searchParams.get(key) == '0') {
+				c.classList.remove("activeOption");
+			}
+			else {
+				count++;
+				if (searchParams.get(key) == '1') {
+					c.classList.add("activeOption");
+				}
+			}
+		}
 	}
 }
-if (!count) {
+if (!params_given || count > 0) {
+	if (searchParams.get("All Sets") == '1') {
+		count = setTypeOptions.childElementCount;
+		params_given = true;
+	}
+	else {
+		// First find out if its negative or positive
+		for (let i=0; i<setTypeOptions.childElementCount; i++) {
+			let c = setTypeOptions.children[i];
+			let key = setTypes[i];
+			// 0 key is given so default is ON
+			if (searchParams.get(key) == '0') {
+				params_given = true;
+				break;
+			}
+			// 1 key is given so default is OFF
+			else if (searchParams.get(key) == '1') {
+				params_given = true;
+				for (let c of setTypeOptions.children) {
+					c.classList.remove("activeOption");
+				}
+				break;
+			}
+		}
+		// Now we know default, calculate count
+		if (params_given) {
+			for (let i=0; i<setTypeOptions.childElementCount; i++) {
+				let c = setTypeOptions.children[i];
+				let key = setTypes[i];
+				if (searchParams.get(key) == '0') {
+					c.classList.remove("activeOption");
+				}
+				else {
+					count++;
+					if (searchParams.get(key) == '1') {
+						c.classList.add("activeOption");
+					}
+				}
+			}
+		}
+	}
+}
+
+if (!count || !params_given) {
 	// Check if history
 	if (localStorage.cardType) {
 		let chosenCardTypes = JSON.parse(localStorage.cardType);
@@ -861,9 +1031,21 @@ if (!count) {
 			if (c.classList.contains("activeOption"))
 				count++;
 		}
+		if (count > 0) {
+			let chosenSetTypes = JSON.parse(localStorage.setType);
+			for (let c of setTypeOptions.children) {
+				if (!chosenSetTypes.includes(c.innerHTML))
+					c.classList.remove("activeOption");
+				if (c.classList.contains("activeOption"))
+					count++;
+			}
+		}
 	}
 	if (!count) {
 		for (let c of cardTypeOptions.children) {
+			c.classList.add("activeOption");
+		}
+		for (let c of setTypeOptions.children) {
 			c.classList.add("activeOption");
 		}
 	}
