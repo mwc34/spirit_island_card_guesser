@@ -572,6 +572,10 @@ function makeGuess(require_text=true) {
 				setWrongAnswers(false);
 			}
 			else {
+				incrementScore(false);
+				infoWrapper.style.backgroundColor = incorrectColour;
+				guessHistory.push([false, currentCard.id, guess]);
+				
 				let guessCard = getCardByTitle(guess);
 				if (guessCard) {
 					preImg.href = `/card-guesser/complete_cards_img/${guessCard.id}.png`;
@@ -581,9 +585,6 @@ function makeGuess(require_text=true) {
 				else {
 					setWrongAnswers(false);
 				}
-				incrementScore(false);
-				infoWrapper.style.backgroundColor = incorrectColour;
-				guessHistory.push([false, currentCard.id, guess]);
 				
 			}
 			decrementCardsLeft();
