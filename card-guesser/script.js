@@ -282,7 +282,7 @@ function startSet() {
 	
 	// Check if there are enough cards in the chosen mode
 	if ((daily && population.length < dailyCount) || population.length == 0) {
-		cardImage.src = '/card-guesser/too_small_mode_card.png';
+		cardImage.src = '/card-guesser/assets/too_small_mode_card.png';
 		shareWrapper.style.display = 'none';
 		cardInputWrapper.style.display = '';
 		submitInput.style.display = '';
@@ -325,7 +325,7 @@ function startSet() {
 				infoWrapper.style.backgroundColor = '';
 				cardsLeft.style.display = '';
 				cardCount.style.display = 'none';
-				cardImage.src = "/card-guesser/already_done_card.png";
+				cardImage.src = "/card-guesser/assets/already_done_card.png";
 				preImg.href = getCycleURL(dailyCount*2-1);
 				cancel = true; // Trigger return
 			}
@@ -340,17 +340,17 @@ function startSet() {
 	// Maximal
 	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x.id}.png`;
-		example_url = '/card-guesser/maximal_card.png';
+		example_url = '/card-guesser/assets/maximal_card.png';
 	}
 	// No Picture
 	else if (guessTypeOptions.children[1].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x.id}.png`;
-		example_url = '/card-guesser/no_picture_card.png';
+		example_url = '/card-guesser/assets/no_picture_card.png';
 	}
 	// Picture Only
 	else if (guessTypeOptions.children[2].classList.contains("activeOption")) {
 		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x.id}.png`;
-		example_url = '/card-guesser/picture_only_card.png';
+		example_url = '/card-guesser/assets/picture_only_card.png';
 	}
 	// Minimal
 	else if (guessTypeOptions.children[3].classList.contains("activeOption")) {
@@ -370,7 +370,7 @@ function startSet() {
 			
 			return `/card-guesser/minimal_cards_img/${url}.png`;
 		}
-		example_url = '/card-guesser/minimal_card.png';
+		example_url = '/card-guesser/assets/minimal_card.png';
 	}
 	// Nothing selected
 	else {
@@ -505,12 +505,12 @@ function newCard(wait) {
 	if (!cardsToGuess.length) {
 		currentCard = null;
 		
-		preImg.href = '/card-guesser/finish_card.png';
+		preImg.href = '/card-guesser/assets/finish_card.png';
 		lock = true;
 		setTimeout(() => {
 			lock = false;
-			cardImage.src = '/card-guesser/finish_card.png';
-			preImg.href = '/card-guesser/share_card.png';
+			cardImage.src = '/card-guesser/assets/finish_card.png';
+			preImg.href = '/card-guesser/assets/share_card.png';
 			shareWrapper.style.display = '';
 			cardInputWrapper.style.display = 'none';
 			continueWrapper.style.display = 'none';
@@ -705,7 +705,7 @@ function toggleDaily(idx) {
 function shareSet() {
 	if (lock) return
 	// First time
-	if (!cardImage.src.includes("/card-guesser/share_card.png")) {
+	if (!cardImage.src.includes("/card-guesser/assets/share_card.png")) {
 		let searchParams = new URLSearchParams();
 		
 		let current = getScore();
@@ -776,7 +776,7 @@ function shareSet() {
 		}
 		let paramText = searchParams.toString();
 		copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
-		cardImage.src = "/card-guesser/share_card.png";
+		cardImage.src = "/card-guesser/assets/share_card.png";
 	}
 	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
@@ -912,7 +912,7 @@ var populationHash = null;
 const completeCards = [];
 const cardTitles = [];
 const preImg = document.createElement('link');
-preImg.href = '/card-guesser/already_done_card.png';
+preImg.href = '/card-guesser/assets/already_done_card.png';
 preImg.rel = 'preload';
 preImg.as = 'image';
 document.head.appendChild(preImg);
