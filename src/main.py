@@ -270,10 +270,10 @@ def process_new_cards():
     with open("new_cards.json", "w") as fp:
         json.dump(new_cards, fp, indent=4)
 
-generate_minimal_cards()
-# generate_no_picture_cards()
-# generate_picture_only_cards()
-# generate_maximal_cards()
-# generate_complete_cards()
+# generate_minimal_cards()
+generate_no_picture_cards()
+generate_picture_only_cards()
+generate_maximal_cards()
+generate_complete_cards()
 # get_unique_values()
 # process_new_cards()

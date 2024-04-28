@@ -4,7 +4,7 @@ import time
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-folder_type = 'minimal_cards'
+folder_type = 'complete_cards'
 
 files = os.listdir(folder_type + '_json')
 

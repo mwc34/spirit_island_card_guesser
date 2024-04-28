@@ -3067,7 +3067,7 @@
             "enabled": true,
             "text": "{any_land}"
         },
-        "effect": "Gather 1 {explorer}, {town}, {city}, {dahan}, {presence}, and {beast}\nfrom each adjacent land.\n\n4 {fear}. 15 Damage. 5 Damage to {dahan}. \nDestroy 1 {presence} from each Spirit. Remove 2 {beast}.",
+        "effect": "Gather 1 {explorer}, {town}, {city}, {dahan}, {presence}, and {beast}\nfrom each adjacent land.\n\n4 {fear}. 15 Damage. 5 Damage to {dahan}. \nDestroy 1 {presence} from each Spirit. Destroy 2 {beast}.",
         "effectFontScale": 0.7,
         "elements": {
             "sun": false,
