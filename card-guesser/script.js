@@ -265,7 +265,7 @@ function startSet() {
 	
 	// Remove unwanted sets
 	let unwanted_sets = [];
-	let set_names = ["base", "b&c", "je", "f&f", "horizons"];
+	let set_names = ["base", "b&c", "je", "f&f", "horizons", "ni"];
 	for (let s=0; s<set_names.length; s++) {
 		if (!setTypeOptions.children[s].classList.contains("activeOption")) {
 			unwanted_sets.push(set_names[s]);
