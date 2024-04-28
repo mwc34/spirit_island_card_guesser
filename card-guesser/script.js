@@ -282,7 +282,7 @@ function startSet() {
 	
 	// Check if there are enough cards in the chosen mode
 	if ((daily && population.length < dailyCount) || population.length == 0) {
-		cardImage.src = '/card-guesser/assets/too_small_mode_card.png';
+		cardImage.src = '/card-guesser/assets/too_small_mode_card.jpg';
 		shareWrapper.style.display = 'none';
 		cardInputWrapper.style.display = '';
 		submitInput.style.display = '';
@@ -325,7 +325,7 @@ function startSet() {
 				infoWrapper.style.backgroundColor = '';
 				cardsLeft.style.display = '';
 				cardCount.style.display = 'none';
-				cardImage.src = "/card-guesser/assets/already_done_card.png";
+				cardImage.src = "/card-guesser/assets/already_done_card.jpg";
 				preImg.href = getCycleURL(dailyCount*2-1);
 				cancel = true; // Trigger return
 			}
@@ -339,18 +339,18 @@ function startSet() {
 	let example_url = null;
 	// Maximal
 	if (guessTypeOptions.children[0].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x.id}.png`;
-		example_url = '/card-guesser/assets/maximal_card.png';
+		cardGuessURI = (x) => `/card-guesser/maximal_cards_img/${x.id}.jpg`;
+		example_url = '/card-guesser/assets/maximal_card.jpg';
 	}
 	// No Picture
 	else if (guessTypeOptions.children[1].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x.id}.png`;
-		example_url = '/card-guesser/assets/no_picture_card.png';
+		cardGuessURI = (x) => `/card-guesser/no_picture_cards_img/${x.id}.jpg`;
+		example_url = '/card-guesser/assets/no_picture_card.jpg';
 	}
 	// Picture Only
 	else if (guessTypeOptions.children[2].classList.contains("activeOption")) {
-		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x.id}.png`;
-		example_url = '/card-guesser/assets/picture_only_card.png';
+		cardGuessURI = (x) => `/card-guesser/picture_only_cards_img/${x.id}.jpg`;
+		example_url = '/card-guesser/assets/picture_only_card.jpg';
 	}
 	// Minimal
 	else if (guessTypeOptions.children[3].classList.contains("activeOption")) {
@@ -368,9 +368,9 @@ function startSet() {
 			
 			let url = `${x.id}_${idx.toString().rjust(2, '0')}`;
 			
-			return `/card-guesser/minimal_cards_img/${url}.png`;
+			return `/card-guesser/minimal_cards_img/${url}.jpg`;
 		}
-		example_url = '/card-guesser/assets/minimal_card.png';
+		example_url = '/card-guesser/assets/minimal_card.jpg';
 	}
 	// Nothing selected
 	else {
@@ -505,12 +505,12 @@ function newCard(wait) {
 	if (!cardsToGuess.length) {
 		currentCard = null;
 		
-		preImg.href = '/card-guesser/assets/finish_card.png';
+		preImg.href = '/card-guesser/assets/finish_card.jpg';
 		lock = true;
 		setTimeout(() => {
 			lock = false;
-			cardImage.src = '/card-guesser/assets/finish_card.png';
-			preImg.href = '/card-guesser/assets/share_card.png';
+			cardImage.src = '/card-guesser/assets/finish_card.jpg';
+			preImg.href = '/card-guesser/assets/share_card.jpg';
 			shareWrapper.style.display = '';
 			cardInputWrapper.style.display = 'none';
 			continueWrapper.style.display = 'none';
@@ -533,7 +533,7 @@ function newCard(wait) {
 		continueWrapper.style.display = 'none';
 		infoWrapper.style.backgroundColor = '';
 		cardImage.src = cardGuessURI(currentCard);
-		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
+		preImg.href = `/card-guesser/complete_cards_img/${currentCard.id}.jpg`;
 		if (!mobileAndTabletCheck())
 			cardInput.focus();
 	}
@@ -559,7 +559,7 @@ function makeGuess(require_text=true) {
 	
 	hideKeyboard(cardInput);
 	if (currentCard) {
-		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.png`;
+		cardImage.src = `/card-guesser/complete_cards_img/${currentCard.id}.jpg`;
 		lock = true;
 		cardImage.onload = () => {
 			lock = false;
@@ -578,7 +578,7 @@ function makeGuess(require_text=true) {
 				
 				let guessCard = getCardByTitle(guess);
 				if (guessCard) {
-					preImg.href = `/card-guesser/complete_cards_img/${guessCard.id}.png`;
+					preImg.href = `/card-guesser/complete_cards_img/${guessCard.id}.jpg`;
 					setWrongAnswers(true);
 					updateWrongAnswerHTML();
 				}
@@ -705,7 +705,7 @@ function toggleDaily(idx) {
 function shareSet() {
 	if (lock) return
 	// First time
-	if (!cardImage.src.includes("/card-guesser/assets/share_card.png")) {
+	if (!cardImage.src.includes("/card-guesser/assets/share_card.jpg")) {
 		let searchParams = new URLSearchParams();
 		
 		let current = getScore();
@@ -776,7 +776,7 @@ function shareSet() {
 		}
 		let paramText = searchParams.toString();
 		copyText += 'https://spirit-island.vercel.app/card-guesser/' + (paramText ? '?' + paramText : '');
-		cardImage.src = "/card-guesser/assets/share_card.png";
+		cardImage.src = "/card-guesser/assets/share_card.jpg";
 	}
 	infoWrapper.style.backgroundColor = '';
 	cardsLeft.style.display = '';
@@ -806,7 +806,7 @@ function getCycleURL(v) {
 	if (currentAnswer % 2 == 0)
 		return cardGuessURI(card);
 	else
-		return `/card-guesser/complete_cards_img/${card.id}.png`;
+		return `/card-guesser/complete_cards_img/${card.id}.jpg`;
 }
 
 function clampModVal(a, b, v) {
@@ -856,11 +856,11 @@ function cycleCard() {
 	if (!guess) return
 	let card_id = guessHistory[guessHistory.length-1][1];
 	let card = getCardByID(card_id);
-	if (cardImage.src.includes(`/card-guesser/complete_cards_img/${card.id}.png`)) {
-		cardImage.src = `/card-guesser/complete_cards_img/${guess.id}.png`;
+	if (cardImage.src.includes(`/card-guesser/complete_cards_img/${card.id}.jpg`)) {
+		cardImage.src = `/card-guesser/complete_cards_img/${guess.id}.jpg`;
 	}
 	else {
-		cardImage.src = `/card-guesser/complete_cards_img/${card.id}.png`;
+		cardImage.src = `/card-guesser/complete_cards_img/${card.id}.jpg`;
 	}
 	updateWrongAnswerHTML();
 }
@@ -872,7 +872,7 @@ function updateWrongAnswerHTML() {
 	if (!guess) return
 	let card_id = guessHistory[guessHistory.length-1][1];
 	let card = getCardByID(card_id);
-	if (cardImage.src.includes(`/card-guesser/complete_cards_img/${card.id}.png`)) {
+	if (cardImage.src.includes(`/card-guesser/complete_cards_img/${card.id}.jpg`)) {
 		wrongAnswerButton.innerHTML = 'Show Guess';
 	}
 	else {
@@ -912,7 +912,7 @@ var populationHash = null;
 const completeCards = [];
 const cardTitles = [];
 const preImg = document.createElement('link');
-preImg.href = '/card-guesser/assets/already_done_card.png';
+preImg.href = '/card-guesser/assets/already_done_card.jpg';
 preImg.rel = 'preload';
 preImg.as = 'image';
 document.head.appendChild(preImg);
@@ -929,7 +929,7 @@ if (!local) {
 }
 else {
 	autocomplete(cardInput, ['a', 'aa', 'aaa', 'aaaa']);
-	cardImage.src = 'complete_cards_img/a_circuitous_and_wending_journey.png'
+	cardImage.src = 'complete_cards_img/a_circuitous_and_wending_journey.jpg'
 }
 var currentCard = null;
 var cardsToGuess = [];
