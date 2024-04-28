@@ -137,7 +137,7 @@
         "id": "a_year_of_perfect_stillness",
         "title": "A Year Of Perfect Stillness",
         "type": "unique",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "base"
     },
     {
@@ -513,8 +513,55 @@
         "id": "asphyxiating_smoke",
         "title": "Asphyxiating Smoke",
         "type": "unique",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "f&f"
+    },
+    {
+        "name": "Bargain of\nCoursing Paths",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{dahan} {dahan}"
+        },
+        "effect": "*Bargain*: 1 {presence} now and -1 Energy / turn.\n\n*Now*: Mark both target land and another land with 2 or more {dahan}.\n\n*Ongoing*: After pieces are added or moved\ninto the marked lands: choose any land,\nthen Move those pieces directly to that land.",
+        "effectFontScale": 0.7,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": true,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.35,
+            "conditionText": "3{air} 2{water} 2{earth}",
+            "effectText": "The {presence} cost comes from your {presence} tracks."
+        },
+        "art": {
+            "image": null,
+            "artist": "Agnieszka D\u00c4\u2026browiecka",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/bargain_of_coursing_paths.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "bargain_of_coursing_paths",
+        "title": "Bargain of Coursing Paths",
+        "type": "major",
+        "minimal_count": 1,
+        "set": "ni"
     },
     {
         "name": "Bargains Of Power\nAnd Protection",
@@ -560,7 +607,7 @@
         "id": "bargains_of_power_and_protection",
         "title": "Bargains Of Power And Protection",
         "type": "major",
-        "minimal_count": 1,
+        "minimal_count": 9,
         "set": "je"
     },
     {
@@ -658,6 +705,53 @@
         "set": "je"
     },
     {
+        "name": "Blazing Intimidation",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}.\nPush 2 {explorer}/{town} to a\nland without Incarna.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": true,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/blazing_intimidation.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "blazing_intimidation",
+        "title": "Blazing Intimidation",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
         "name": "Blazing Renewal",
         "nameFontScale": 1,
         "cost": 5,
@@ -705,6 +799,53 @@
         "set": "base"
     },
     {
+        "name": "Blinding Glare",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": "2 {fear}.\n{wide_or}\nSkip up to one Ravage Action.",
+        "effectFontScale": 0.95,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.6,
+            "conditionText": "5{sun}",
+            "effectText": " Instead, 3 {fear}.\n{wide_or}\nSkip to one Invader Action."
+        },
+        "art": {
+            "image": null,
+            "artist": "Agnieszka D\u00c4\u2026browiecka",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/blinding_glare.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "blinding_glare",
+        "title": "Blinding Glare",
+        "type": "unique",
+        "minimal_count": 4,
+        "set": "ni"
+    },
+    {
         "name": "Blood Draws Predators",
         "nameFontScale": 1,
         "cost": 1,
@@ -748,8 +889,55 @@
         "id": "blood_draws_predators",
         "title": "Blood Draws Predators",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 11,
         "set": "je"
+    },
+    {
+        "name": "Blood Water\nand Bloodlust",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{blight} {presence} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Add 1 {beast} and 1 {disease}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Nolan Nasser",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/blood_water_and_bloodlust.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "blood_water_and_bloodlust",
+        "title": "Blood Water and Bloodlust",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
     },
     {
         "name": "Bloodwrack Plague",
@@ -799,6 +987,53 @@
         "set": "b&c"
     },
     {
+        "name": "Blooming of the\nRocks and Trees",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "If no {blight} is present, Add 1 Vitality.\n{wide_or}\nIf no Invaders are present, Add 1 {wilds}.",
+        "effectFontScale": 0.85,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": true,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.45,
+            "conditionText": "3{plant}",
+            "effectText": "You may do both."
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/blooming_of_teh_rocks_and_trees.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "blooming_of_the_rocks_and_trees",
+        "title": "Blooming of the Rocks and Trees",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
+    },
+    {
         "name": "Blur The Arc Of Years",
         "nameFontScale": 1,
         "cost": 1,
@@ -846,6 +1081,53 @@
         "set": "je"
     },
     {
+        "name": "Bombard with Boulders\nand Stinging Seeds",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{mountain_jungle} {range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}. 2 Damage.\n\nAdd 1 {badlands}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": true,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.5,
+            "conditionText": "2{air} 3{earth} 3{plant}",
+            "effectText": "1 {fear}. 2 Damage.\nAdd 1 {wilds}."
+        },
+        "art": {
+            "image": null,
+            "artist": "Kat Guevara",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/bombard_with_boulders_and_stinging_seeds.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "bombard_with_boulders_and_stinging_seeds",
+        "title": "Bombard with Boulders and Stinging Seeds",
+        "type": "major",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
         "name": "Boon Of Ancient\nMemories",
         "nameFontScale": 1,
         "cost": 1,
@@ -891,6 +1173,53 @@
         "type": "unique",
         "minimal_count": 3,
         "set": "je"
+    },
+    {
+        "name": "Boon of Corrupted Blood",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "1 Damage in one of\ntarget Spirit's lands.\n\nIf you target another Spirit,\nin that land also:\nDestroy 1 of their {presence}.\n1 Damage. Gather 1 {beast}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Nolan Nasser",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/boon_of_corrupted_blood.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "boon_of_corrupted_blood",
+        "title": "Boon of Corrupted Blood",
+        "type": "unique",
+        "minimal_count": 3,
+        "set": "ni"
     },
     {
         "name": "Boon Of Growing Power",
@@ -985,6 +1314,53 @@
         "type": "unique",
         "minimal_count": 2,
         "set": "je"
+    },
+    {
+        "name": "Boon of\nResilient Power",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "Target Spirit may Add 1 Destroyed Presence to one of your lands.\n\nIf you target yourself,\ngain a Major Power. Otherwise,\ntarget Spirits gains a Power Card.",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": true,
+            "moon": true,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/boon_of_resilient_power.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "boon_of_resilient_power",
+        "title": "Boon of Resilient Power",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
     },
     {
         "name": "Boon Of Swarming\nBedevilment",
@@ -1265,7 +1641,7 @@
         "id": "call_on_herders_for_aid",
         "title": "Call on Herders for Aid",
         "type": "unique",
-        "minimal_count": 5,
+        "minimal_count": 4,
         "set": "horizons"
     },
     {
@@ -1406,7 +1782,7 @@
         "id": "call_to_ferocity",
         "title": "Call To Ferocity",
         "type": "minor",
-        "minimal_count": 5,
+        "minimal_count": 3,
         "set": "b&c"
     },
     {
@@ -1453,7 +1829,7 @@
         "id": "call_to_guard",
         "title": "Call To Guard",
         "type": "minor",
-        "minimal_count": 5,
+        "minimal_count": 3,
         "set": "je"
     },
     {
@@ -1500,7 +1876,7 @@
         "id": "call_to_isolation",
         "title": "Call To Isolation",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 2,
         "set": "base"
     },
     {
@@ -1643,6 +2019,53 @@
         "type": "minor",
         "minimal_count": 1,
         "set": "b&c"
+    },
+    {
+        "name": "Call to Vigilance",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{dahan} {presence} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "2 {fear} if Invaders are present.\n\nFor each {dahan} in origin land,\nPush up to 1 {explorer}/{town}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/call_to_vigilance.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "call_to_vigilance",
+        "title": "Call to Vigilance",
+        "type": "unique",
+        "minimal_count": 3,
+        "set": "ni"
     },
     {
         "name": "Carapaced Land",
@@ -1880,6 +2303,53 @@
         "set": "b&c"
     },
     {
+        "name": "Coordinated Raid",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{dahan} {presence} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 Damage.\n\nIf {dahan} are present, 1 Damage.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/coordinated_raid.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "coordinated_raid",
+        "title": "Coordinated Raid",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
+    },
+    {
         "name": "Crops Wither And Fade",
         "nameFontScale": 1,
         "cost": 1,
@@ -1923,7 +2393,7 @@
         "id": "crops_wither_and_fade",
         "title": "Crops Wither And Fade",
         "type": "unique",
-        "minimal_count": 1,
+        "minimal_count": 4,
         "set": "base"
     },
     {
@@ -2393,7 +2863,7 @@
         "id": "dissolve_the_bonds_of_kinship",
         "title": "Dissolve The Bonds Of Kinship",
         "type": "major",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "base"
     },
     {
@@ -2440,7 +2910,7 @@
         "id": "dissolving_vapors",
         "title": "Dissolving Vapors",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "je"
     },
     {
@@ -2538,6 +3008,53 @@
         "set": "base"
     },
     {
+        "name": "Draw to the\nWater's Edge",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Gather up to 2 {town}\nfrom a single land.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Nolan Nasser",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/draw_to_the_waters_edge.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "draw_to_the_waters_edge",
+        "title": "Draw to the Water's Edge",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
+    },
+    {
         "name": "Draw Towards A Consuming Void",
         "nameFontScale": 1,
         "cost": 8,
@@ -2550,7 +3067,7 @@
             "enabled": true,
             "text": "{any_land}"
         },
-        "effect": "Gather 1 {explorer}, {town}, {city}, {dahan}, {presence}, and {beast}\nfrom each adjacent land.\n\n4 {fear}. 15 Damage. 5 Damage to {dahan}. \nDestroy 1 {presence} from each Spirit. Remove 2 {beast}.",
+        "effect": "Gather 1 {explorer}, {town}, {city}, {dahan}, {presence}, and {beast}\nfrom each adjacent land.\n\n4 {fear}. 15 Damage. 5 Damage to {dahan}. \nDestroy 1 {presence} from each Spirit. Destroy 2 {beast}.",
         "effectFontScale": 0.7,
         "elements": {
             "sun": false,
@@ -2910,7 +3427,7 @@
         "id": "eerie_noises_and_moving_trees",
         "title": "Eerie Noises and Moving Trees",
         "type": "unique",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "horizons"
     },
     {
@@ -3102,6 +3619,53 @@
         "set": "b&c"
     },
     {
+        "name": "Emerge from the\nDread Night Wind",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{norange}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Add/Move Incarna to target land.\n\n1 {fear}. If exactly 1 Invader is present, Abduct it. Otherwise, Push up to\n2 {explorer}/{town} to different lands.\n\nPush up to 2 {dahan}.",
+        "effectFontScale": 0.85,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/emerge_from_the_dread_night_wind.webp"
+        },
+        "language": "English",
+        "meeple": true,
+        "title": "Emerge from the Dread Night Wind",
+        "id": "emerge_from_the_dread_night_wind",
+        "type": "unique",
+        "set": "ni",
+        "minimal_count": 1
+    },
+    {
         "name": "Encompassing Ward",
         "nameFontScale": 1,
         "cost": 1,
@@ -3192,7 +3756,7 @@
         "id": "enticing_splendor",
         "title": "Enticing Splendor",
         "type": "minor",
-        "minimal_count": 8,
+        "minimal_count": 7,
         "set": "base"
     },
     {
@@ -3290,6 +3854,53 @@
         "set": "je"
     },
     {
+        "name": "Entwine the\nFates of All",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "In one of target Spirit's lands,\nDefend 2 per {presence} (from *all* Spirits).",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": true,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/entwine_the_fates_of_all.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "entwine_the_fates_of_all",
+        "title": "Entwine the Fates of All",
+        "type": "unique",
+        "minimal_count": 3,
+        "set": "ni"
+    },
+    {
         "name": "Entwined Power",
         "nameFontScale": 1,
         "cost": 2,
@@ -3333,7 +3944,7 @@
         "id": "entwined_power",
         "title": "Entwined Power",
         "type": "major",
-        "minimal_count": 1,
+        "minimal_count": 2,
         "set": "base"
     },
     {
@@ -3380,8 +3991,102 @@
         "id": "evermultiplying_swarm",
         "title": "Ever-Multiplying Swarm",
         "type": "unique",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "je"
+    },
+    {
+        "name": "Exaltation of Echoed Steps",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": "Target Spirit may Push 1 {presence},\nBringing up to 1 {explorer}/{town}/{dahan}/{beast}.\n\nYou may do likewise.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/exaltation_of_echoed_steps.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "exaltation_of_echoed_steps",
+        "title": "Exaltation of Echoed Steps",
+        "type": "unique",
+        "minimal_count": 4,
+        "set": "ni"
+    },
+    {
+        "name": "Exaltation of\nGrasping Roots",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": "Target Spirit may Add 1 {wilds} \nin one of their lands. \n\nYou may do likewise.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/exaltation_of_grasping_roots.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "exaltation_of_grasping_roots",
+        "title": "Exaltation of Grasping Roots",
+        "type": "unique",
+        "minimal_count": 7,
+        "set": "ni"
     },
     {
         "name": "Exaltation Of\nMolten Stone",
@@ -3478,6 +4183,100 @@
         "set": "horizons"
     },
     {
+        "name": "Exaltation of the\nIncandescent Sky",
+        "nameFontScale": 1,
+        "cost": "7",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": "Target Spirit may play 1 Power\nCard by paying its cost, make up\nto 2 of their Powers {fast} this turn,\nand do 3 Damage in one of their lands.\nYou may do likewise.",
+        "effectFontScale": 0.75,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": true,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.5,
+            "conditionText": "3{sun} 3{fire} 4{air} 2{water}",
+            "effectText": "In any 4 lands of the island,\nSkip 1 Invader Action. 5 {fear} _(total)."
+        },
+        "art": {
+            "image": null,
+            "artist": "Kat Guevara",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/exaltation_of_the_incandescent_sky.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "exaltation_of_the_incandescent_sky",
+        "title": "Exaltation of the Incandescent Sky",
+        "type": "major",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
+        "name": "Exhale Confusion\nand Delirium",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{strife}"
+        },
+        "effect": "2 {fear}.\n\nInvaders with {strife} don't\nparticipate in Ravage.\n\n_(Check when ravaging;\n_they don't deal Damage or\n_take counterattack Damage.)",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": true,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/exhale_confusion_and_delirium.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "exhale_confusion_and_delirium",
+        "title": "Exhale Confusion and Delirium",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
         "name": "Favor of the Sun and Star-Lit Dark",
         "nameFontScale": 1,
         "cost": 1,
@@ -3572,6 +4371,53 @@
         "set": "base"
     },
     {
+        "name": "Favors of Story and Season",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": "Target Spirit may Gather up to\n3 {dahan} into one of their lands.\n\nIf they have at least 3 {dahan} among\ntheir lands, they gain 1 Energy and\nmay Reclaim 1 Power Card instead\nof discarding it at the end of turn.",
+        "effectFontScale": 0.85,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": true,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/favors_of_story_and_season.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "favors_of_story_and_season",
+        "title": "Favors of Story and Season",
+        "type": "unique",
+        "minimal_count": 6,
+        "set": "ni"
+    },
+    {
         "name": "Ferocious Rampage",
         "nameFontScale": 1,
         "cost": 2,
@@ -3615,7 +4461,7 @@
         "id": "ferocious_rampage",
         "title": "Ferocious Rampage",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "horizons"
     },
     {
@@ -3662,7 +4508,7 @@
         "id": "fetid_breath_spreads_infection",
         "title": "Fetid Breath Spreads Infection",
         "type": "unique",
-        "minimal_count": 7,
+        "minimal_count": 5,
         "set": "je"
     },
     {
@@ -3803,7 +4649,7 @@
         "id": "fire_and_flood",
         "title": "Fire And Flood",
         "type": "major",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "b&c"
     },
     {
@@ -4042,6 +4888,53 @@
         "set": "b&c"
     },
     {
+        "name": "Flocking Red-Talons",
+        "nameFontScale": 1,
+        "cost": "3",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{wetland_with_presence} {range,3}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Add 1 {beast}. Move up to 2 {beast} within {range,3} to\ntarget land. For each {beast} present, choose a\ndifferent Invader. 1 Damage to each of those\nInvaders. Push 1 {explorer}/{town} per {beast}.",
+        "effectFontScale": 0.65,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": false,
+            "air": true,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.5,
+            "conditionText": "2{air} 2{plant} 3{animal}",
+            "effectText": "Repeat this Power on a different land within {range,3} _(of target land)."
+        },
+        "art": {
+            "image": null,
+            "artist": "Kat Guevara",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/flocking_redtalons.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "flocking_redtalons",
+        "title": "Flocking Red-Talons",
+        "type": "major",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
         "name": "Flow Downriver, Blow Downwind",
         "nameFontScale": 1,
         "cost": 0,
@@ -4085,7 +4978,7 @@
         "id": "flow_downriver_blow_downwind",
         "title": "Flow Downriver, Blow Downwind",
         "type": "minor",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "je"
     },
     {
@@ -4179,7 +5072,7 @@
         "id": "flowing_and_silent_forms_dart_by",
         "title": "Flowing And Silent Forms Dart By",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "je"
     },
     {
@@ -4228,6 +5121,53 @@
         "type": "major",
         "minimal_count": 2,
         "set": "je"
+    },
+    {
+        "name": "Focus the Sun's Rays",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 Damage. 2 Damage to {dahan}.\n\nMove up to 3 {presence} directly to target land _(from anywhere on the island).\nYou may Bring 1 {badlands} _(total)_\nwith those {presence}.",
+        "effectFontScale": 0.85,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Agnieszka D\u00c4\u2026browiecka",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/focus_the_suns_rays.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "focus_the_suns_rays",
+        "title": "Focus the Sun's Rays",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
     },
     {
         "name": "Forests Of Living Obsidian",
@@ -4369,6 +5309,100 @@
         "type": "unique",
         "minimal_count": 2,
         "set": "f&f"
+    },
+    {
+        "name": "Fragments of\nYesteryear",
+        "nameFontScale": 1,
+        "cost": "7",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "Remove all pieces, then Add the pieces\nmatching target land's Setup symbols.",
+        "effectFontScale": 0.75,
+        "elements": {
+            "sun": true,
+            "moon": true,
+            "fire": false,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.7,
+            "conditionText": "3{sun}",
+            "effectText": "This power may be {fast}.\n\n*3*{moon}*:*\nDon't remove {dahan}, any Spirit's {presence},\nor Spirit Tokens. Don't add Invaders/{blight}."
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/fragments_of_yesteryear.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "fragments_of_yesteryear",
+        "title": "Fragments of Yesteryear",
+        "type": "major",
+        "minimal_count": 3,
+        "set": "ni"
+    },
+    {
+        "name": "Frightful Keening",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "Incarna"
+        },
+        "effect": "Push Incarna.\n\nIf this pushes Incarna into a land\nwith Invaders, 2 {fear} there\n(before adding {strife}).",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/frightful_keening.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "frightful_keening",
+        "title": "Frightful Keening",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
     },
     {
         "name": "Gather The Scattered Light Of Stars",
@@ -4839,6 +5873,53 @@
         "type": "unique",
         "minimal_count": 4,
         "set": "horizons"
+    },
+    {
+        "name": "Gift of Seismic Energy",
+        "nameFontScale": 1,
+        "cost": "3",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "If you target yourself,\ngain 3 Energy.\n\nOtherwise, target Spirit gains\n1 Energy per Power Card you\nhave in play (max. 6).\n\n(Don't count Impending Card.)",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/gift_of_seismic_energy.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "gift_of_seismic_energy",
+        "title": "Gift of Seismic Energy",
+        "type": "unique",
+        "minimal_count": 3,
+        "set": "ni"
     },
     {
         "name": "Gift Of The\nPrimordial Deeps",
@@ -5354,7 +6435,7 @@
         "id": "guard_the_healing_land",
         "title": "Guard The Healing Land",
         "type": "unique",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "base"
     },
     {
@@ -5495,7 +6576,7 @@
         "id": "harbingers_of_the_lightning",
         "title": "Harbingers Of The Lightning",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "base"
     },
     {
@@ -5542,7 +6623,7 @@
         "id": "haunted_by_primal_memories",
         "title": "Haunted By Primal Memories",
         "type": "minor",
-        "minimal_count": 4,
+        "minimal_count": 3,
         "set": "je"
     },
     {
@@ -5730,7 +6811,7 @@
         "id": "impersonate_authority",
         "title": "Impersonate Authority",
         "type": "unique",
-        "minimal_count": 1,
+        "minimal_count": 5,
         "set": "je"
     },
     {
@@ -5777,7 +6858,7 @@
         "id": "incite_the_mob",
         "title": "Incite The Mob",
         "type": "unique",
-        "minimal_count": 1,
+        "minimal_count": 9,
         "set": "je"
     },
     {
@@ -5918,7 +6999,7 @@
         "id": "infested_aquifers",
         "title": "Infested Aquifers",
         "type": "minor",
-        "minimal_count": 6,
+        "minimal_count": 4,
         "set": "b&c"
     },
     {
@@ -6012,7 +7093,7 @@
         "id": "inflame_the_fires_of_life",
         "title": "Inflame The Fires Of Life",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 10,
         "set": "b&c"
     },
     {
@@ -6063,6 +7144,100 @@
         "set": "b&c"
     },
     {
+        "name": "Inspire a Winding Dance",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": "Push up to 1 {explorer}/{town}. \n\nGather up to 1 {dahan}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": true,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/inspire_a_winding_dance.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "inspire_a_winding_dance",
+        "title": "Inspire a Winding Dance",
+        "type": "unique",
+        "minimal_count": 19,
+        "set": "ni"
+    },
+    {
+        "name": "Inspire the Release\nof Stolen Lands",
+        "nameFontScale": 1,
+        "cost": "4",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{blight,no}"
+        },
+        "effect": "Gather up to 3 {dahan}. Remove up to 3 Health\nworth of Invaders per {dahan}.",
+        "effectFontScale": 0.7,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.65,
+            "conditionText": "3{sun} 3{water} 2{animal}",
+            "effectText": "This Power can target lands with {blight}.\nIf {dahan} are present, Remove 1 {blight} from target\nland, then Remove 1 {explorer}, 1 {town}, and 1 {city} from\na land within {range,1} _(of target land)."
+        },
+        "art": {
+            "image": null,
+            "artist": "Agnieszka D\u00c4\u2026browiecka",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/inspire_the_release_of_stolen_lands.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "inspire_the_release_of_stolen_lands",
+        "title": "Inspire the Release of Stolen Lands",
+        "type": "major",
+        "minimal_count": 4,
+        "set": "ni"
+    },
+    {
         "name": "Instruments Of\nTheir Own Ruin",
         "nameFontScale": 1,
         "cost": 4,
@@ -6106,7 +7281,7 @@
         "id": "instruments_of_their_own_ruin",
         "title": "Instruments Of Their Own Ruin",
         "type": "major",
-        "minimal_count": 4,
+        "minimal_count": 3,
         "set": "b&c"
     },
     {
@@ -6294,7 +7469,7 @@
         "id": "land_of_haunts_and_embers",
         "title": "Land Of Haunts And Embers",
         "type": "minor",
-        "minimal_count": 4,
+        "minimal_count": 3,
         "set": "base"
     },
     {
@@ -6623,7 +7798,7 @@
         "id": "mantle_of_dread",
         "title": "Mantle Of Dread",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "base"
     },
     {
@@ -6858,7 +8033,7 @@
         "id": "mysterious_abductions",
         "title": "Mysterious Abductions",
         "type": "unique",
-        "minimal_count": 6,
+        "minimal_count": 5,
         "set": "horizons"
     },
     {
@@ -7234,7 +8409,7 @@
         "id": "paths_tied_by_nature",
         "title": "Paths Tied By Nature",
         "type": "unique",
-        "minimal_count": 16,
+        "minimal_count": 7,
         "set": "f&f"
     },
     {
@@ -7426,6 +8601,53 @@
         "set": "base"
     },
     {
+        "name": "Plague Ships Sail\nto Distant Ports",
+        "nameFontScale": 1,
+        "cost": "4",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{coastal} {city}"
+        },
+        "effect": "1 {fear}. Add 4 {disease} among Coastal lands\n_(on any boards)_ other than target land.",
+        "effectFontScale": 0.65,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": true,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.7,
+            "conditionText": "2{fire} 2{water} 2{animal}",
+            "effectText": "Instead: 1 {fear}. 3 Damage.\nSpirits may jointly spend 3 Energy per player\n(aided by removing {disease} from the island for\n3 Energy each) to remove the top card of\nthe Fear Deck from the game. Add 1 {disease}."
+        },
+        "art": {
+            "image": null,
+            "artist": "Kat Guevara",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/plague_ships_sail_to_distant_ports.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "plague_ships_sail_to_distant_ports",
+        "title": "Plague Ships Sail to Distant Ports",
+        "type": "major",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
         "name": "Plaguebearers",
         "nameFontScale": 1,
         "cost": 1,
@@ -7610,7 +8832,7 @@
         "id": "poisoned_land",
         "title": "Poisoned Land",
         "type": "major",
-        "minimal_count": 6,
+        "minimal_count": 5,
         "set": "base"
     },
     {
@@ -7657,7 +8879,7 @@
         "id": "portents_of_disaster",
         "title": "Portents Of Disaster",
         "type": "minor",
-        "minimal_count": 3,
+        "minimal_count": 5,
         "set": "b&c"
     },
     {
@@ -7798,7 +9020,7 @@
         "id": "predatory_nightmares",
         "title": "Predatory Nightmares",
         "type": "unique",
-        "minimal_count": 10,
+        "minimal_count": 7,
         "set": "base"
     },
     {
@@ -7986,7 +9208,7 @@
         "id": "pull_beneath_the_hungry_earth",
         "title": "Pull Beneath The Hungry Earth",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 2,
         "set": "base"
     },
     {
@@ -8033,7 +9255,7 @@
         "id": "purifying_flame",
         "title": "Purifying Flame",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 11,
         "set": "base"
     },
     {
@@ -8221,8 +9443,102 @@
         "id": "quicken_the_earths_struggles",
         "title": "Quicken The Earth's Struggles",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 6,
         "set": "base"
+    },
+    {
+        "name": "Radiant and\nHallowed Grove",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{norange}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "Incarna"
+        },
+        "effect": "2 {fear} if Invaders are\npresent or adjacent.\n\nIn both target and one adjacent\nland, you may Remove an Invader\nwith Health less than or equal to\nthe Terror Level.\n_(Damage doesn't reduce Health.)_",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": true,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/radiant_and_hallowed_grove.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "radiant_and_hallowed_grove",
+        "title": "Radiant and Hallowed Grove",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
+        "name": "Radiating Tremors",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "2 Damage.\n\nYou may Push any number of Quake,\ndividing them as evenly as possible\nbetween adjacent lands.",
+        "effectFontScale": 0.8,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/radiating_tremors.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "radiating_tremors",
+        "title": "Radiating Tremors",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
     },
     {
         "name": "Raging Storm",
@@ -8315,7 +9631,7 @@
         "id": "rain_of_ash",
         "title": "Rain Of Ash",
         "type": "unique",
-        "minimal_count": 1,
+        "minimal_count": 3,
         "set": "je"
     },
     {
@@ -8362,8 +9678,55 @@
         "id": "rain_of_blood",
         "title": "Rain Of Blood",
         "type": "minor",
-        "minimal_count": 6,
+        "minimal_count": 3,
         "set": "base"
+    },
+    {
+        "name": "Ravaged Undergrowth\nSlithers Back to Life",
+        "nameFontScale": 1,
+        "cost": "3",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{blight}"
+        },
+        "effect": "Replace 1 {blight} with 1 {wilds}.\n\n1 {fear}. 3 Damage.\n\nPush that {wilds}.",
+        "effectFontScale": 0.75,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.55,
+            "conditionText": "3{water} 2{plant}",
+            "effectText": "Add 1 {wilds}. You may Push it. In each land\nwith {wilds} within {range,1} _(of target land):\nPush 1 {explorer} and 1 {town} to lands without {wilds}."
+        },
+        "art": {
+            "image": null,
+            "artist": "Kat Guevara",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/ravaged_undergrowth_slithers_back_to_life.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "ravaged_undergrowth_slithers_back_to_life",
+        "title": "Ravaged Undergrowth Slithers Back to Life",
+        "type": "major",
+        "minimal_count": 1,
+        "set": "ni"
     },
     {
         "name": "Razor-sharp Undergrowth",
@@ -8411,6 +9774,53 @@
         "type": "minor",
         "minimal_count": 1,
         "set": "b&c"
+    },
+    {
+        "name": "Reach from the\nInfinite Darkness",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{yourself}"
+        },
+        "effect": "Abduct up to 2 {presence} (of any Spirits, with their permission) from any lands on the island, ignoring land type restrictions on moving {presence}. \n\nEach Spirit's {presence} in Endless Dark grants them {range,+1} with all their Powers (this turn).",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/reach_from_the_infinite_darkness.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "reach_from_the_infinite_darkness",
+        "title": "Reach from the Infinite Darkness",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
     },
     {
         "name": "Reaching Grasp",
@@ -8597,8 +10007,55 @@
         "id": "renewing_rain",
         "title": "Renewing Rain",
         "type": "minor",
-        "minimal_count": 5,
+        "minimal_count": 3,
         "set": "b&c"
+    },
+    {
+        "name": "Resounding Footfalls\nSow Dismay",
+        "nameFontScale": 1,
+        "cost": "3",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}.\n\nAdd 1 Quake.\n\nSkip all Ravage Actions.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": true,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/resounding_footfalls_sow_dismay.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "resounding_footfalls_sow_dismay",
+        "title": "Resounding Footfalls Sow Dismay",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
     },
     {
         "name": "Rites Of The\nLand's Rejection",
@@ -8742,6 +10199,53 @@
         "set": "base"
     },
     {
+        "name": "Roiling Bog and\nSnagging Thorn",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}. Isolate. Defend 2.\n\n1 {dahan} does not participate in Ravage. \n(Check when ravaging; it does \nnot take Damage and does not counterattack.)",
+        "effectFontScale": 0.86,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Kat Guevara",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/roiling_bog_and_snagging_thorn.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "roiling_bog_and_snagging_thorn",
+        "title": "Roiling Bog and Snagging Thorn",
+        "type": "minor",
+        "minimal_count": 4,
+        "set": "ni"
+    },
+    {
         "name": "Rouse The Trees\nAnd Stones",
         "nameFontScale": 1,
         "cost": 1,
@@ -8787,6 +10291,100 @@
         "type": "minor",
         "minimal_count": 3,
         "set": "base"
+    },
+    {
+        "name": "Rumbling Earthquakes",
+        "nameFontScale": 1,
+        "cost": "6",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "This Power ignores Health bonuses.\n\n3 {fear}. 6 Damage, to {town}/{city} only.\n6 Damage among adjacent lands,\nto {town}/{city} only.",
+        "effectFontScale": 0.75,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.45,
+            "conditionText": "4{earth}",
+            "effectText": "6 Damage among target/adjacent lands,\nto {town}/{city} only."
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/rumbling_earthquakes.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "rumbling_earthquakes",
+        "title": "Rumbling Earthquakes",
+        "type": "major",
+        "minimal_count": 2,
+        "set": "ni"
+    },
+    {
+        "name": "Rumblings Portend a Greater Quake",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "If you have at least as many Impending Card as Power Cards in play,\n1 {fear} and Add 1 Quake.\n\nPush up to 3 {dahan}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/rumblings_portend_a_greater_quake.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "rumblings_portend_a_greater_quake",
+        "title": "Rumblings Portend a Greater Quake",
+        "type": "unique",
+        "minimal_count": 3,
+        "set": "ni"
     },
     {
         "name": "Sacrosanct Wilderness",
@@ -8973,7 +10571,7 @@
         "id": "savage_transformation",
         "title": "Savage Transformation",
         "type": "major",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "b&c"
     },
     {
@@ -9020,7 +10618,7 @@
         "id": "scarred_and_stony_land",
         "title": "Scarred And Stony Land",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "je"
     },
     {
@@ -9255,7 +10853,7 @@
         "id": "sear_anger_into_the_wild_lands",
         "title": "Sear Anger Into The Wild Lands",
         "type": "minor",
-        "minimal_count": 4,
+        "minimal_count": 3,
         "set": "je"
     },
     {
@@ -9396,7 +10994,7 @@
         "id": "shadows_of_the_burning_forest",
         "title": "Shadows Of The Burning Forest",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 4,
         "set": "base"
     },
     {
@@ -9490,7 +11088,7 @@
         "id": "share_secrets_of_survival",
         "title": "Share Secrets Of Survival",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "je"
     },
     {
@@ -9584,7 +11182,7 @@
         "id": "skies_herald_the_season_of_return",
         "title": "Skies Herald The Season Of Return",
         "type": "minor",
-        "minimal_count": 1,
+        "minimal_count": 9,
         "set": "je"
     },
     {
@@ -9725,7 +11323,7 @@
         "id": "smothering_infestation",
         "title": "Smothering Infestation",
         "type": "major",
-        "minimal_count": 4,
+        "minimal_count": 3,
         "set": "b&c"
     },
     {
@@ -9774,6 +11372,53 @@
         "type": "unique",
         "minimal_count": 1,
         "set": "je"
+    },
+    {
+        "name": "Solidify Echoes of\nMajesty Past",
+        "nameFontScale": 1,
+        "cost": "4",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": " Choose one of target Spirit's lands.\nIn that land and each adjacent land,\nDefend 3. They Add 1 Destroyed Presence to each adjacent land. Skip up to 1 Invader Action at each added Destroyed Presence.",
+        "effectFontScale": 0.7,
+        "elements": {
+            "sun": true,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.5,
+            "conditionText": "2{sun} 2{moon} 2{earth}",
+            "effectText": "Target Spirit either Reclaims 1 Power Card\nor re-gains a Unique Power they previously\nforgot. They may play it by paying its cost."
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/solidify_echoes_of_majesty_past.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "solidify_echoes_of_majesty_past",
+        "title": "Solidify Echoes of Majesty Past",
+        "type": "major",
+        "minimal_count": 1,
+        "set": "ni"
     },
     {
         "name": "Song Of Sanctity",
@@ -9960,7 +11605,7 @@
         "id": "steam_vents",
         "title": "Steam Vents",
         "type": "minor",
-        "minimal_count": 9,
+        "minimal_count": 6,
         "set": "base"
     },
     {
@@ -10007,7 +11652,7 @@
         "id": "stem_the_flow_of_fresh_water",
         "title": "Stem The Flow Of Fresh Water",
         "type": "unique",
-        "minimal_count": 1,
+        "minimal_count": 2,
         "set": "base"
     },
     {
@@ -10101,7 +11746,7 @@
         "id": "stormswath",
         "title": "Storm-Swath",
         "type": "major",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "je"
     },
     {
@@ -10289,7 +11934,7 @@
         "id": "stubborn_solidity",
         "title": "Stubborn Solidity",
         "type": "unique",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "je"
     },
     {
@@ -10481,6 +12126,100 @@
         "set": "je"
     },
     {
+        "name": "Surging Lahar",
+        "nameFontScale": 1,
+        "cost": "2",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "2 Damage.\n\nIf your {presence} is present, Add 1 {badlands}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": true,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/surging_lahar.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "surging_lahar",
+        "title": "Surging Lahar",
+        "type": "unique",
+        "minimal_count": 4,
+        "set": "ni"
+    },
+    {
+        "name": "Surrounded\nby the Dahan",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{dahan}"
+        },
+        "effect": "2 {fear} if Invaders are present. \n\n1 {fear} if {dahan} outnumber {town} / {city}. \n\nIsolate target land.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Aalaa Yassin",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/surrounded_by_the_dahan.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "surrounded_by_the_dahan",
+        "title": "Surrounded by the Dahan",
+        "type": "unique",
+        "minimal_count": 4,
+        "set": "ni"
+    },
+    {
         "name": "Swallow The Land-dwellers",
         "nameFontScale": 1,
         "cost": 0,
@@ -10526,6 +12265,53 @@
         "type": "unique",
         "minimal_count": 2,
         "set": "base"
+    },
+    {
+        "name": "Swallowed by the\nEndless Dark",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": " 2 {fear}. Abduct 1 {explorer}.",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": true,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.45,
+            "conditionText": "3{moon} 3{air}",
+            "effectText": "Abduct 1 Invader."
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/swallowed_by_the_endless_dark.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "swallowed_by_the_endless_dark",
+        "title": "Swallowed by the Endless Dark",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
     },
     {
         "name": "Swallowed By\nThe Wilderness",
@@ -10853,7 +12639,7 @@
         "id": "teeth_gleam_from_darkness",
         "title": "Teeth Gleam From Darkness",
         "type": "unique",
-        "minimal_count": 4,
+        "minimal_count": 3,
         "set": "b&c"
     },
     {
@@ -10998,6 +12784,53 @@
         "set": "base"
     },
     {
+        "name": "Terrifying Rampage",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}. 2 Invaders don't\nparticipate in Ravage.\n_(Choose the Invaders when\n_ravaging; they don't deal Damage\n_or take counterattack Damage.)\n\nPush 3 {dahan}.",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/terrifying_rampage.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "terrifying_rampage",
+        "title": "Terrifying Rampage",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
         "name": "Territorial Strife",
         "nameFontScale": 1,
         "cost": 0,
@@ -11043,6 +12876,53 @@
         "type": "minor",
         "minimal_count": 3,
         "set": "je"
+    },
+    {
+        "name": "Terror of the Hunted",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,0}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": "If {beast} are present,\n1 {fear} and Add 1 {strife}.\n\nAdd 1 {strife} per Terror Level.\n\nIf target land is Endless Dark, Add 1 {strife}.\n_({strife} only escapes with the\n_Invader it's attached to.)",
+        "effectFontScale": 0.78,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/terror_of_the_hunted.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "terror_of_the_hunted",
+        "title": "Terror of the Hunted",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
     },
     {
         "name": "Terror Turns To Madness",
@@ -11417,7 +13297,7 @@
         "id": "the_wounded_wild_turns_on_its_assailants",
         "title": "The Wounded Wild Turns On Its Assailants",
         "type": "major",
-        "minimal_count": 1,
+        "minimal_count": 6,
         "set": "je"
     },
     {
@@ -11844,6 +13724,53 @@
         "set": "je"
     },
     {
+        "name": "Transformative\nSacrifice",
+        "nameFontScale": 1,
+        "cost": "3",
+        "speed": "fast",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_spirit}"
+        },
+        "effect": "Target Spirit may Remove up to 3 {presence}\n_(from anywhere on the island).\nThen for each removed {presence}, they Take\na Minor Power and play it _(for free).",
+        "effectFontScale": 0.8,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.55,
+            "conditionText": "2{moon} 3{fire} 2{plant}",
+            "effectText": "Before taking cards, they may also\nRemove 1 {presence} from their {presence} track to\nTake a Minor Power and play it."
+        },
+        "art": {
+            "image": null,
+            "artist": "Kat Guevara",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/transformative_sacrifice.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "transformative_sacrifice",
+        "title": "Transformative Sacrifice",
+        "type": "major",
+        "minimal_count": 3,
+        "set": "ni"
+    },
+    {
         "name": "Traveler's Boon",
         "nameFontScale": 1,
         "cost": 0,
@@ -12032,6 +13959,53 @@
         "set": "base"
     },
     {
+        "name": "Turmoil's Touch",
+        "nameFontScale": 1,
+        "cost": 0,
+        "speed": "slow",
+        "range": {
+            "enabled": false,
+            "text": ""
+        },
+        "target": {
+            "enabled": true,
+            "text": "{another_spirit}"
+        },
+        "effect": "Target Spirit may either pay\n1 Energy or discard a Power\nCard _(from hand)_ to Take a\nMinor Power into their discard.\n\nYou may do likewise",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": true,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/turmoils_touch.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "turmoils_touch",
+        "title": "Turmoil's Touch",
+        "type": "unique",
+        "minimal_count": 6,
+        "set": "ni"
+    },
+    {
         "name": "Twilight Fog\nBrings Madness",
         "nameFontScale": 1,
         "cost": 0,
@@ -12075,8 +14049,55 @@
         "id": "twilight_fog_brings_madness",
         "title": "Twilight Fog Brings Madness",
         "type": "minor",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "b&c"
+    },
+    {
+        "name": "Twist Perceptions",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": "Add 1 {strife}. You may Push the\nInvader you added {strife} to.\n\n_(If you add {strife} to {explorer}/{town}, you can\n_push that Invader first with\n_Senseless Roaming before\n_pushing it with this Power.)",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": false,
+            "air": true,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Emily Hancock",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/twist_perceptions.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "twist_perceptions",
+        "title": "Twist Perceptions",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
     },
     {
         "name": "Twisted Flowers\nMurmur Ultimatums",
@@ -12173,6 +14194,53 @@
         "set": "f&f"
     },
     {
+        "name": "Unbearable Gaze",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 {fear}.\n\nPush 2 {explorer}/{town} from origin or target\nland (or 1 {explorer}/{town} from each).",
+        "effectFontScale": 0.9,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": false,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Agnieszka D\u00c4\u2026browiecka",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/unbearable_gaze.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "unbearable_gaze",
+        "title": "Unbearable Gaze",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
+    },
+    {
         "name": "Uncanny Melting",
         "nameFontScale": 1,
         "cost": 1,
@@ -12220,6 +14288,53 @@
         "set": "base"
     },
     {
+        "name": "Unearth a Beast of\nWrathful Stone",
+        "nameFontScale": 1,
+        "cost": "5",
+        "speed": "fast",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": "*After the next Invader Phase (on any turn)\n*with no Ravage/Build Actions in target land:\n3 {fear}. 12 Damage. Add 1 {beast}. You may Push\nthat {beast}. 1 {fear} and 2 Damage in its land.",
+        "effectFontScale": 0.65,
+        "elements": {
+            "sun": false,
+            "moon": true,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": true,
+            "relativeHeight": 0.6,
+            "conditionText": "2{moon} 3{earth} 3{animal}",
+            "effectText": "Mark it (BEAST). BEAST can't leave the island.\n*Each {slow} phase:* You may push BEAST.\n1 {fear} and 2 damage at BEAST."
+        },
+        "art": {
+            "image": null,
+            "artist": "David Markiwsky",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/unearth_a_beast_of_wrathful_stone.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "unearth_a_beast_of_wrathful_stone",
+        "title": "Unearth a Beast of Wrathful Stone",
+        "type": "major",
+        "minimal_count": 5,
+        "set": "ni"
+    },
+    {
         "name": "Unexpected Tigers",
         "nameFontScale": 1,
         "cost": 0,
@@ -12263,7 +14378,7 @@
         "id": "unexpected_tigers",
         "title": "Unexpected Tigers",
         "type": "unique",
-        "minimal_count": 4,
+        "minimal_count": 3,
         "set": "je"
     },
     {
@@ -12310,7 +14425,7 @@
         "id": "unleash_a_torrent_of_the_selfs_own_essence",
         "title": "Unleash a Torrent of the Self's Own Essence",
         "type": "major",
-        "minimal_count": 3,
+        "minimal_count": 2,
         "set": "je"
     },
     {
@@ -12404,7 +14519,7 @@
         "id": "unnerving_pall",
         "title": "Unnerving Pall",
         "type": "unique",
-        "minimal_count": 1,
+        "minimal_count": 2,
         "set": "je"
     },
     {
@@ -12639,7 +14754,7 @@
         "id": "veil_the_nights_hunt",
         "title": "Veil The Night's Hunt",
         "type": "minor",
-        "minimal_count": 5,
+        "minimal_count": 3,
         "set": "base"
     },
     {
@@ -13203,7 +15318,7 @@
         "id": "weep_for_what_is_lost",
         "title": "Weep For What Is Lost",
         "type": "minor",
-        "minimal_count": 2,
+        "minimal_count": 1,
         "set": "je"
     },
     {
@@ -13301,6 +15416,53 @@
         "set": "base"
     },
     {
+        "name": "Wither Bodies,\nScar Stones",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{from_sacredsite} {range,2}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{any_land}"
+        },
+        "effect": "1 Damage.\n\n{wide_or}\n\nAdd 1 {badlands}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": true,
+            "moon": false,
+            "fire": true,
+            "air": false,
+            "water": false,
+            "earth": true,
+            "plant": false,
+            "animal": false
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Agnieszka D\u00c4\u2026browiecka",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/wither_bodies_scar_stones.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "wither_bodies_scar_stones",
+        "title": "Wither Bodies, Scar Stones",
+        "type": "unique",
+        "minimal_count": 1,
+        "set": "ni"
+    },
+    {
         "name": "Words Of Warning",
         "nameFontScale": 1,
         "cost": 1,
@@ -13348,6 +15510,53 @@
         "set": "base"
     },
     {
+        "name": "Wrack with\nPain and Grief",
+        "nameFontScale": 1,
+        "cost": "1",
+        "speed": "slow",
+        "range": {
+            "enabled": true,
+            "text": "{blight} {presence} {range,1}"
+        },
+        "target": {
+            "enabled": true,
+            "text": "{invaders}"
+        },
+        "effect": "2 {fear}.\nPush 1 {explorer} and 1 {town}.",
+        "effectFontScale": 1,
+        "elements": {
+            "sun": false,
+            "moon": false,
+            "fire": false,
+            "air": false,
+            "water": true,
+            "earth": false,
+            "plant": true,
+            "animal": true
+        },
+        "threshold": {
+            "enabled": false,
+            "relativeHeight": 0.5,
+            "conditionText": "",
+            "effectText": ""
+        },
+        "art": {
+            "image": null,
+            "artist": "Nolan Nasser",
+            "leftOffset": -0.09,
+            "topOffset": 0.24,
+            "scale": 0.87,
+            "url": "https://sick.oberien.de/imgs/powers/wrack_with_pain_and_grief.webp"
+        },
+        "language": "English",
+        "meeple": false,
+        "id": "wrack_with_pain_and_grief",
+        "title": "Wrack with Pain and Grief",
+        "type": "unique",
+        "minimal_count": 2,
+        "set": "ni"
+    },
+    {
         "name": "Wrap In Wings Of Sunlight",
         "nameFontScale": 1,
         "cost": 3,
@@ -13391,7 +15600,7 @@
         "id": "wrap_in_wings_of_sunlight",
         "title": "Wrap In Wings Of Sunlight",
         "type": "major",
-        "minimal_count": 1,
+        "minimal_count": 2,
         "set": "base"
     }
 ]

@@ -2,6 +2,8 @@ import json
 import os
 import itertools
 
+import numpy as np
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 complete_cards_path = '../card-guesser/complete_cards.json'
@@ -10,11 +12,13 @@ complete_cards_directory = 'complete_cards_json'
 no_picture_cards_directory = 'no_picture_cards_json'
 picture_only_cards_directory = 'picture_only_cards_json'
 maximal_cards_directory = 'maximal_cards_json'
+new_cards_directory = 'new_cards_json'
 os.makedirs(minimal_cards_directory, exist_ok=True)
 os.makedirs(complete_cards_directory, exist_ok=True)
 os.makedirs(no_picture_cards_directory, exist_ok=True)
 os.makedirs(picture_only_cards_directory, exist_ok=True)
 os.makedirs(maximal_cards_directory, exist_ok=True)
+os.makedirs(new_cards_directory, exist_ok=True)
 
 def powerset(iterable):
     """powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"""
@@ -201,25 +205,75 @@ def generate_complete_cards():
             json.dump(card, fp, indent=4)
 
 
-def get_unique_range_target():
-    ranges = set()
-    targets = set()
+def get_unique_values():
     with open(complete_cards_path) as fp:
         complete_cards = json.load(fp)
 
-    for card in complete_cards:
-        ranges.add(card["range"]["text"])
-        targets.add(card["target"]["text"])
+    keys = {
+        "cost": None,
+        "range": lambda x: str(x["range"]["enabled"]) + "/" + x["range"]["text"],
+        "target": lambda x: x["target"]["text"],
+        "threshold": lambda x: str(x["threshold"]["enabled"]) + "/" + x["threshold"]["conditionText"],
+        "type": None,
+        "set": None,
+    }
     
-    print(ranges)
-    print(len(ranges))
-    print(targets)
-    print(len(targets))
+    results = {key: np.unique([f(c) if f is not None else c[key] for c in complete_cards], return_counts=True) for key, f in keys.items()}
+    for key, val in results.items():
+        print(key)
+        idxs = np.argsort(val[1])[::-1]
+        print("\n".join([f"{val[1][i]} {val[0][i]}" for i in idxs]))
+        print("\n\n")
 
 
-generate_minimal_cards()
-# generate_no_picture_cards()
-# generate_picture_only_cards()
-# generate_maximal_cards()
-# generate_complete_cards()
-# get_unique_range_target()
+def process_new_cards():
+    new_cards = []
+    for f in os.listdir(new_cards_directory):
+        with open(os.path.join(new_cards_directory, f)) as fp:
+            card = json.load(fp)
+        card["title"] = card["name"].replace("\n", " ")
+        while True:
+            q = input(card["title"])
+            if q:
+                card["title"] = q
+            else:
+                break
+                
+        card["id"] = card["title"].replace(" ", "_").lower().replace("-", "").replace("'", "").replace(",", "")
+        while True:
+            q = input(card["id"])
+            if q:
+                card["id"] = q
+            else:
+                break
+                
+        card["type"] = "unique"
+        while True:
+            q = input(f"Type is {card['type']}, change to major/minor/unique??")
+            if q:
+                card["type"] = q
+            else:
+                break
+                
+        card["set"] = "ni"
+        card["art"]["image"] = None
+        card["art"]["url"] = f"https://sick.oberien.de/imgs/powers/{card['id']}.webp"
+        
+        new_cards.append(card)
+    
+    # Check statistics
+    print("Types")
+    print(np.unique([i["type"] for i in new_cards], return_counts=True))
+    print("Sets")
+    print(np.unique([i["set"] for i in new_cards], return_counts=True))
+    
+    with open("new_cards.json", "w") as fp:
+        json.dump(new_cards, fp, indent=4)
+
+# generate_minimal_cards()
+generate_no_picture_cards()
+generate_picture_only_cards()
+generate_maximal_cards()
+generate_complete_cards()
+# get_unique_values()
+# process_new_cards()
